@@ -13,3 +13,6 @@ error_log
 
 # پوشه زباله پنل ادمین
 admin.anbaritoys.ir/.trash
+
+# پوشه تصاویر
+photos.anbaritoys.ir/
