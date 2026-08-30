@@ -1,0 +1,1684 @@
+[22-Jul-2023 16:10:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:11:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(31): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[22-Jul-2023 16:12:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'mobile' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(44): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:36:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:37:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:38:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[01-Sep-2023 18:39:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Sep-2023 06:51:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'khrasan-north' for column 'city_id' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(43): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:26:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[21-Sep-2023 05:27:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'post_code' at row 1 in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:02 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[08-Dec-2023 20:25:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[08-Dec-2023 20:25:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:47 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:58 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:58:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:58:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:10 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:11 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:17 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:35 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 16:59:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 16:59:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:19 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[02-Jan-2024 17:00:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[02-Jan-2024 17:00:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[28-Jan-2024 07:39:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[28-Jan-2024 07:39:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[28-Jan-2024 07:39:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[28-Jan-2024 07:39:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[28-Jan-2024 07:39:59 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[28-Jan-2024 07:39:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:11 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 3
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:23 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 3
+[04-Jul-2024 16:07:41 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 3
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:49 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:52 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Jul-2024 16:07:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Jul-2024 16:07:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:01 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:21 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:27 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:45 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[24-Aug-2024 18:32:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[24-Aug-2024 18:32:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Oct-2025 18:52:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Oct-2025 18:52:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Oct-2025 18:52:42 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Oct-2025 18:52:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Oct-2025 18:52:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Oct-2025 18:52:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Oct-2025 18:53:07 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Oct-2025 18:53:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 16
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 24
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 25
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 28
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Undefined array key "user_sing" in /home/h227443/public_html/requests/user/AddressRequest.php on line 29
+[04-Oct-2025 18:53:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/h227443/public_html/requests/user/AddressRequest.php on line 30
+[04-Oct-2025 18:53:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/h227443/public_html/models/Address.php:44
+Stack trace:
+#0 /home/h227443/public_html/models/Address.php(44): PDOStatement->execute()
+#1 /home/h227443/public_html/requests/user/AddressRequest.php(30): createAddress()
+#2 /home/h227443/public_html/core.php(45): include('/home/h227443/p...')
+#3 {main}
+  thrown in /home/h227443/public_html/models/Address.php on line 44

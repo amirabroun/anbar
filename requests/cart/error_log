@@ -1,0 +1,192 @@
+[18-Mar-2023 14:17:21 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 14:17:26 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 14:17:27 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 14:17:56 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:36:58 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:07 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:08 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:09 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:09 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:20 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:28 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:28 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:29 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:41 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:46 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:46 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:46 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:46 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:37:46 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:38:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:38:42 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:38:42 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:38:42 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:41:28 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:41:29 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:41:51 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-3626708981')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403
+[18-Mar-2023 15:41:52 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in on clause is ambiguous in /home/oubvlaxz/public_html/models/Product.php:403
+Stack trace:
+#0 /home/oubvlaxz/public_html/models/Product.php(403): PDOStatement->execute()
+#1 /home/oubvlaxz/public_html/requests/cart/cartRequestAjax.php(66): getDetailsProducts('PSP-2367399704')
+#2 {main}
+  thrown in /home/oubvlaxz/public_html/models/Product.php on line 403

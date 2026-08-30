@@ -1,0 +1,126 @@
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Info-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Page Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5"> محصولات</h5>
+                <!--end::Page Title-->
+                <!--begin::Actions-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
+                <!--end::Actions-->
+            </div>
+            <!--end::Info-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Daterange-->
+                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
+                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
+                </a>
+                <!--end::Daterange-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="card card-custom gutter-b">
+                <div class="card-header">
+                    <h3 class="card-title">افزودن محصولات</h3>
+                </div>
+                <div class="alert alert-danger print-error-msg" id="print-error-msg" style="display:none">
+
+                    <ul></ul>
+
+                </div>
+                <?php  echo initFormErrors()?>
+                <form class="form" method="post">
+                    <input type="hidden" name="action" value="create_product">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>عنوان فارسی:</label>
+                                <input type="text" id="title" class="form-control" placeholder="عنوان" name="title"  />
+                            </div>
+                            <div class="col-lg-6">
+                                   <label>عنوان انگلیسی:</label>
+                                    <input type="text" id="english_title" class="form-control" placeholder="عنوان انگلیسی" name="english_title" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>قیمت:</label>
+                                    <input type="text" id="price" class="form-control" placeholder="قیمت"  name=" price"/>
+                                </div>
+                                <div class="col-lg-6 mt-3">
+                                    <label>قیمت با تخفیف:</label>
+                                    <input type="text" id="price_discounted" class="form-control" placeholder="قیمت با تخفیف" name="price_discounted" />
+                                </div>
+                            </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>موجودی:</label>
+                                <input type="text" id="stock" class="form-control" placeholder="موجودی" name="stock"/>
+                            </div>
+                            <?php
+                            $selectBrandsForProducts=selectBrandForProduct();
+                            ?>
+                            <div class="col-lg-6">
+                                <label >برند:</label>
+                                <select class="form-control selectpicker " id="brand_id" name="brand_id">
+                                    <option value="1">انتخاب کنید...</option>
+                                    <?php
+                                    if ($selectBrandsForProducts){
+                                        foreach ($selectBrandsForProducts as $selectbrandsforproducts)
+                                        {
+                                            ?>
+                                            <option value="<?php echo $selectbrandsforproducts['id']; ?>"><?php echo $selectbrandsforproducts['title']; ?></option>
+                                            <?php
+                                        }
+                                    }
+
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <br>
+                        
+                        <div class="col-lg-12">
+                            <label>برچسب ها: (برای سئو) - (کلمه ها را با - جدا کنید)</label>
+                            <input type="text" class="form-control" placeholder="قیمت خرید" name="label" id="label"/>
+                        </div>
+                        <br>
+                        <div class="col-lg-12">
+                            <label>توضیح کوتاه: (برای سئو)</label>
+                            <input type="text" id="qqqqqqq" class="form-control" placeholder="قیمت خرید" name="MiniDescription"/>
+                        </div>
+                        
+                        <br>
+                        
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <label >نقد و بررسی:</label>
+                               <textarea class="summernote" style="display: none;" id="review" name="review"></textarea>
+                            </div>
+                            <div class="col-lg-12">
+                                <label >توضیحات:</label>
+                                <textarea class="summernote"  style="display: none;" id="description" name="description"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" onclick="createProducts();" class="btn btn-primary mr-2">ثبت</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+</div>

@@ -1,0 +1,73 @@
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:20 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[05-Aug-2023 07:01:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:30:41 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:30:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:30:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:30:48 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:30:50 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:30:50 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:30:50 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:22 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:23 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:39:24 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:39:24 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:39:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:45:41 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:45:41 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:45:42 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:45:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:45:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:45:43 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:45:43 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:45:46 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:45:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:45:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:49:59 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:49:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:49:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code2.php on line 2
+[26-Jan-2024 17:50:00 UTC] PHP Warning:  Undefined variable $total_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:50:00 UTC] PHP Warning:  Undefined variable $final_amount in /home/h227443/public_html/requests/authentication/session_code3.php on line 2
+[26-Jan-2024 17:50:00 UTC] PHP Warning:  Undefined array key "cart_user" in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:50:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2
+[26-Jan-2024 17:50:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/h227443/public_html/requests/authentication/session_code.php on line 2

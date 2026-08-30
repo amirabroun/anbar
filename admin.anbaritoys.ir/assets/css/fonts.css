@@ -1,0 +1,24 @@
+
+/*@font-face {
+    font-family: "metal_lord";
+    src: url('../../font/metal_lord/metal lord.ttf');
+    src: url('../../font/metal_lord/metal lord.ttf') format('metallord-opentype'),
+    url('../../font/metal_lord/metal lord.ttf') format("ttf"),
+    url('../../font/metal_lord/metal lord.ttf') format('truetype');
+}
+.s-font{
+    font-family: metal_lord !important;
+}*/
+
+@font-face {
+    font-family: "shabbnam";
+    src: url('../../font/shabnam-font-v2.4.0/Shabnam.eot');
+    src: url('../../font/shabnam-font-v2.4.0/Shabnam.eot?iefix') format('Shabnam-opentype'),
+    url('../../font/shabnam-font-v2.4.0/Shabnam.ttf') format("ttf"),
+    url('../../font/shabnam-font-v2.4.0/Shabnam-Bold.woff') format('truetype');
+}
+.a,h1,h2,h3,h4,h5,h6,p,i,span,div,td,th,tr,button,ul,li,input,label,select,textarea{
+    font-family: shabbnam;
+    font-size: 15px;
+}
+

@@ -1,0 +1,25 @@
+[12-Mar-2023 20:54:06 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:06 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:06 Asia/Tehran] PHP Fatal error:  Failed opening required 'public_html/shop/admin/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:12 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:12 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:12 Asia/Tehran] PHP Fatal error:  Failed opening required 'public_html/shop/admin/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:50 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:50 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:50 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:51 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:51 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:51 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
+[12-Mar-2023 20:54:52 Asia/Tehran] PHP Fatal error:  Failed opening required 'admin.anbaritoys.com/core.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
+[12-Mar-2023 21:41:45 Asia/Tehran] PHP Warning:  Undefined array key "category_id" in /home/oubvlaxz/admin.anbaritoys.com/requests/ProductsRequest.php on line 12
