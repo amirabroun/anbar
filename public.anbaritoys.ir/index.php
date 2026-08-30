@@ -6,5 +6,6 @@ function whirlpool2($key){
 }
 
 if (!isset($_GET["secret"]) || $_GET["secret"] !== whirlpool2(SECRET_TOKEN2)) {
-    header('Location: https://anbaritoys.ir/index.php');
+    header('Location: ' . (getenv('APP_URL') ?: 'https://anbaritoys.ir/') . 'index.php');
+    exit;
 }
