@@ -1,10 +1,10 @@
 <?php
 function createTransactionForPayment($amount, $description, $mobile = '', $email = ''){
 
-$data = array(
-    "merchant_id" => GATEWAY_PAYMENT['zarinpal']['merchant_id'],
-    "amount" => $amount + 660000,
-    "callback_url" => GATEWAY_PAYMENT['zarinpal']['callback'],
+    $data = array(
+        "merchant_id" => GATEWAY_PAYMENT['zarinpal']['merchant_id'],
+        "amount" => $amount,
+        "callback_url" => GATEWAY_PAYMENT['zarinpal']['callback'],
     "description" => $description,
     "metadata" => [
         "email" => $email,
@@ -52,16 +52,16 @@ if ($err) {
 function verifyTransaction($amount, $id, $order_id){
     
     $Authority = $_GET['Authority'];
-    $data = array("
-    merchant_id" => GATEWAY_PAYMENT['zarinpal']['merchant_id'], 
-    "authority" => $Authority, 
-    "amount" => $amount + 660000,
+    $data = array(
+    "merchant_id" => GATEWAY_PAYMENT['zarinpal']['merchant_id'],
+    "authority" => $Authority,
+    "amount" => $amount,
     "id" => $id,
     "order_id" => $order_id,
-    
+
     );
     $jsonData = json_encode($data);
-    $ch = curl_init('https://sandbox.zarinpal.com/pg/v4/payment/verify.json');
+    $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/verify.json');
     curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v4');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
@@ -70,8 +70,9 @@ function verifyTransaction($amount, $id, $order_id){
         'Content-Type: application/json',
         'Content-Length: ' . strlen($jsonData)
     ));
-    
+
     $result = curl_exec($ch);
+    $err = curl_error($ch);
     curl_close($ch);
     $result = json_decode($result, true);
     if ($err) {
