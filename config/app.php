@@ -1,4 +1,8 @@
 <?php
+// مقادیر پیش‌فرض برای پروداکشن (cPanel) است؛ در محیط‌های دیگر
+// (مثل داکر لوکال) همین مقادیر از فایل .env قابل تغییرند.
+require_once dirname(__DIR__) . '/helpers/env.php';
+
 const PREFIX_TRACKING_CODE =[
     'order'=>'PSO-',
     'product' =>'PSP-'
@@ -42,21 +46,22 @@ const LOCALIZATION = [
 const PREFIX_IMAGE_CODE =[
     'product' =>'IMG-'
 ];
-const  DOCUMENT_ROOT_DOMAIN=[
-    'public'=>'photos.anbaritoys.ir'
-];
 
-const  DOMAIN=[
-    'main'=>'https://anbaritoys.ir/',
-    'public'=>'http://photos.anbaritoys.ir',
-    'document_root'=>'photos.anbaritoys.ir',
-];
+// APP_URL: آدرس کامل سایت اصلی (پروداکشن: https://anbaritoys.ir/)
+// PUBLIC_URL: مبنا برای آدرس فایل‌های استاتیک/عکس‌ها (پروداکشن: سابدامین photos)
+define('DOCUMENT_ROOT_DOMAIN', [
+    'public'=>env('PUBLIC_URL', 'photos.anbaritoys.ir')
+]);
 
-const  GATEWAY_PAYMENT=[
+define('DOMAIN', [
+    'main'=>env('APP_URL', 'https://anbaritoys.ir/'),
+    'public'=>env('PUBLIC_URL', 'http://photos.anbaritoys.ir'),
+    'document_root'=>env('PUBLIC_URL', 'photos.anbaritoys.ir'),
+]);
+
+define('GATEWAY_PAYMENT', [
     'zarinpal' =>[
-    'callback'=>'https://anbaritoys.ir/callback.php',
-    'merchant_id'=> '3dd45331-3bc7-4eac-bb1c-c117b98b6c2a',
+        'callback'=>env('ZARINPAL_CALLBACK', 'https://anbaritoys.ir/callback.php'),
+        'merchant_id'=> env('ZARINPAL_MERCHANT_ID', '3dd45331-3bc7-4eac-bb1c-c117b98b6c2a'),
     ]
-];
-
-
+]);

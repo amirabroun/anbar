@@ -105,7 +105,7 @@ $(document).on('submit','#form_manager_login',function (event) {
                 confirmButtonText:'متوجه شدم!',
             }).then(function (){
                 if (response.status === 200){
-                    location.replace('https://admin.anbaritoys.com/')
+                    location.replace('https://admin.anbaritoys.ir/')
                 }
             })
         },

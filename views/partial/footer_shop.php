@@ -49,18 +49,18 @@
     <button><i class="mdi mdi-settings"></i></button>
     <ul>
         <li class="active" data-path="./assets/css/colors/default.css"><span style="background-color: #f7858d;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/amber-color.css"><span style="background-color: #ffab00;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/blue-color.css"><span style="background-color: #2979ff;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/blue-grey-color.css"><span style="background-color: #607d8b;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/brown-color.css"><span style="background-color: #795548;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/cyan-color.css"><span style="background-color: #00bcd4;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/green-color.css"><span style="background-color: #4caf50;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/indigo-color.css"><span style="background-color: #3f51b5;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/lime-color.css"><span style="background-color: #cddc39;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/orange-color.css"><span style="background-color: #ff9800;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/red-color.css"><span style="background-color: #f44336;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/teal-color.css"><span style="background-color: #009688;"></span></li>
-        <li data-path="https://anbaritoys.ir/assets/css/colors/purple-color.css"><span style="background-color: #9c27b0;"></span></li>
+        <li data-path="/assets/css/colors/amber-color.css"><span style="background-color: #ffab00;"></span></li>
+        <li data-path="/assets/css/colors/blue-color.css"><span style="background-color: #2979ff;"></span></li>
+        <li data-path="/assets/css/colors/blue-grey-color.css"><span style="background-color: #607d8b;"></span></li>
+        <li data-path="/assets/css/colors/brown-color.css"><span style="background-color: #795548;"></span></li>
+        <li data-path="/assets/css/colors/cyan-color.css"><span style="background-color: #00bcd4;"></span></li>
+        <li data-path="/assets/css/colors/green-color.css"><span style="background-color: #4caf50;"></span></li>
+        <li data-path="/assets/css/colors/indigo-color.css"><span style="background-color: #3f51b5;"></span></li>
+        <li data-path="/assets/css/colors/lime-color.css"><span style="background-color: #cddc39;"></span></li>
+        <li data-path="/assets/css/colors/orange-color.css"><span style="background-color: #ff9800;"></span></li>
+        <li data-path="/assets/css/colors/red-color.css"><span style="background-color: #f44336;"></span></li>
+        <li data-path="/assets/css/colors/teal-color.css"><span style="background-color: #009688;"></span></li>
+        <li data-path="/assets/css/colors/purple-color.css"><span style="background-color: #9c27b0;"></span></li>
     </ul>
 </div>
 <!-- end colorPanel -->
@@ -68,19 +68,19 @@
 
 <!-- Core JS Files -->
 <!-- Core JS Files -->
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery-3.4.1.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/popper.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/bootstrap.min.js'></script>
+<script src='/assets/js/vendor/jquery-3.4.1.min.js'></script>
+<script src='/assets/js/vendor/popper.min.js'></script>
+<script src='/assets/js/vendor/bootstrap.min.js'></script>
 <!-- Plugins -->
-<script src='https://anbaritoys.ir/assets/js/vendor/owl.carousel.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.horizontalmenu.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.nice-select.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.fancybox.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/nouislider.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/wNumb.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/ResizeSensor.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/theia-sticky-sidebar.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/sweetalert2.js'></script>
+<script src='/assets/js/vendor/owl.carousel.min.js'></script>
+<script src='/assets/js/vendor/jquery.horizontalmenu.js'></script>
+<script src='/assets/js/vendor/jquery.nice-select.min.js'></script>
+<script src='/assets/js/vendor/jquery.fancybox.min.js'></script>
+<script src='/assets/js/vendor/nouislider.min.js'></script>
+<script src='/assets/js/vendor/wNumb.js'></script>
+<script src='/assets/js/vendor/ResizeSensor.min.js'></script>
+<script src='/assets/js/vendor/theia-sticky-sidebar.min.js'></script>
+<script src='/assets/js/vendor/sweetalert2.js'></script>
 <!-- Main JS File -->
 <script src='./assets/js/main.js'></script>
 
@@ -128,7 +128,7 @@ if (isset($_SESSION['message2'])){
 <!-- google map js -->
 
 <!-- Main JS File -->
-<script src="https://anbaritoys.ir/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 
 </html>

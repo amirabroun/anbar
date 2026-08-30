@@ -9,19 +9,19 @@
     <meta name="msapplication-navbutton-color" content="#f7858d">
     <meta name="apple-mobile-web-app-status-bar-style" content="#f7858d">
     <title>مرحله خرید عنبری توییز</title>
-    <link rel="icon" href="https://anbaritoys.ir/assets/img/logoo.png" type="image/x-icon" />
+    <link rel="icon" href="/assets/img/logoo.png" type="image/x-icon" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
     <!-- Plugins -->
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/jquery.horizontalmenu.css">
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/nouislider.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/jquery.horizontalmenu.css">
+    <link rel="stylesheet" href="/assets/css/vendor/nice-select.css">
+    <link rel="stylesheet" href="/assets/css/vendor/nouislider.min.css">
     <!-- Font Icon -->
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/materialdesignicons.min.css">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/main.css">
-    <link rel="stylesheet" href="https://anbaritoys.ir/assets/css/colors/default.css" id="colorswitch">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/colors/default.css" id="colorswitch">
 
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());

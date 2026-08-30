@@ -17,7 +17,7 @@ if (isset($_POST['action']) && $_POST['action']==='manager_login' ){
             $_SESSION['admin_sing'] = $login['id'];
             $_SESSION['blog'] = "ok";
             setMessage('عملیات موفق','به مدیریت خوش آمدید.     ','success');
-        redirect('http://admin.anbaritoys.com/');
+        redirect('http://admin.anbaritoys.ir/');
 
         }
         setMessage('عملیات ناموفق','اطلاعات معتبر نیست   ','error');

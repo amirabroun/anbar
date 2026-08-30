@@ -39,7 +39,7 @@
                <div class="col-12 text-center pt-2">
                 <div class="header-shopping-logo dt-sl">
                     <a href="#">
-                        <img src="https://anbaritoys.ir/assets/img/logoo.png" alt="لوگو عنبری تویز" style="height:55px;">
+                        <img src="/assets/img/logoo.png" alt="لوگو عنبری تویز" style="height:55px;">
                     </a>
                     <br>
                 </div>

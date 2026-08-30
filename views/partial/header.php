@@ -43,21 +43,21 @@
     ?>
     <title>فروشگاه اسباب بازی Anbari Toys|عنبری توییز</title>
     <!-- Bootstrap -->
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/bootstrap.min.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/bootstrap.min.css'>
     <!-- Plugins -->
 
-    <link rel="icon" href="https://anbaritoys.ir/assets/img/logoo.png" type="image/x-icon" />
+    <link rel="icon" href="/assets/img/logoo.png" type="image/x-icon" />
 
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/owl.carousel.min.css'>
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/jquery.horizontalmenu.css'>
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/nice-select.css'>
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/nouislider.min.css'>
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/fancybox.min.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/owl.carousel.min.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/jquery.horizontalmenu.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/nice-select.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/nouislider.min.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/fancybox.min.css'>
     <!-- Font Icon -->
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/vendor/materialdesignicons.min.css'>
+    <link rel='stylesheet' href='/assets/css/vendor/materialdesignicons.min.css'>
     <!-- Main CSS File -->
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/main.css'>
-    <link rel='stylesheet' href='https://anbaritoys.ir/assets/css/colors/default.css' id='colorswitch'>
+    <link rel='stylesheet' href='/assets/css/main.css'>
+    <link rel='stylesheet' href='/assets/css/colors/default.css' id='colorswitch'>
 </head>
 
 <body>

@@ -8,7 +8,7 @@
                     <div class="dt-sl dt-sn mb-3">
                         <div class="profile-sidebar-header dt-sl">
                             <div class="profile-avatar float-right">
-                                <img src="https://anbaritoys.ir/assets/img/theme/avatar.png" alt="پروفایل عنبری تویز">
+                                <img src="/assets/img/theme/avatar.png" alt="پروفایل عنبری تویز">
                             </div>
                             <div class="profile-header-content mr-3 mt-2 float-right">
                                 <span class="d-block profile-username">

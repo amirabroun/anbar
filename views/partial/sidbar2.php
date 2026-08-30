@@ -12,7 +12,7 @@
                     <input name="search" type='text'
                            placeholder='به فارسی یا انگلیسی یا کد محصول را جستجو کنید…'>
                     <button type="submit" class="btn-search-widget">
-                        <img src="https://anbaritoys.ir/assets/img/theme/search.png" alt="جست و جو در عنبری تویز">
+                        <img src="/assets/img/theme/search.png" alt="جست و جو در عنبری تویز">
                     </button>
                 </form>
             </div>

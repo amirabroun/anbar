@@ -43,7 +43,7 @@ function api(){
                 "categories" => $cat,
                 "image_link" => $image,
                 "image_links" => $images,
-                "page_url" => "https://anbaritoys.com/single-product.php?tracking_code=".$item['tracking_code'],
+                "page_url" => productUrl($item['tracking_code']),
                 "short_desc" => $item['MiniDescription'],
                 "spec" => null,
         ];
