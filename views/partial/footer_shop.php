@@ -48,7 +48,7 @@
 <div id="colorswitch-option">
     <button><i class="mdi mdi-settings"></i></button>
     <ul>
-        <li class="active" data-path="./assets/css/colors/default.css"><span style="background-color: #f7858d;"></span></li>
+        <li class="active" data-path="./assets/css/colors/anbar.css"><span style="background-color: #e63950;"></span></li>
         <li data-path="/assets/css/colors/amber-color.css"><span style="background-color: #ffab00;"></span></li>
         <li data-path="/assets/css/colors/blue-color.css"><span style="background-color: #2979ff;"></span></li>
         <li data-path="/assets/css/colors/blue-grey-color.css"><span style="background-color: #607d8b;"></span></li>

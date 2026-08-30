@@ -1,0 +1,216 @@
+/* ============================================================
+   Anbari Toys — Design Refresh Layer
+   لایه‌ی پولیش سراسری روی تم اصلی؛ بعد از main.css و colors/anbar.css لود می‌شود.
+   پالت: قرمز مرجانی برند + کهربایی سرگرم‌کننده + خاکستری جوهری روی زمینه‌ی گرم
+   ============================================================ */
+
+:root {
+    --anbar-primary: #e63950;
+    --anbar-primary-strong: #cf1f3d;   /* دکمه‌ها — کنتراست کافی با متن سفید */
+    --anbar-primary-deep: #a80f2a;     /* لینک/هاور متنی */
+    --anbar-primary-soft: #fdeef1;     /* پس‌زمینه‌ی بج و تینت‌ها */
+    --anbar-amber: #ffb100;            /* ستاره و بج «ویژه» */
+    --anbar-ink: #24272c;
+    --anbar-muted: #6f7680;
+    --anbar-bg: #fdf8f6;
+    --anbar-card: #ffffff;
+    --anbar-border: #f1e6e2;
+    --anbar-shadow: 0 2px 10px rgba(36, 39, 44, .05);
+    --anbar-shadow-lg: 0 14px 34px rgba(36, 39, 44, .10);
+    --anbar-radius: 14px;
+}
+
+/* ---------- پایه ---------- */
+html { scroll-behavior: smooth; }
+body {
+    background: var(--anbar-bg);
+    color: var(--anbar-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+::selection { background: var(--anbar-primary-soft); color: var(--anbar-primary-deep); }
+
+a { transition: color .18s ease; }
+:focus-visible {
+    outline: 2px solid var(--anbar-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel],
+input[type=number], input[type=search], textarea, select {
+    border-radius: 10px !important;
+    border-color: var(--anbar-border) !important;
+    transition: border-color .18s ease, box-shadow .18s ease;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: var(--anbar-primary) !important;
+    box-shadow: 0 0 0 3px var(--anbar-primary-soft) !important;
+    outline: none;
+}
+
+/* ---------- هدر ---------- */
+header.main-header {
+    background: var(--anbar-card);
+    border-bottom: 1px solid var(--anbar-border);
+}
+header.main-header.fixed { box-shadow: var(--anbar-shadow-lg); }
+header.main-header .main-menu .list > .list-item > a {
+    font-weight: 600;
+    transition: color .18s ease;
+}
+
+/* جستجو: فیلد و دکمه چسبیده و هم‌قد */
+header.main-header .search-area form.search {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--anbar-border);
+    background: #fff;
+    box-shadow: var(--anbar-shadow);
+    transition: box-shadow .18s ease, border-color .18s ease;
+}
+header.main-header .search-area form.search:focus-within {
+    border-color: var(--anbar-primary);
+    box-shadow: 0 0 0 3px var(--anbar-primary-soft);
+}
+header.main-header .search-area form.search input {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+    height: 46px;
+}
+header.main-header .search-area form.search button {
+    background: var(--anbar-primary-strong) !important;
+    color: #fff;
+    height: 46px;
+    border-radius: 0 !important;
+    transition: background .18s ease;
+}
+header.main-header .search-area form.search button:hover { background: var(--anbar-primary-deep) !important; }
+
+/* ---------- دکمه‌ها ---------- */
+.btn { border-radius: 12px; font-weight: 600; }
+.btn-primary-cm, .btn-danger, footer.main-footer .newsletter form .btn {
+    background-color: var(--anbar-primary-strong) !important;
+    border-color: var(--anbar-primary-strong) !important;
+    color: #fff !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(207, 31, 61, .22);
+    transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.btn-primary-cm:hover, .btn-danger:hover, footer.main-footer .newsletter form .btn:hover {
+    background-color: var(--anbar-primary-deep) !important;
+    border-color: var(--anbar-primary-deep) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(207, 31, 61, .28);
+}
+.btn-primary-cm:active { transform: translateY(0); }
+
+/* ---------- کارت محصول ---------- */
+.product-card, .product-item {
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border) !important;
+    border-radius: var(--anbar-radius) !important;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    overflow: hidden;
+}
+.product-card:hover, .product-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--anbar-shadow-lg);
+    border-color: #f6d4da !important;
+}
+.product-card .product-title { line-height: 1.7; }
+.product-card .product-title > a {
+    color: var(--anbar-ink) !important;
+    font-weight: 600;
+    font-size: .92rem;
+}
+.product-card .product-title > a:hover { color: var(--anbar-primary-deep) !important; }
+.product-card .product-price, .product-item--price { font-weight: 700; }
+.discount span {
+    background: var(--anbar-primary-strong) !important;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 2px 10px;
+}
+.product-card .product-addcart .btn, .addCart button {
+    border-radius: 10px;
+}
+
+/* ---------- کارت دسته‌بندی (بنر انتخاب دسته) ---------- */
+.brand-slider .item, .category-slider .item {
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: var(--anbar-radius);
+    padding: 6px;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+.brand-slider .item:hover, .category-slider .item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--anbar-shadow-lg);
+}
+.brand-slider .item img, .category-slider .item img {
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* ---------- اسلایدرها ---------- */
+.product-carousel .owl-nav button, .carousel-lg .owl-nav button,
+.carousel-md .owl-nav button, .category-slider .owl-nav button {
+    background: #fff !important;
+    color: var(--anbar-primary-deep) !important;
+    border-radius: 50% !important;
+    width: 38px !important;
+    height: 38px !important;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.product-carousel .owl-nav button:hover, .carousel-lg .owl-nav button:hover,
+.carousel-md .owl-nav button:hover, .category-slider .owl-nav button:hover {
+    transform: scale(1.08);
+    box-shadow: var(--anbar-shadow-lg);
+}
+.product-carousel .owl-dot span, .widget-suggestion .owl-dot span {
+    width: 22px !important;
+    height: 5px !important;
+    border-radius: 3px !important;
+}
+
+/* ---------- سبد خرید و فرم‌ها ---------- */
+.tab-cart-page a.active { border-bottom-color: var(--anbar-primary) !important; }
+.checkout-steps li.active::before { background-color: var(--anbar-primary) !important; }
+
+/* ---------- فوتر ---------- */
+footer.main-footer {
+    background: var(--anbar-card);
+    border-top: 1px solid var(--anbar-border);
+    margin-top: 3rem;
+}
+footer.main-footer .socials .footer-social ul li a {
+    border-radius: 10px;
+    transition: background .18s ease, color .18s ease;
+}
+footer.main-footer .back-to-top .icon { color: var(--anbar-primary) !important; }
+
+/* ---------- بج‌های عمومی ---------- */
+.badge, .promotion-badge { border-radius: 8px; }
+.rating--general .rating-rate {
+    background-color: var(--anbar-amber) !important;
+    color: #4a3200;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+/* ---------- دسترس‌پذیری و حرکت ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .product-card:hover, .product-item:hover, .brand-slider .item:hover { transform: none; }
+}
