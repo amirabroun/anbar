@@ -76,7 +76,7 @@
                                             ?>
                                             <a href='<?php echo cagegorystUrl($gory['id'])?>'>
                                                     <?php
-                                                    if ($_GET['id'] === $gory['id']){
+                                                    if (($_GET['id'] ?? null) === $gory['id']){
                                                         ?>
                                                         <input style="margin-top: 10px;" type="checkbox" id="coding" name="interest" value="coding" checked>
                                                         <label class="label" style="font-size: 15px;color: #333333;"><?php echo $gory['title'] ?></label>
@@ -102,7 +102,7 @@
                     </div>
 
                     <?php
-                    $categoryzero = selectCategoryzero($_GET['id']);
+                    $categoryzero = selectCategoryzero($_GET['id'] ?? null);
                     if ($categoryzero){
                         ?>
                     <div class="card">

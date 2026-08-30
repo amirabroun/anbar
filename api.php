@@ -14,7 +14,7 @@ function api(){
         
         $cat = [];
         $getCategory = selectcategoryyOeser($item['id']);
-        foreach ($getCategory as $categoryys){
+        foreach (($getCategory ?: []) as $categoryys){
             $getCategorys = selectcategoryy($categoryys['category_id']);
             $cat[] = $getCategorys['title'] ;
         }

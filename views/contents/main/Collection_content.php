@@ -121,7 +121,7 @@
 
                             <div class="row mb-3 mx-0 px-res-0">
                                 <?php
-                                $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id']);
+                                $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id'] ?? null);
                                 if ($getcategoryByCollectionInn){
                                     foreach ($getcategoryByCollectionInn as $getcategoryByCollectionInnnnn)
                                 $category = getcategoryByCollection($getcategoryByCollectionInnnnn['id']);
@@ -206,7 +206,7 @@
 
                         <div class="row mb-3 mx-0 px-res-0">
                             <?php
-/*                            $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id']);
+/*                            $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id'] ?? null);
                             if ($getcategoryByCollectionInn){
                                 foreach ($getcategoryByCollectionInn as $getcategoryByCollectionInnnnn)
                                     $category = getcategoryByCollection($getcategoryByCollectionInnnnn['id']);
@@ -292,7 +292,7 @@
 
                         <div class="row mb-3 mx-0 px-res-0">
                             <?php
-/*                            $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id']);
+/*                            $getcategoryByCollectionInn = getcategoryByCollectionInn($_GET['id'] ?? null);
                             if ($getcategoryByCollectionInn){
                                 foreach ($getcategoryByCollectionInn as $getcategoryByCollectionInnnnn)
                                     $category = getcategoryByCollection($getcategoryByCollectionInnnnn['id']);

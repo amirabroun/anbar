@@ -6,8 +6,8 @@ if (pagename()==='profile'){
         unset($_SESSION['massageLogin']);
     }
 
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -27,8 +27,8 @@ if (pagename()==='profile'){
 }
 
 if (pagename()==='profile-interest'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -48,8 +48,8 @@ if (pagename()==='profile-interest'){
 }
 
 if (pagename()==='profile-sendMassege'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -68,8 +68,8 @@ if (pagename()==='profile-sendMassege'){
     }
 }
 if (pagename()==='profile-additional-info'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -88,8 +88,8 @@ if (pagename()==='profile-additional-info'){
     }
 }
 if (pagename()==='profile-addresses'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -108,8 +108,8 @@ if (pagename()==='profile-addresses'){
     }
 }
 if (pagename()==='profile-factor'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -129,8 +129,8 @@ if (pagename()==='profile-factor'){
 }
 
 if (pagename()==='profile-single-factor'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);
@@ -150,8 +150,8 @@ if (pagename()==='profile-single-factor'){
 }
 
 if (pagename()==='profile-question'){
-    $user_id =getIdUsers($_SESSION['user_sing']);
-    $CheckUser = getCheckUser($_GET['mobile'],$user_id['id']);
+    $user_id = authUser() ? getIdUsers($_SESSION['user_sing']) : false;
+    $CheckUser = ($user_id && isset($_GET['mobile'])) ? getCheckUser($_GET['mobile'], $user_id['id']) : false;
     if ($CheckUser) {
         if (isset($_GET['mobile'])) {
             $details_user = getDetailsUsers($_GET['mobile']);

@@ -1,10 +1,10 @@
 <?php
 if (pagename() === 'shopping') {
-    $user_id = getIdUsers($_SESSION['user_sing']);
     if (!authUser()) {
         setMessage('عملیات غیر مجاز', 'برای دسترسی  به این صفحه ابتدا باید لاگین کنید', 'error');
         redirect('/login.php');
     }
+    $user_id = getIdUsers($_SESSION['user_sing']);
 
     if (!authUserCart() || count(authUserCart()['products']) === 0) {
         setMessage('عملیات غیر مجاز', 'برای ادامه خرید نباید سبد خرید شما خالی باشد.', 'error');
