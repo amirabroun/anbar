@@ -844,3 +844,180 @@ footer.main-footer .copyright {
     .category-card__img, .age-card__img { width: 64px; height: 64px; }
     .feature-bar__text strong { font-size: .8rem; }
 }
+
+/* ============================================================
+   صفحه محصول تکی — بازطراحی
+   ============================================================ */
+
+/* ---------- برِدکرامب ---------- */
+.title-breadcrumb-special .breadcrumb {
+    background: transparent;
+    padding: 0 0 4px;
+    margin-bottom: 4px;
+}
+.title-breadcrumb-special .breadcrumb nav a {
+    color: var(--anbar-muted);
+    font-size: .85rem;
+    font-weight: 500;
+}
+.title-breadcrumb-special .breadcrumb nav a:hover { color: var(--anbar-primary-deep); }
+
+/* ---------- گالری محصول ---------- */
+.product-gallery {
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: var(--anbar-shadow);
+}
+.product-gallery .product-carousel .gallery-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdf3f0;
+    border-radius: 12px;
+    min-height: 320px;
+    overflow: hidden;
+}
+.product-gallery .product-carousel .gallery-item img {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}
+.product-gallery .product-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+.product-gallery .product-thumbnails li {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--anbar-border);
+    background: #fff;
+    cursor: pointer;
+    transition: border-color .18s ease, transform .18s ease;
+}
+.product-gallery .product-thumbnails li:hover { border-color: #f6b8c2; }
+.product-gallery .product-thumbnails li.active { border-color: var(--anbar-primary); }
+.product-gallery .product-thumbnails li a { display: block; width: 100%; height: 100%; }
+.product-gallery .product-thumbnails li img { width: 100%; height: 100%; object-fit: contain; }
+
+/* دکمه علاقه‌مندی */
+.gallery-options .add-favorites {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--anbar-border);
+    box-shadow: var(--anbar-shadow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: transform .18s ease, color .18s ease;
+}
+.gallery-options .add-favorites:hover { transform: scale(1.1); }
+.gallery-options .tooltip-option { display: none; }
+
+/* ---------- اطلاعات محصول ---------- */
+.product-info { padding: 8px 0 0 12px; }
+.product-info .product-title h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.7;
+    color: var(--anbar-ink);
+    margin-bottom: 10px;
+}
+.product-params ul { list-style: none; padding: 0; margin: 12px 0; }
+.product-params ul li {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--anbar-border);
+    font-size: .9rem;
+}
+.product-params ul li span:first-child { color: var(--anbar-muted); font-weight: 600; min-width: 96px; }
+.product-params ul li span:last-child { color: var(--anbar-ink); font-weight: 700; }
+
+/* توضیحات کوتاه */
+.product-info > span.text-dark {
+    display: block;
+    background: var(--anbar-amber-soft);
+    border: 1px solid #ffe7b8;
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: var(--anbar-ink) !important;
+    font-size: .9rem;
+    margin: 12px 0;
+}
+
+/* کد محصول و قیمت — حذف نوار لهجه و بازچینی */
+.product-info .section-title { padding: 0; }
+.product-info .section-title h2 { padding-right: 0; font-size: .95rem; font-weight: 700; }
+.product-info .section-title h2::before { display: none; }
+.product-info .section-title .price { display: inline-flex; flex-direction: column; gap: 4px; margin-top: 6px; }
+.product-info .section-title .price strong { font-size: 1.6rem; font-weight: 800; color: var(--anbar-primary-strong); }
+.product-info .section-title .price del { color: var(--anbar-muted); font-size: .9rem; }
+
+/* دکمه افزودن به سبد */
+.product-info .addCartSingle .btn-primary-cm {
+    padding: 13px 34px;
+    font-size: 1.05rem;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.product-info .addCartSingle .btn-primary-cm img { width: 22px; filter: brightness(0) invert(1); }
+
+/* ---------- تب‌ها ---------- */
+.tabs-product-info .ah-tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid var(--anbar-border);
+    padding-bottom: 14px;
+}
+.tabs-product-info .ah-tab-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--anbar-muted);
+    background: #fff;
+    border: 1px solid var(--anbar-border);
+    transition: all .18s ease;
+}
+.tabs-product-info .ah-tab-item:hover { color: var(--anbar-primary-deep); border-color: #f6b8c2; }
+.tabs-product-info .ah-tab-item[data-ah-tab-active="true"] {
+    background: var(--anbar-grad-primary);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(207, 31, 61, .25);
+}
+
+/* محتوای تب */
+.ah-tab-content-wrapper.product-info {
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--anbar-shadow);
+    margin-top: 16px;
+}
+.comments-area { border-radius: 12px; }
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width: 768px) {
+    .product-info { padding-left: 0; margin-top: 20px; }
+    .product-gallery .product-carousel .gallery-item { min-height: 240px; }
+}

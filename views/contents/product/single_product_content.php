@@ -356,7 +356,6 @@
                                     }
                                     }else{
                                         ?>
-                                    }
                                         <div class="comment-body shadow">
                                         <div class="comment-author">
                                             <span class="icon-comment">?</span>
@@ -569,54 +568,29 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                         ?>
                                         <div class='item'>
                                             <div class='product-card'>
-                                                <div class="product-head">
-
-                                                    <?php
-
-                                                    if ($product['stock'] == 0) {
-                                                        ?>
-                                                        <div class="discount">
-                                                            <span>اتمام موجودی</span>
-                                                        </div>
-                                                        <br>
-                                                        <br>
-                                                        <?php
-                                                    }
-
-                                                    else if (!empty($product['price_discounted'])) {
-                                                        ?>
-                                                        <div class="discount">
-                                                    <span><?php $cal_percentage = $product['price'] - ($product['price_discounted']);
-                                                        echo cal_percentage($cal_percentage, $product['price']) . '%<br/>'; ?></span>
-                                                        </div>
-                                                        <br>
-                                                        <?php
-                                                    } else {
-                                                        echo '<br><br>';
-                                                    }
-                                                    ?>
-
-                                                </div>
-
-
-                                                <a class='product-thumb' target="_blank"
+<a class='product-thumb' target="_blank"
                                                    href='<?php echo productUrl($product['tracking_code']) ?>'>
                                                     <?php
 
                                                     if (!empty($product['photo_name'])) {
                                                         ?>
-                                                        <img height="150" width="150"
+                                                        <img loading="lazy" decoding="async" height="150" width="150"
                                                              src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name']) ?>'
                                                              alt='<?php echo $product['title'] ?>'>
                                                         <?php
                                                     } else {
                                                         ?>
-                                                        <img height="120" width="150"
+                                                        <img loading="lazy" decoding="async" height="120" width="150"
                                                              src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                                              alt='<?php echo $product['title'] ?>'>
                                                         <?php
                                                     }
                                                     ?>
+                                                <?php if ((int)$product['stock'] === 0): ?>
+                                                    <span class="product-badge product-badge--out">اتمام موجودی</span>
+                                                <?php elseif (!empty($product['price_discounted']) && $product['price_discounted'] > 0): ?>
+                                                    <span class="product-badge"><?php echo cal_percentage($product['price'] - $product['price_discounted'], $product['price']) ?>%</span>
+                                                <?php endif; ?>
                                                 </a>
                                                 <div class='product-card-body'>
                                                     <h5 class='product-title'>
@@ -639,81 +613,23 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                         }
                                         ?> </span>
                                                 </div>
-                                                <div class="row d-flex justify-content-center align-items-center mt-3">
-
-                                                    <div class="addCartIndex ml-1" data-product-id="<?php echo $product['tracking_code']?>">
-                                                        <!--<input type="hidden" name="action" value="add_to_cartIndex">-->
-                                                        <input type="hidden" name="product"
-                                                               value="<?php echo $product['tracking_code']; ?>">
-                                                        <button class="btn btn-primary btn-Add-Cart-Index">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                                 fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
-                                                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
-                                                            </svg>
+<div class="product-card-actions">
+                                                    <div class="addCartIndex" data-product-id="<?php echo $product['tracking_code']?>">
+                                                        <input type="hidden" name="product" value="<?php echo $product['tracking_code']; ?>">
+                                                        <button class="btn-primary-cm btn-sm-cm btn-Add-Cart-Index" title="افزودن به سبد خرید">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16"><path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/></svg>
                                                         </button>
                                                     </div>
-
-                                                    <div class="addInterestIndex ml-1" data-product-id="<?php echo $product['id']?>">
+                                                    <div class="addInterestIndex" data-product-id="<?php echo $product['id']?>">
                                                         <input type="hidden" name="action" value="interest">
-                                                        <?php
-                                                        if (isset($_SESSION['user_sing'])) {
-                                                            $user_id = getIdUsers($_SESSION['user_sing']);
-                                                            $single_id = $product['id'];
-                                                            $select_one_product = select_one_product($single_id);
-                                                            if ($select_one_product) {
-                                                                ?>
-                                                                <button
-                                                                        type="submit" class="btn btn-danger  btn-Add-interest-Index" name="id"
-                                                                        value="<?php echo $product['id'] ?>">
-                                                                    <svg style="margin-top: 3px;color: #aeaeae"
-                                                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                                         fill="currentColor" class="bi bi-heart-fill"
-                                                                         viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd"
-                                                                              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                    </svg>
-                                                                </button>
-                                                                <?php
-                                                            }
-                                                            if (!$select_one_product) {
-                                                                ?>
-                                                                <button
-                                                                        type="submit" class="btn btn-danger btn-Add-interest-Index" name="id"
-                                                                        value="<?php echo $product['id'] ?>">
-                                                                    <svg style="margin-top: 3px" xmlns="http://www.w3.org/2000/svg"
-                                                                         width="20" height="20" fill="currentColor"
-                                                                         class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd"
-                                                                              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                    </svg>
-                                                                </button>
-                                                                <?php
-                                                            }
-                                                        } else {
-                                                            ?>
-                                                            <button type="submit" class="btn btn-danger btn-Add-interest-Index"
-                                                                    name="id" value="<?php echo $product['id'] ?>">
-                                                                <svg style="margin-top: 3px" xmlns="http://www.w3.org/2000/svg"
-                                                                     width="20" height="20" fill="currentColor" class="bi bi-heart-fill"
-                                                                     viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd"
-                                                                          d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                </svg>
-                                                            </button>
-                                                            <?php
-                                                        }
-                                                        ?>
+                                                        <?php $isFav = isset($_SESSION['user_sing']) && select_one_product($product['id']); ?>
+                                                        <button type="submit" class="btn-fav<?php echo $isFav ? ' is-active' : '' ?> btn-Add-interest-Index" name="id" value="<?php echo $product['id'] ?>" title="افزودن به علاقه‌مندی">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>
+                                                        </button>
                                                     </div>
-
-                                                    <a class="btn btn-success pointer-event" data-toggle="modal"
-                                                       data-target="#exampleModal<?php echo $product['id'] ?>">
-                                                        <svg style="margin-top: 4px" xmlns="http://www.w3.org/2000/svg"
-                                                             width="20" height="20" fill="currentColor" class="bi bi-share-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
-                                                        </svg>
+                                                    <a class="btn-share" data-toggle="modal" data-target="#exampleModal<?php echo $product['id'] ?>" title="اشتراک‌گذاری">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
                                                     </a>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -782,54 +698,29 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                         ?>
                                         <div class='item'>
                                             <div class='product-card'>
-                                                <div class="product-head">
-
-                                                    <?php
-
-                                                    if ($product['stock'] == 0) {
-                                                        ?>
-                                                        <div class="discount">
-                                                            <span>اتمام موجودی</span>
-                                                        </div>
-                                                        <br>
-                                                        <br>
-                                                        <?php
-                                                    }
-
-                                                    else if (!empty($product['price_discounted'])) {
-                                                        ?>
-                                                        <div class="discount">
-                                                    <span><?php $cal_percentage = $product['price'] - ($product['price_discounted']);
-                                                        echo cal_percentage($cal_percentage, $product['price']) . '%<br/>'; ?></span>
-                                                        </div>
-                                                        <br>
-                                                        <?php
-                                                    } else {
-                                                        echo '<br><br>';
-                                                    }
-                                                    ?>
-
-                                                </div>
-
-
-                                                <a class='product-thumb' target="_blank"
+<a class='product-thumb' target="_blank"
                                                    href='<?php echo productUrl($product['tracking_code']) ?>'>
                                                     <?php
 
                                                     if (!empty($product['photo_name'])) {
                                                         ?>
-                                                        <img height="150" width="150"
+                                                        <img loading="lazy" decoding="async" height="150" width="150"
                                                              src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name']) ?>'
                                                              alt='<?php echo $product['title'] ?>'>
                                                         <?php
                                                     } else {
                                                         ?>
-                                                        <img height="120" width="150"
+                                                        <img loading="lazy" decoding="async" height="120" width="150"
                                                              src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                                              alt='<?php echo $product['title'] ?>'>
                                                         <?php
                                                     }
                                                     ?>
+                                                <?php if ((int)$product['stock'] === 0): ?>
+                                                    <span class="product-badge product-badge--out">اتمام موجودی</span>
+                                                <?php elseif (!empty($product['price_discounted']) && $product['price_discounted'] > 0): ?>
+                                                    <span class="product-badge"><?php echo cal_percentage($product['price'] - $product['price_discounted'], $product['price']) ?>%</span>
+                                                <?php endif; ?>
                                                 </a>
                                                 <div class='product-card-body'>
                                                     <h5 class='product-title'>
@@ -852,81 +743,23 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                         }
                                         ?> </span>
                                                 </div>
-                                                <div class="row d-flex justify-content-center align-items-center mt-3">
-
-                                                    <div class="addCartIndex ml-1" data-product-id="<?php echo $product['tracking_code']?>">
-                                                        <!--<input type="hidden" name="action" value="add_to_cartIndex">-->
-                                                        <input type="hidden" name="product"
-                                                               value="<?php echo $product['tracking_code']; ?>">
-                                                        <button class="btn btn-primary btn-Add-Cart-Index">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                                 fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
-                                                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
-                                                            </svg>
+<div class="product-card-actions">
+                                                    <div class="addCartIndex" data-product-id="<?php echo $product['tracking_code']?>">
+                                                        <input type="hidden" name="product" value="<?php echo $product['tracking_code']; ?>">
+                                                        <button class="btn-primary-cm btn-sm-cm btn-Add-Cart-Index" title="افزودن به سبد خرید">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16"><path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/></svg>
                                                         </button>
                                                     </div>
-
-                                                    <div class="addInterestIndex ml-1" data-product-id="<?php echo $product['id']?>">
+                                                    <div class="addInterestIndex" data-product-id="<?php echo $product['id']?>">
                                                         <input type="hidden" name="action" value="interest">
-                                                        <?php
-                                                        if (isset($_SESSION['user_sing'])) {
-                                                            $user_id = getIdUsers($_SESSION['user_sing']);
-                                                            $single_id = $product['id'];
-                                                            $select_one_product = select_one_product($single_id);
-                                                            if ($select_one_product) {
-                                                                ?>
-                                                                <button
-                                                                        type="submit" class="btn btn-danger  btn-Add-interest-Index" name="id"
-                                                                        value="<?php echo $product['id'] ?>">
-                                                                    <svg style="margin-top: 3px;color: #aeaeae"
-                                                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                                         fill="currentColor" class="bi bi-heart-fill"
-                                                                         viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd"
-                                                                              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                    </svg>
-                                                                </button>
-                                                                <?php
-                                                            }
-                                                            if (!$select_one_product) {
-                                                                ?>
-                                                                <button
-                                                                        type="submit" class="btn btn-danger btn-Add-interest-Index" name="id"
-                                                                        value="<?php echo $product['id'] ?>">
-                                                                    <svg style="margin-top: 3px" xmlns="http://www.w3.org/2000/svg"
-                                                                         width="20" height="20" fill="currentColor"
-                                                                         class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd"
-                                                                              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                    </svg>
-                                                                </button>
-                                                                <?php
-                                                            }
-                                                        } else {
-                                                            ?>
-                                                            <button type="submit" class="btn btn-danger btn-Add-interest-Index"
-                                                                    name="id" value="<?php echo $product['id'] ?>">
-                                                                <svg style="margin-top: 3px" xmlns="http://www.w3.org/2000/svg"
-                                                                     width="20" height="20" fill="currentColor" class="bi bi-heart-fill"
-                                                                     viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd"
-                                                                          d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                                                </svg>
-                                                            </button>
-                                                            <?php
-                                                        }
-                                                        ?>
+                                                        <?php $isFav = isset($_SESSION['user_sing']) && select_one_product($product['id']); ?>
+                                                        <button type="submit" class="btn-fav<?php echo $isFav ? ' is-active' : '' ?> btn-Add-interest-Index" name="id" value="<?php echo $product['id'] ?>" title="افزودن به علاقه‌مندی">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>
+                                                        </button>
                                                     </div>
-
-                                                    <a class="btn btn-success pointer-event" data-toggle="modal"
-                                                       data-target="#exampleModal<?php echo $product['id'] ?>">
-                                                        <svg style="margin-top: 4px" xmlns="http://www.w3.org/2000/svg"
-                                                             width="20" height="20" fill="currentColor" class="bi bi-share-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
-                                                        </svg>
+                                                    <a class="btn-share" data-toggle="modal" data-target="#exampleModal<?php echo $product['id'] ?>" title="اشتراک‌گذاری">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
                                                     </a>
-
                                                 </div>
                                             </div>
                                         </div>
