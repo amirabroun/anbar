@@ -10,7 +10,6 @@
     </div>
     <div class="container anbar-hero-inner">
         <div class="anbar-hero-copy">
-            <span class="hero-kicker">دنیای اسباب‌بازی عنبری تویز</span>
             <h1 class="hero-title">شادی کودکت رو <em>هديه</em> کن!</h1>
             <p class="hero-sub">بیش از ۷۰۰ اسباب‌بازی انتخاب‌شده برای هر سن و سلیقه — با ارسال سریع و ضمانت اصالت کالا.</p>
             <div class="hero-actions">
