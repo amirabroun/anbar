@@ -657,3 +657,190 @@ footer.main-footer .copyright {
     .product-card .product-thumb { min-height: 120px; margin: 8px; }
     .section-title h2, .title-wide h2 { font-size: 1.15rem; }
 }
+
+/* ============================================================
+   صفحه اصلی — بازطراحی کامل
+   ============================================================ */
+
+.home-section { margin-bottom: 2.75rem; }
+
+/* ---------- نوار اعتماد ---------- */
+.feature-bar { margin: 1.75rem 0 2.75rem; }
+.feature-bar .row > [class*="col-"] { padding: 6px; }
+.feature-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    height: 100%;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.feature-bar__item:hover { transform: translateY(-3px); box-shadow: var(--anbar-shadow-md); }
+.feature-bar__icon {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--anbar-primary-soft);
+    color: var(--anbar-primary-deep);
+}
+.feature-bar__text { display: flex; flex-direction: column; line-height: 1.5; }
+.feature-bar__text strong { font-size: .9rem; font-weight: 800; color: var(--anbar-ink); }
+.feature-bar__text span { font-size: .78rem; color: var(--anbar-muted); }
+
+/* ---------- کارت دسته‌بندی و سن ---------- */
+.category-card,
+.age-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: 16px;
+    padding: 16px 8px;
+    height: 100%;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.category-card:hover,
+.age-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--anbar-shadow-lg);
+    border-color: #f6d4da;
+}
+.category-card__img,
+.age-card__img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px;
+    background: #fdf3f0;
+}
+.age-card__img { background: #fff6e6; }
+.category-card__img img,
+.age-card__img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+.category-card:hover .category-card__img img,
+.age-card:hover .age-card__img img { transform: scale(1.08); }
+.category-card__title,
+.age-card__title {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--anbar-ink);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ---------- کارت برند ---------- */
+.brand-slider .item { padding: 6px; }
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--anbar-card);
+    border: 1px solid var(--anbar-border);
+    border-radius: 16px;
+    padding: 16px 8px;
+    height: 100%;
+    box-shadow: var(--anbar-shadow);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.brand-card:hover { transform: translateY(-4px); box-shadow: var(--anbar-shadow-lg); border-color: #f6d4da; }
+.brand-card__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    background: #fafafa;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px;
+}
+.brand-card__img img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform .3s ease; }
+.brand-card:hover .brand-card__img img { transform: scale(1.06); }
+.brand-card__title { font-size: .85rem; font-weight: 700; color: var(--anbar-ink); text-align: center; }
+
+/* ---------- بج محصول ---------- */
+.product-card .product-thumb { position: relative; }
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--anbar-grad-primary);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(207, 31, 61, .25);
+    z-index: 2;
+}
+.product-badge--out { background: #8a929b; box-shadow: none; }
+.product-price del { display: block; color: var(--anbar-muted); font-size: .78rem; }
+.product-price strong { display: block; font-size: 1rem; font-weight: 800; color: var(--anbar-ink); }
+.product-price--na { font-style: normal; color: var(--anbar-muted); font-weight: 600; }
+
+/* ---------- بنر هدیه (CTA) ---------- */
+.home-cta {
+    background: var(--anbar-grad-primary);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    color: #fff;
+    margin: 2.75rem 0;
+    box-shadow: 0 14px 30px rgba(207, 31, 61, .25);
+}
+.home-cta__content { display: flex; align-items: center; gap: 16px; }
+.home-cta__icon {
+    flex: none;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.home-cta h3 { color: #fff; font-weight: 800; font-size: 1.35rem; margin-bottom: 6px; }
+.home-cta p { color: rgba(255, 255, 255, .92); margin: 0; }
+.home-cta__btn {
+    background: #fff;
+    color: var(--anbar-primary-strong) !important;
+    border-radius: 30px;
+    font-weight: 800;
+    padding: 12px 28px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.home-cta__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .2);
+    color: var(--anbar-primary-deep) !important;
+}
+
+/* ---------- ریسپانسیو صفحه اصلی ---------- */
+@media (max-width: 576px) {
+    .home-cta { padding: 1.5rem 1.25rem; text-align: center; }
+    .home-cta__content { flex-direction: column; gap: 12px; }
+    .home-cta .text-left { text-align: center !important; margin-top: 14px; }
+    .category-card__img, .age-card__img { width: 64px; height: 64px; }
+    .feature-bar__text strong { font-size: .8rem; }
+}
