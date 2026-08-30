@@ -153,7 +153,7 @@
                                 <div class="col-lg-2 text-center">
 
                                     <label>تصویر <?php echo $photo['sort'] ?></label>
-                                    <div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(<?php echo normalizedPath('http://photos.anbaritoys.ir/',$photo['src'],$photo['name']) ?>)">
+                                    <div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(<?php echo normalizedPath(DOMAIN['public'],$photo['src'],$photo['name']) ?>)">
                                         <div class="image-input-wrapper"></div>
                                       
                                         <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="" data-original-title="Cancel avatar">

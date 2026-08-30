@@ -1,7 +1,7 @@
 <?php
-const PREFIX_TRACKING_CODE =[
-    'order'=>'PSO-',
-    'product' =>'PSP-'
+const PREFIX_TRACKING_CODE = [
+    'order' => 'PSO-',
+    'product' => 'PSP-'
 ];
 const LOCALIZATION = [
     'rules' => [
@@ -33,20 +33,19 @@ const LOCALIZATION = [
         'required' => 'خط ثابت',
     ]
 ];
-/*
-const PREFIX_IMAGE_CODE =[
-    'product' =>'IMG-'
+const PREFIX_IMAGE_CODE = [
+    'product' => 'IMG-'
 ];
-const  DOCUMENT_ROOT_DOMAIN=[
-    'public'=>'../../photos.anbaritoys.ir/'
-];
-
-const  DOMAIN=[
-    'main'=>'https://anbaritoys.ir/',
-    'public'=>'https://photos.anbaritoys.ir',
-    'document_root'=>'../photos.anbaritoys.ir',
+// آدرس‌های دامنه‌ها — در صورت تغییر محیط، فقط همین‌جا ویرایش شود
+const  DOCUMENT_ROOT_DOMAIN = [
+    'public' => '../photos.anbaritoys.ir/'
 ];
 
-*/
+const  DOMAIN = [
+    'main' => 'https://anbaritoys.ir/',
+    'public' => 'https://photos.anbaritoys.ir',
+    'document_root' => '../photos.anbaritoys.ir',
+];
+
 
 const SECRET_TOKEN = "AmirRezaSiteSecret0001290109000102";

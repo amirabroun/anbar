@@ -1,41 +1,27 @@
 <!-- Start main-content -->
 <?php
+/**
+ * @var array  $cart_products            محصولات سبد خرید از سشن
+ * @var array  $total_amount            مبلغ کل
+ * @var array  $amount_payable          مبلغ قابل پرداخت
+ * @var mixed  $change_cart_foll        مبلغ قابل پرداخت (از CartRequest.php)
+ * @var mixed  $change_cart_foll_total  مبلغ کل (از CartRequest.php)
+ * @var mixed  $price_discount_cart_fool سود خرید (از CartRequest.php)
+ */
 $cart_products = $_SESSION['cart_user']['products'];
 $total_amount = $_SESSION['cart_user']['summary']['total_amount'];
 $amount_payable = $_SESSION['cart_user']['summary']['amount_payable'];
 $number_product=count($cart_products);
 ?>
 
-<!-- Start main-content -->
-<main style="display: none" id="cart-empity" class="main-content dt-sl mt-4 mb-3">
-    <div class="container main-container">
-
-        <div class="row">
-            <div class="col-12">
-                <div class="dt sl dt-sn pt-3 pb-5">
-                    <div class="cart-page cart-empty">
-                        <div class="circle-box-icon">
-                            <i class="mdi mdi-cart-remove"></i>
-                        </div>
-                        <p class="cart-empty-title">سبد خرید شما خالیست!</p>
-                        <p>می‌توانید برای مشاهده محصولات بیشتر به صفحه زیر بروید:</p>
-                        <div class="cart-empty-links mb-5">
-
-                            <a href="products.php" class="border-bottom-dt">همه محصولات</a>
-
-                        </div>
-                        <a href="/" class="btn-primary-cm">ادامه خرید در پاسکال شاپ</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</main>
-<!-- End main-content -->
-
 <main style="display: block" id="cart-noEmpity" class="main-content dt-sl mt-4 mb-3">
     <div class="container main-container">
+
+        <div class="title-breadcrumb-special dt-sl mb-3">
+            <div class="section-title text-sm-title title-wide">
+                <h2><i class="mdi mdi-cart-outline"></i> سبد خرید</h2>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2 px-0">
@@ -58,7 +44,7 @@ $number_product=count($cart_products);
                             <div class="col-xl-9 col-lg-8 col-12 px-0">
                                 <div class="table-responsive checkout-content dt-sl">
                                     <div class="checkout-header checkout-header--express">
-                                        <span class="checkout-header-title">ارسال عادی</span>
+                                        <span class="checkout-header-title"><i class="mdi mdi-truck-fast-outline"></i> ارسال عادی</span>
                                         <span class="checkout-header-extra-info"> کالا(<?php echo $number_product?>)</span>
                                     </div>
 
@@ -94,15 +80,15 @@ $number_product=count($cart_products);
                                                         <input type="hidden" class="final_amount_foll_discount" data-price4="<?php echo $price_discount_cart_fool ?>">
 
                                                         <!--<input type="hidden" name="product_id" data-product-id="<?php /*echo $product['id']*/?>" value="<?php /*echo $product['id']*/?>">-->
-                                                        <button  type="button" class="checkout-btn-remove btn btn-danger" style="background-color: #ff7a7a;margin-top: -10px;border-radius: 100%;">
-                                                            <svg style="margin-top: -11px;margin-right: -2px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <button  type="button" class="checkout-btn-remove cart-btn-remove">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                                                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                                             </svg>
                                                         </button>
 
                                                         <button id="hangout-click<?php echo $product['id']?>" type="submit" class="Delete-Cart-Foll" style="opacity: 0%">
-                                                            <svg style="margin-top: -11px;margin-right: -2px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                                                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                                             </svg>
@@ -406,75 +392,7 @@ $number_product=count($cart_products);
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                         aria-labelledby="nav-profile-tab">
-                        <div class="row">
-                            <div class="col-xl-9 col-lg-8 col-12 px-0">
-                                <div class="table-responsive checkout-content dt-sl">
-                                    <div class="checkout-header checkout-header--express">
-                                        <span class="checkout-header-title">ارسال عادی</span>
-                                        <span class="checkout-header-extra-info">(2 کالا)</span>
-                                        <a class="checkout-add-all-to-cart">
-                                            افزودن همه به سبد خرید
-                                        </a>
                                     </div>
-                                    <table class="table table-cart">
-                                        <tbody>
-                                        <tr class="checkout-item">
-                                            <td>
-                                                <img src="/assets/img/cart/04.jpg" alt="">
-                                                <button class="checkout-btn-remove">&times;</button>
-                                            </td>
-                                            <td class="text-right">
-                                                <a href="#">
-                                                    
-                                                </a>
-                                                <p class="checkout-dealer">
-                                                </p>
-                                             
-                                                <div class="checkout-variant checkout-variant--color">
-                                                    <span class="checkout-variant-title">رنگ :</span>
-                                                    <span class="checkout-variant-value">
-                                                                    مشکی
-                                                                    <div class="checkout-variant-shape"
-                                                                         style="background-color:#212121"></div>
-                                                                </span>
-                                                </div>
-                                                <a class="checkout-save-for-later">افزودن به سبد خرید</a>
-                                            </td>
-                                            <td>
-                                                <p class="mb-0">تعداد</p>
-                                                <div class="number-input">
-                                                    <button
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                                                    <input class="quantity" min="0" name="quantity"
-                                                           value="1" type="number">
-                                                    <button
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                            class="plus"></button>
-                                                </div>
-                                            </td>
-                                            <td><strong>۱۲,۲۰۰,۰۰۰ تومان</strong></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-12 w-res-sidebar sticky-sidebar">
-                                <div class="dt-sn">
-                                    <div class="section-title text-sm-title title-wide mb-1 no-after-title-wide mb-2">
-                                        <h2 class="text-dark">لیست خرید بعدی چیست؟</h2>
-                                    </div>
-                                    <p class="text-secondary text-justify">
-                                        شما می‌توانید محصولاتی که به سبد خرید
-                                        خود افزوده اید و موقتا قصد خرید آن‌ها را ندارید، در لیست خرید بعدی خود قرار داده و
-                                        هر زمان مایل بودید آن‌ها را مجدداً به سبد خرید اضافه کرده و خرید آن‌ها را تکمیل کنید.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
