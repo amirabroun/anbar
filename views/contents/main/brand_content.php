@@ -11,7 +11,7 @@
         $getLastProductsPriseZero=getLastProductsByBrandIsPriseZero($_GET['id']);
         $getLastProductsPriseFool=getLastProductsByBrandIsPriseFool($_GET['id']);
         $categori_name = getbrand($_GET['id']);
-        $categori_name_org = $categori_name["title"];
+        $categori_name_org = $categori_name["title"] ?? false;
         if (!$categori_name_org){
             setMessage2('warning','این برند وجود ندارد');
             redirect('products.php');

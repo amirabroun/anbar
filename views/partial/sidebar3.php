@@ -124,7 +124,7 @@
                                         ?>
                                         <a href='<?php echo cagegorystUrl($zero['id'])?>'>
                                             <?php
-                                            if ($_GET['id'] === $zero['id']){
+                                            if (($_GET['id'] ?? null) === $zero['id']){
                                                 ?>
                                                 <input style="margin-top: 10px;" type="checkbox" id="coding" name="interest" value="coding" checked>
                                                 <label class="label" style="font-size: 15px;color: #333333;"><?php echo $zero['title'] ?></label>
@@ -171,7 +171,7 @@
                                         ?>
                                         <a href='<?php echo brandtUrl($gory['id'])?>'>
                                             <?php
-                                            if (pagename()==='brand' && $_GET['id'] === $gory['id']){
+                                            if (pagename()==='brand' && ($_GET['id'] ?? null) === $gory['id']){
                                                 ?>
                                                 <input style="margin-top: 10px;" type="checkbox" id="coding" name="interest" value="coding" checked>
                                                 <label class="label" style="font-size: 15px;color: #333333;"><?php echo $gory['title'] ?></label>

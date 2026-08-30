@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#f7858d">
-    <meta name="msapplication-navbutton-color" content="#f7858d">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#f7858d">
+    <meta name="theme-color" content="#e63950">
+    <meta name="msapplication-navbutton-color" content="#e63950">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e63950">
     <title>Welcome Page</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
@@ -106,7 +106,7 @@
     <div id="colorswitch-option">
         <button><i class="mdi mdi-settings"></i></button>
         <ul>
-            <li class="active" data-path="./assets/css/colors/default.css"><span style="background-color: #f7858d;"></span></li>
+            <li class="active" data-path="./assets/css/colors/default.css"><span style="background-color: #e63950;"></span></li>
             <li data-path="./assets/css/colors/amber-color.css"><span style="background-color: #ffab00;"></span></li>
             <li data-path="./assets/css/colors/blue-color.css"><span style="background-color: #2979ff;"></span></li>
             <li data-path="./assets/css/colors/blue-grey-color.css"><span style="background-color: #607d8b;"></span></li>

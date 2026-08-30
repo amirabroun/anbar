@@ -115,7 +115,7 @@ function getLastProductsByCategoryy ($category){
             left join photo_product  on products.id = photo_product.product_id
             left join photos p on photo_product.photo_id = p.id
             join categories c on c.id=products.category_id
-            where category_id= ? and  status = 'active'
+            where products.category_id= ? and  products.status = 'active'
             group by products.created_at order by  products.created_at  limit 25";
 
     $result=$cn->prepare($sql);

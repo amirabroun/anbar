@@ -1,4 +1,10 @@
 <?php
+// جلوگیری از اجرای دوباره در دسترسی مستقیم به core.php
+// (یک‌بار به‌عنوان auto_prepend_file اجرا شده است)
+if (defined('DOMAIN')) {
+    return;
+}
+
 //config
 include 'config/app.php';
 //helper
