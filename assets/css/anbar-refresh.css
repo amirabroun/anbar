@@ -1150,3 +1150,402 @@ footer.main-footer .copyright {
     .cart-empty--refresh { padding: 32px 16px; }
 }
 
+
+/* ============================================================
+   v2 — Playful Pop (hero + cards + stickers)
+   ============================================================ */
+
+/* ---------- تیتر بخش‌ها: استایل استیکری ---------- */
+.home-section { margin-top: 2.75rem; }
+.section-title, .title-wide {
+    position: relative;
+    display: inline-block;
+    padding: .35rem 1.4rem .35rem 2.6rem;
+    background: #fff;
+    border-radius: 999px;
+    border: 2px solid var(--anbar-primary-soft);
+    box-shadow: var(--anbar-shadow);
+    font-weight: 800 !important;
+    font-size: 1.15rem !important;
+}
+.section-title::before, .title-wide::before {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-8deg);
+    width: 26px;
+    height: 12px;
+    border-radius: 6px;
+    background: var(--anbar-amber);
+    box-shadow: 1px 4px 0 rgba(0,0,0,.06);
+}
+.section-title a { color: var(--anbar-muted) !important; font-size: .8rem; font-weight: 600; }
+
+/* ---------- هیرو ---------- */
+.anbar-hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: -1rem;
+    padding: 3.2rem 0 3.6rem;
+    background:
+        radial-gradient(1100px 420px at 85% -10%, rgba(255,177,0,.18), transparent 60%),
+        radial-gradient(900px 380px at 8% 110%, rgba(15,171,150,.12), transparent 55%),
+        linear-gradient(115deg, #cf1f3d 0%, #e63950 45%, #ff7a59 100%);
+    color: #fff;
+    border-radius: 0 0 34px 34px;
+}
+.anbar-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.hero-kicker {
+    display: inline-block;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.35);
+    backdrop-filter: blur(4px);
+    padding: .3rem 1rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+.hero-title {
+    margin: 1rem 0 .8rem;
+    font-size: clamp(1.7rem, 4vw, 2.9rem);
+    font-weight: 900;
+    line-height: 1.45;
+    text-shadow: 0 2px 14px rgba(0,0,0,.14);
+}
+.hero-title em {
+    font-style: normal;
+    position: relative;
+    color: #ffe08a;
+    padding: 0 .35rem;
+}
+.hero-title em::after {
+    content: '';
+    position: absolute;
+    inset: auto .2rem .35rem .2rem;
+    height: 9px;
+    background: rgba(255,224,138,.28);
+    border-radius: 6px;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+.hero-sub { font-size: 1.02rem; opacity: .92; max-width: 34rem; line-height: 2; margin-bottom: 1.6rem; }
+.hero-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fff;
+    color: var(--anbar-primary-strong) !important;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: .8rem 2rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 26px rgba(0,0,0,.18);
+    transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
+}
+.hero-cta:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 34px rgba(0,0,0,.24);
+    color: var(--anbar-primary-deep) !important;
+}
+.hero-link { color: #fff !important; font-weight: 700; border-bottom: 2px dashed rgba(255,255,255,.55); padding-bottom: 2px; }
+.anbar-hero-stats { display: flex; gap: .9rem; flex-wrap: wrap; }
+.stat-chip {
+    background: rgba(255,255,255,.13);
+    border: 1px solid rgba(255,255,255,.3);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    padding: .9rem 1.3rem;
+    text-align: center;
+    min-width: 104px;
+}
+.stat-chip strong { display: block; font-size: 1.35rem; font-weight: 900; }
+.stat-chip span { font-size: .78rem; opacity: .9; }
+
+/* حباب‌ها و ستاره‌های تزئینی */
+.anbar-hero-blobs { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.anbar-hero-blobs .blob { position: absolute; border-radius: 50%; }
+.blob-1 { width: 220px; height: 220px; right: -60px; top: -80px; background: rgba(255,255,255,.10); animation: floaty 7s ease-in-out infinite; }
+.blob-2 { width: 120px; height: 120px; left: 8%; bottom: -50px; background: rgba(255,224,138,.22); animation: floaty 9s ease-in-out infinite reverse; }
+.blob-3 { width: 64px; height: 64px; left: 38%; top: 28px; border: 3px dashed rgba(255,255,255,.3); background: transparent; animation: spin-slow 26s linear infinite; }
+.hero-star { position: absolute; color: #ffe08a; opacity: .8; }
+.star-1 { font-size: 1.5rem; left: 22%; top: 20%; animation: floaty 6s ease-in-out infinite; }
+.star-2 { font-size: 1rem; right: 30%; bottom: 22%; animation: floaty 8s ease-in-out infinite reverse; }
+.star-3 { font-size: 1.2rem; left: 55%; bottom: 30%; color: #fff; opacity: .5; animation: spin-slow 18s linear infinite; }
+@keyframes floaty { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+@keyframes spin-slow { from { transform: rotate(0) } to { transform: rotate(360deg) } }
+
+/* ---------- feature-bar و CTA (بخش‌های ایجنت موازی، هماهنگ‌سازی) ---------- */
+.feature-bar__item, .home-cta {
+    background: #fff;
+    border: 1px solid var(--anbar-border);
+    border-radius: 18px;
+    box-shadow: var(--anbar-shadow);
+}
+.feature-bar__icon { color: var(--anbar-primary-strong) !important; background: var(--anbar-primary-soft) !important; border-radius: 14px !important; }
+.feature-bar__item { transition: transform .22s ease, box-shadow .22s ease; }
+.feature-bar__item:hover { transform: translateY(-3px); box-shadow: var(--anbar-shadow-lg); }
+.home-cta__icon { color: var(--anbar-primary-strong) !important; background: var(--anbar-primary-soft) !important; border-radius: 16px !important; }
+
+/* ---------- کارت دسته‌بندی ---------- */
+.category-card {
+    background: #fff;
+    border: 1px solid var(--anbar-border) !important;
+    border-radius: 18px !important;
+    box-shadow: var(--anbar-shadow);
+    overflow: hidden;
+    transition: transform .24s cubic-bezier(.34,1.56,.64,1), box-shadow .24s ease;
+}
+.category-card:hover { transform: translateY(-5px) rotate(-.6deg); box-shadow: var(--anbar-shadow-lg); }
+.category-card__img { transition: transform .3s ease; }
+.category-card:hover .category-card__img { transform: scale(1.06); }
+.category-card__title { font-weight: 700 !important; color: var(--anbar-ink) !important; }
+
+/* ---------- کارت محصول: زوم تصویر و دکمه ---------- */
+.product-card .product-item--image img, .product-card img {
+    transition: transform .35s ease;
+}
+.product-card:hover .product-item--image img, .product-card:hover > a > img { transform: scale(1.07); }
+.product-card .product-addcart {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .22s ease, transform .22s ease;
+}
+.product-card:hover .product-addcart, .product-card:focus-within .product-addcart { opacity: 1; transform: translateY(0); }
+@media (hover: none) {
+    .product-card .product-addcart { opacity: 1; transform: none; }
+}
+
+/* قیمت: قرص شکل */
+.product-price, .price-discount { border-radius: 999px; }
+.product-price b, .product-price strong { font-weight: 800; }
+
+/* ---------- سایدبار فیلتر محصولات ---------- */
+.filter-product .card, .shop-sidebox, .sticky-sidebar .card {
+    border: 1px solid var(--anbar-border) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--anbar-shadow);
+}
+.filter-product .card .card-header { background: #fff !important; border-bottom: 1px solid var(--anbar-border); font-weight: 700; }
+
+/* ---------- صفحه محصول: گالری و جعبه خرید ---------- */
+.product-gallery { border-radius: 18px; }
+.product-information, .product-info-box, .single-product .card {
+    border: 1px solid var(--anbar-border) !important;
+    border-radius: 18px !important;
+    box-shadow: var(--anbar-shadow);
+}
+.product-gallery .badge { box-shadow: 0 4px 10px rgba(207,31,61,.3); }
+
+/* ---------- موبایل ---------- */
+@media (max-width: 768px) {
+    .anbar-hero { padding: 2.4rem 0 2.6rem; border-radius: 0 0 24px 24px; }
+    .anbar-hero-stats { width: 100%; }
+    .stat-chip { flex: 1; min-width: 84px; padding: .6rem .5rem; }
+    .hero-sub { font-size: .92rem; }
+    .section-title, .title-wide { font-size: 1rem !important; padding: .3rem 1rem .3rem 2.2rem; }
+}
+
+/* ---------- حرکت کاهش‌یافته ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .anbar-hero-blobs *, .hero-star, .category-card, .product-card img { animation: none !important; }
+}
+
+/* ---------- صفحه محصول: گالری، واریانت، تب‌ها و کامنت‌ها ---------- */
+.product-gallery {
+    background: #fff;
+    border: 1px solid var(--anbar-border);
+    border-radius: 18px;
+    padding: .8rem;
+    box-shadow: var(--anbar-shadow);
+}
+.product-gallery .product-thumbnails > li > a {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color .18s ease, transform .18s ease;
+}
+.product-gallery .product-thumbnails > li > a:hover { transform: translateY(-2px); }
+.product-gallery .product-thumbnails > li.active > a { border-color: var(--anbar-primary); }
+
+.ui-variant {
+    border-radius: 12px !important;
+    border: 2px solid var(--anbar-border) !important;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.ui-variant:hover { border-color: #f3c3cb !important; transform: translateY(-2px); }
+.ui-variant--check, .ui-variant[aria-pressed="true"] {
+    border-color: var(--anbar-primary) !important;
+    box-shadow: 0 0 0 3px var(--anbar-primary-soft);
+}
+
+.ah-tab-wrapper .ah-tab-item {
+    border-radius: 999px;
+    transition: background .18s ease, color .18s ease;
+}
+.ah-tab-wrapper .ah-tab-item[data-ah-tab-active="true"] {
+    background: var(--anbar-primary-strong);
+    color: #fff;
+}
+
+.comment-body {
+    border-radius: 16px !important;
+    border: 1px solid var(--anbar-border);
+    background: #fff;
+    padding: 1rem 1.2rem;
+}
+.accordion-product .card, .accordion-product {
+    border-radius: 16px !important;
+    border-color: var(--anbar-border) !important;
+    overflow: hidden;
+}
+
+/* ============================================================
+   v3 — تمیزکاری بالای صفحه اصلی (تاپ‌بار، اسلایدر، کارت دسته‌ها)
+   ============================================================ */
+
+/* تاپ‌بار تبلیغاتی: حذف گرادیان اینستاگرامی که با هیرو می‌جنگید */
+.promo-bar {
+    background: #8f0c24 !important;
+    background-image: none !important;
+}
+.promo-bar, .promo-bar * { font-size: .78rem !important; letter-spacing: .02em; }
+.promo-bar p { color: #fff !important; }
+
+/* اسلایدر اصلی: کارت لایه‌دار که روی هیرو سوار می‌شود */
+@media (min-width: 992px) {
+    .main-container > .row.mb-5:first-child {
+        margin-top: -46px !important;
+        position: relative;
+        z-index: 6;
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: var(--anbar-shadow-lg);
+        padding: 10px !important;
+        overflow: hidden;
+    }
+}
+.main-container > .row.mb-5:first-child .carousel-inner {
+    border-radius: 16px;
+    overflow: hidden;
+}
+.main-container > .row.mb-5:first-child img {
+    height: auto !important;
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+/* هیرو: چون اسلایدر رویش سوار می‌شود، فضای پایینش کافی است */
+@media (min-width: 992px) {
+    .anbar-hero { padding-bottom: 4.4rem; }
+}
+
+/* کارت دسته‌بندی: قاب یکنواخت برای عکس‌ها */
+.category-card__img, .category-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: 10px;
+    background: #fff;
+}
+.category-card { text-align: center; }
+.category-card__title { font-size: .85rem !important; padding: 0 .5rem .75rem; display: block; }
+
+/* سن و برند هم قاب یکسان */
+.home-section img { border-radius: 12px; }
+
+/* سکشن‌ها: ریتم یکنواخت */
+.home-section + .home-section, .home-cta { margin-top: 3.25rem; }
+
+/* کارت‌ها داخل کاروسل: فقط هم‌قد (owl خودش عرض آیتم‌ها را مدیریت می‌کند) */
+.owl-item .category-card, .owl-item .product-card { height: 100%; }
+
+/* ============================================================
+   v4.1 — فیکس‌های گزارش‌شده: بنر، feature-bar، عکس پیشنهادی، فاصله‌ها
+   ============================================================ */
+
+/* بنر اصلی: نمایش کامل تصویر با نسبت طبیعی (بدون crop شدن متن بنر) */
+#main-slider .carousel-item img {
+    height: auto !important;
+    object-fit: contain;
+}
+#main-slider .carousel-item { height: auto; }
+
+/* feature-bar: آیکون کنار متن (نه زیر هم)، هم‌تراز عمودی */
+.feature-bar { margin-top: 1.6rem !important; }
+.feature-bar .row { margin: 0 -8px; }
+.feature-bar [class*='col-'] { padding: 0 8px; }
+.feature-bar__item {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .85rem 1rem !important;
+    height: 100%;
+}
+.feature-bar__icon {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+}
+.feature-bar__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.7;
+    min-width: 0;
+}
+.feature-bar__text strong { font-size: .86rem; white-space: nowrap; }
+.feature-bar__text span { font-size: .74rem; color: var(--anbar-muted); white-space: nowrap; }
+
+/* کاروسل محصولات پیشنهادی: عکس بزرگ‌تر و هم‌اندازه */
+.product-carousel .product-card,
+.carousel-md .product-card { padding: .4rem; }
+.product-carousel .product-thumb,
+.carousel-md .product-thumb,
+.product-carousel .product-card img,
+.carousel-md .product-card img {
+    min-height: 210px;
+    object-fit: contain;
+    width: 100%;
+}
+.product-carousel .product-card-body,
+.carousel-md .product-card-body { padding: .65rem .8rem 1rem; }
+.product-carousel .product-title,
+.carousel-md .product-title {
+    font-size: .88rem;
+    line-height: 1.8;
+    min-height: 3.4em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* فاصله‌ی سکشن‌ها: ریتم منظم‌تر و فشرده‌تر */
+.home-section { margin-top: 2.6rem !important; }
+.home-cta { margin-top: 2.6rem !important; }
+.main-container > .row.mb-5 { margin-bottom: 2.6rem !important; }
+
+/* آیکون‌های سن و برند: قاب هم‌اندازه با متن کنار/زیر مرتب */
+.home-section .owl-item .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    text-align: center;
+}

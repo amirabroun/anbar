@@ -1,5 +1,6 @@
 <!-- Start main-content -->
-<main class='main-content dt-sl mt-4 mb-3'>
+<main class='main-content dt-sl mb-3'>
+    <?php require_once dirname(__DIR__) . '/partial/home_hero.php'?>
     <div class='container main-container'>
 
         <?php require_once 'main/main_slider.php'?>

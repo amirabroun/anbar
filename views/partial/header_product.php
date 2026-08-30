@@ -44,8 +44,8 @@
     <link rel='stylesheet' href='/assets/css/vendor/materialdesignicons.min.css'>
     <!-- Main CSS File -->
     <link rel='stylesheet' href='/assets/css/main.css'>
-    <link rel='stylesheet' href='/assets/css/colors/anbar.css' id='colorswitch'>
-<link rel='stylesheet' href='/assets/css/anbar-refresh.css'>
+    <link rel='stylesheet' href='/assets/css/colors/anbar.css?v=2' id='colorswitch'>
+<link rel='stylesheet' href='/assets/css/anbar-refresh.css?v=5'>
 
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
