@@ -1,0 +1,24 @@
+.git
+.DS_Store
+.idea
+.vscode
+.history
+.env
+.dockerignore
+
+# لاگ‌ها و فایل‌های موقت
+error_log
+*.log
+
+# پوشه زباله پنل ادمین
+admin.anbaritoys.ir/.trash
+
+# فایل‌های غیرمرتبط با اجرای سایت
+*.pdf
+*.pptx
+cart.png
+login.png
+tools/kavenegar/vendor.zip
+test.html
+538541.txt
+.well-known

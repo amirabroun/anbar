@@ -1,0 +1,33 @@
+services:
+    nginx:
+        image: nginx:alpine
+        container_name: "anbar-nginx"
+        depends_on:
+            - php
+        ports:
+            - "${APP_PORT:-8000}:80"
+        volumes:
+            - ./:/usr/share/nginx/www
+            - ./docs/dockerfiles/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        extra_hosts:
+            - "anbaritoys.ir:0.0.0.0"
+            - "localhost:0.0.0.0"
+        restart: unless-stopped
+
+    php:
+        container_name: "anbar-php"
+        build:
+            context: .
+            dockerfile: docs/dockerfiles/Dockerfile
+        hostname: anbar
+        extra_hosts:
+            - "anbaritoys.ir:127.0.0.1"
+            - "localhost:127.0.0.1"
+        volumes:
+            - ./:/usr/share/nginx/www
+        restart: unless-stopped
+
+networks:
+    default:
+        external: true
+        name: "${APP_DOCKER_NETWORK:-app}"

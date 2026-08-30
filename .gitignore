@@ -1,0 +1,15 @@
+# محیطی
+.env
+
+# لاگ‌ها
+error_log
+*.log
+
+# سیستم‌عامل
+.DS_Store
+.idea
+.vscode
+.history
+
+# پوشه زباله پنل ادمین
+admin.anbaritoys.ir/.trash
