@@ -1,3 +1,13 @@
+<?php
+/**
+ * View صفحه‌ی محصول تکی.
+ * این فایل توسط single-product.php بعد از header_product.php لود می‌شود و
+ * متغیر $details_products در requests/products/SingleProductRequest.php
+ * بر اساس $_GET['tracking_code'] مقداردهی می‌شود.
+ *
+ * @var array $details_products اطلاعات کامل محصول
+ */
+?>
 <!-- Start main-content -->
 <main class="main-content dt-sl mt-4 mb-3">
     <div class="container main-container">
