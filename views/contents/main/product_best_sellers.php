@@ -17,9 +17,9 @@
                     foreach ($getLastProductsPrice as $product) {
 
                                 $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                $product['photo_name'] = $selectPhotosByID['name'];
-                                $product['photo_src'] = $selectPhotosByID['src'];
+                                $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                         ?>
                         <div class='item'>
                             <div class='product-card'>
@@ -69,13 +69,13 @@
 
                                     if (!empty($product['photo_name'])) {
                                         ?>
-                                        <img height="150" width="150"
+                                        <img loading="lazy" decoding="async" height="150" width="150"
                                              src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name']) ?>'
                                              alt='<?php echo $product['title'] ?>'>
                                         <?php
                                     } else {
                                         ?>
-                                        <img height="120" width="150"
+                                        <img loading="lazy" decoding="async" height="120" width="150"
                                              src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                              alt='تصویر محصولات عنبری تویز'>
                                         <?php
@@ -234,13 +234,13 @@
                             $categorys = getProductPhotoss($gory['id']);
                             if (!empty($categorys['name'])) {
                                 ?>
-                                <img height="120" width="150"
+                                <img loading="lazy" decoding="async" height="120" width="150"
                                      src='<?php echo DOMAIN['public'] . $categorys['src'] . $categorys['name'] ?>'
                                      alt='<?php echo $gory['title'] ?>'>
                                 <?php
                             } else {
                                 ?>
-                                <img height="120" width="150"
+                                <img loading="lazy" decoding="async" height="120" width="150"
                                      src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                      alt='تصویر محصولات عنبری تویز'>
                                 <?php
@@ -282,9 +282,9 @@
                         if ($getLastProducts) {
                             foreach ($getLastProducts as $product) {
 $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                $product['photo_name'] = $selectPhotosByID['name'];
-                                $product['photo_src'] = $selectPhotosByID['src'];
+                                $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                                 ?>
                                 <div class='item'>
                                     <div class='product-card'>
@@ -324,13 +324,13 @@ $selectPhotoProducts = selectPhotoProducts($product['id']);
 
                                             if (!empty($product['photo_name'])) {
                                                 ?>
-                                                <img height="150" width="150"
+                                                <img loading="lazy" decoding="async" height="150" width="150"
                                                      src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name']) ?>'
                                                      alt='<?php echo $product['title'] ?>'>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <img height="120" width="150"
+                                                <img loading="lazy" decoding="async" height="120" width="150"
                                                      src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                                      alt='تصویر محصولات عنبری تویز'>
                                                 <?php
@@ -477,7 +477,7 @@ $selectPhotoProducts = selectPhotoProducts($product['id']);
     <div class='col-xl-2 col-lg-3 hidden-lg pr-0'>
         <div class='widget-suggestion dt-sn pt-3 mt-3'>
             <div class='widget-suggestion-title'>
-                <img src='https://anbaritoys.com/assets/img/theme/suggestion-title.png' alt='پیشنهادی های عنبری تویز'>
+                <img loading="lazy" decoding="async" src='/assets/img/theme/suggestion-title.png' alt='پیشنهادی های عنبری تویز'>
             </div>
             <div id='progressBar'>
                 <div class='slide-progress'></div>
@@ -489,9 +489,9 @@ $selectPhotoProducts = selectPhotoProducts($product['id']);
                     foreach ($getLastProductsSuggested as $product) {
                         $cal_percentage = $product['price'] - ($product['price_discounted']);
                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                $product['photo_name'] = $selectPhotosByID['name'];
-                                $product['photo_src'] = $selectPhotosByID['src'];
+                                $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                         ?>
                         <div class='item'>
                             <div class='product-card mb-3 shadow-unset'>
@@ -527,13 +527,13 @@ $selectPhotoProducts = selectPhotoProducts($product['id']);
 
                                     if (!empty($product['photo_name'])) {
                                         ?>
-                                        <img height="150" width="150"
+                                        <img loading="lazy" decoding="async" height="150" width="150"
                                              src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name']) ?>'
                                              alt='<?php echo $product['title'] ?>'>
                                         <?php
                                     } else {
                                         ?>
-                                        <img height="120" width="150"
+                                        <img loading="lazy" decoding="async" height="120" width="150"
                                              src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                              alt='تصویر محصولات عنبری تویز'>
                                         <?php
@@ -598,13 +598,13 @@ $selectPhotoProducts = selectPhotoProducts($product['id']);
                             $categorys = getProductPhotossss($gory['id']);
                             if (!empty($categorys['name'])) {
                                 ?>
-                                <img height="120" width="150"
+                                <img loading="lazy" decoding="async" height="120" width="150"
                                      src='<?php echo DOMAIN['public'] . $categorys['src'] . $categorys['name'] ?>'
                                      alt='<?php echo $gory['title'] ?>'>
                                 <?php
                             } else {
                                 ?>
-                                <img height="120" width="150"
+                                <img loading="lazy" decoding="async" height="120" width="150"
                                      src='<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>'
                                      alt='تصویر محصولات عنبری تویز'>
                                 <?php

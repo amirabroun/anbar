@@ -273,7 +273,7 @@ function getLastProductsSuggested (){
 
 function getDetailsProducts ($tracking_code){
     global $cn;
-    $sql="select * from products where products.status != 'inactive' and products.tracking_code=?";
+    $sql="select products.*, brands.title as brand_title from products left join brands on products.brand_id = brands.id where products.status != 'inactive' and products.tracking_code=?";
 
     $result=$cn->prepare($sql);
     $result->bindValue(1,$tracking_code);

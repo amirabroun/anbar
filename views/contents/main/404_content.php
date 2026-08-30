@@ -8,7 +8,7 @@
                     <div class="error-page text-center">
                         <h1>صفحه‌ای که دنبال آن بودید پیدا نشد!</h1>
                         <a href="/" class="btn-primary-cm">ادامه خرید در عنبری تویز</a>
-                        <img src="https://anbaritoys.com/assets/img/theme/404.svg" class="img-fluid" width="60%" alt="تصویر 404 عنبری تویز">
+                        <img src="/assets/img/theme/404.svg" class="img-fluid" width="60%" alt="تصویر 404 عنبری تویز">
                     </div>
                 </div>
             </div>

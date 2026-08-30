@@ -68,7 +68,7 @@ $number_product=count($cart_products);
                                         foreach ($cart_products as $product){
                                             $detailproduct = getDetailsCart2($product['id']);
                                             $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                            $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                            $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                             $detailproduct['photo_name'] = $selectPhotosByID['name'];
                                             $detailproduct['photo_src'] = $selectPhotosByID['src'];
                                             if ($detailproduct){
@@ -387,11 +387,11 @@ $number_product=count($cart_products);
                                     <ul>
                                         
                                         <li class="checkout-feature-aside-item">
-                                            <img src="https://anbaritoys.com/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
+                                            <img src="/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
                                             66,000 تومان هزینه ارسال
                                         </li>
                                         <li class="checkout-feature-aside-item">
-                                            <img src="https://anbaritoys.com/assets/img/svg/delivery.svg" alt="تحویل محصولات عنبری تویز">
+                                            <img src="/assets/img/svg/delivery.svg" alt="تحویل محصولات عنبری تویز">
                                             تحویل اکسپرس
                                         </li>
                                     </ul>
@@ -422,7 +422,7 @@ $number_product=count($cart_products);
                                         <tbody>
                                         <tr class="checkout-item">
                                             <td>
-                                                <img src="https://anbaritoys.com/assets/img/cart/04.jpg" alt="">
+                                                <img src="/assets/img/cart/04.jpg" alt="">
                                                 <button class="checkout-btn-remove">&times;</button>
                                             </td>
                                             <td class="text-right">

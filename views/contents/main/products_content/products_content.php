@@ -33,16 +33,16 @@
                                 <?php
                                 if ($getLastProducts){
                                 foreach ($getLastProducts as $product){
-                                    if ($product['many_id'] != 0){
+                                    if (!empty($product['many_id'])) {
                                         $many = selectManyById($product['many_id']);
                                         $product['price'] = $many['price'] * $product['price'];
                                         $product['price_discounted'] = $many['price'] * $product['price_discounted'];
                                     }
 
                                     $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                    $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                    $product['photo_name'] = $selectPhotosByID['name'];
-                                    $product['photo_src'] = $selectPhotosByID['src'];
+                                    $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                    $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                    $product['photo_src'] = $selectPhotosByID['src'] ?? '';
 
                                 ?>
                                 <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-10 mb-1 px-res-0">
@@ -79,11 +79,11 @@
 
                                             if (!empty($product['photo_name'])){
                                                 ?>
-                                                <img  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
+                                                <img loading="lazy" decoding="async"  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
                                                 <?php
                                             }else{
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                 <?php
                                             }
                                             ?>
@@ -219,16 +219,16 @@
                                 <?php
                                 if ($getLastProductsZero){
                                     foreach ($getLastProductsZero as $product){
-                                        if ($product['many_id'] != 0){
+                                        if (!empty($product['many_id'])) {
                                             $many = selectManyById($product['many_id']);
                                             $product['price'] = $many['price'] * $product['price'];
                                             $product['price_discounted'] = $many['price'] * $product['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                        $product['photo_name'] = $selectPhotosByID['name'];
-                                        $product['photo_src'] = $selectPhotosByID['src'];
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                        $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                        $product['photo_src'] = $selectPhotosByID['src'] ?? '';
 
                                         ?>
                                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-10 mb-1 px-res-0">
@@ -264,11 +264,11 @@
 
                                                     if (!empty($product['photo_name'])){
                                                         ?>
-                                                        <img  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
+                                                        <img loading="lazy" decoding="async"  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                         <?php
                                                     }
                                                     ?>
@@ -403,15 +403,15 @@
                                 <?php
                                 if ($getLastProductszeroprice){
                                     foreach ($getLastProductszeroprice as $product){
-                                        if ($product['many_id'] != 0){
+                                        if (!empty($product['many_id'])) {
                                             $many = selectManyById($product['many_id']);
                                             $product['price'] = $many['price'] * $product['price'];
                                             $product['price_discounted'] = $many['price'] * $product['price_discounted'];
                                         }
                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                        $product['photo_name'] = $selectPhotosByID['name'];
-                                        $product['photo_src'] = $selectPhotosByID['src'];
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                        $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                        $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                                         ?>
                                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-10 mb-1 px-res-0">
                                             <div class="product-card mb-2 mx-res-0">
@@ -446,11 +446,11 @@
 
                                                     if (!empty($product['photo_name'])){
                                                         ?>
-                                                        <img  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
+                                                        <img loading="lazy" decoding="async"  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                         <?php
                                                     }
                                                     ?>
@@ -585,15 +585,15 @@
                                 <?php
                                 if ($getLastProductsss100Zero){
                                     foreach ($getLastProductsss100Zero as $product){
-                                        if ($product['many_id'] != 0){
+                                        if (!empty($product['many_id'])) {
                                             $many = selectManyById($product['many_id']);
                                             $product['price'] = $many['price'] * $product['price'];
                                             $product['price_discounted'] = $many['price'] * $product['price_discounted'];
                                         }
                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                        $product['photo_name'] = $selectPhotosByID['name'];
-                                        $product['photo_src'] = $selectPhotosByID['src'];
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                        $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                        $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                                         ?>
                                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-10 mb-1 px-res-0">
                                             <div class="product-card mb-2 mx-res-0">
@@ -627,11 +627,11 @@
 
                                                 if (!empty($product['photo_name'])){
                                                     ?>
-                                                    <img  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
+                                                    <img loading="lazy" decoding="async"  height="100" width="100" src='<?php echo normalizedPath(DOMAIN['public'], $product['photo_src'], $product['photo_name'])?>' alt='<?php echo $product['title']?>'>
                                                     <?php
                                                 }else{
                                                     ?>
-                                                    <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                    <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                     <?php
                                                 }
                                                 ?>

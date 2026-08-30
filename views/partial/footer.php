@@ -166,7 +166,17 @@
                 <div class='col-12 col-md-6 col-lg-3'>
                    <div class="row">
                        <div class="col-6">
-<a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=331273&Code=Iuo4cD9b18LQ7X7Wf92O'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=331273&Code=Iuo4cD9b18LQ7X7Wf92O' alt='' style='cursor:pointer' code='Iuo4cD9b18LQ7X7Wf92O'></a>                       </div>
+                           <!-- نماد اعتماد بعد از رویداد load تزریق می‌شود تا در صورت قطع بودن/فیلتر بودن enamad،
+                                لود صفحه تا ۳۰ ثانیه روی تایم‌اوت آن قفل نشود -->
+                           <div id="enamad-seal"></div>
+                           <script>
+                           window.addEventListener('load', function () {
+                               var box = document.getElementById('enamad-seal');
+                               if (!box) return;
+                               box.innerHTML = '<a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=331273&Code=Iuo4cD9b18LQ7X7Wf92O"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=331273&Code=Iuo4cD9b18LQ7X7Wf92O" alt="" style="cursor:pointer" onerror="this.parentNode.style.display=\'none\'"></a>';
+                           });
+                           </script>
+                       </div>
                    </div>
                     <div class='socials'>
                         <p>عنبری تویز را در شبکه های اجتماعی دنبال کنید</p>
@@ -214,19 +224,19 @@
  </script>
 
 <!-- Core JS Files -->
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery-3.4.1.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/popper.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/bootstrap.min.js'></script>
+<script src='/assets/js/vendor/jquery-3.4.1.min.js'></script>
+<script src='/assets/js/vendor/popper.min.js'></script>
+<script src='/assets/js/vendor/bootstrap.min.js'></script>
 <!-- Plugins -->
-<script src='https://anbaritoys.ir/assets/js/vendor/owl.carousel.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.horizontalmenu.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.nice-select.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/jquery.fancybox.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/nouislider.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/wNumb.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/ResizeSensor.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/theia-sticky-sidebar.min.js'></script>
-<script src='https://anbaritoys.ir/assets/js/vendor/sweetalert2.js'></script>
+<script src='/assets/js/vendor/owl.carousel.min.js'></script>
+<script src='/assets/js/vendor/jquery.horizontalmenu.js'></script>
+<script src='/assets/js/vendor/jquery.nice-select.min.js'></script>
+<script src='/assets/js/vendor/jquery.fancybox.min.js'></script>
+<script src='/assets/js/vendor/nouislider.min.js'></script>
+<script src='/assets/js/vendor/wNumb.js'></script>
+<script src='/assets/js/vendor/ResizeSensor.min.js'></script>
+<script src='/assets/js/vendor/theia-sticky-sidebar.min.js'></script>
+<script src='/assets/js/vendor/sweetalert2.js'></script>
 <!-- Main JS File -->
 <script>
     const Toast = Swal.mixin({
@@ -291,7 +301,7 @@ if (isset($_SESSION['message2'])){
 
 </script>
 <!-- Main JS File -->
-<script src='https://anbaritoys.ir/assets/js/main.js'></script>
+<script src='/assets/js/main.js'></script>
 </body>
 
 </html>

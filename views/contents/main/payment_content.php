@@ -139,7 +139,7 @@ $number_product=count($cart_products);
                                                     foreach ($cart_products as $product){
                                                     $detailproduct =getDetailsCart2($product['id']);
                                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                                         $detailproduct['photo_name'] = $selectPhotosByID['name'];
                                                         $detailproduct['photo_src'] = $selectPhotosByID['src'];
                                                     ?>
@@ -319,7 +319,7 @@ $number_product=count($cart_products);
                     <ul>
                      
                         <li class="checkout-feature-aside-item">
-                                            <img src="https://anbaritoys.com/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
+                                            <img src="/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
                                             66,000 تومان هزینه ارسال
                                         </li>
                       

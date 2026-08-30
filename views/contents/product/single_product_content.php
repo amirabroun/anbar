@@ -221,7 +221,7 @@
                                     <input type="hidden" name="action" value="add_to_cart">
                                     <input type="hidden" name="product" value="<?php echo $details_products['tracking_code']; ?>">
                                     <button  class="btn-primary-cm btn-with-icon btn-Add-Cart-Single">
-                                        <img src="https://anbaritoys.com/assets/img/theme/shopping-cart.png" alt="افزودن به سبد خرید عنبری تویز">
+                                        <img src="/assets/img/theme/shopping-cart.png" alt="افزودن به سبد خرید عنبری تویز">
                                         افزودن به سبد خرید
                                     </button>
                                 </div>
@@ -486,15 +486,15 @@
 $order_products = GetOrderProductsSingleProduct($details_products['id']);
 
                             $productsM = [];
-                            
-                            foreach($order_products as $item){
+
+                            foreach(($order_products ?: []) as $item){
                                 $productsM[] = GetOrderProductsByOrderID($item['order_id']);
                             }
                             
                             $products_Order = [];
                             
                             foreach($productsM as $item){
-                                foreach($item as $item2){
+                                foreach(($item ?: []) as $item2){
                                      if($item2['product_id']==$details_products['id']){
                                         continue;
                                      }
@@ -563,9 +563,9 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                 
                                     foreach ($getLastProducts_for as $product){
                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                        $product['photo_name'] = $selectPhotosByID['name'];
-                                        $product['photo_src'] = $selectPhotosByID['src'];
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                        $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                        $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                                         ?>
                                         <div class='item'>
                                             <div class='product-card'>
@@ -776,9 +776,9 @@ $order_products = GetOrderProductsSingleProduct($details_products['id']);
                                 if ($getLastProducts_for){
                                     foreach ($getLastProducts_for as $product){
                                         $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
-                                        $product['photo_name'] = $selectPhotosByID['name'];
-                                        $product['photo_src'] = $selectPhotosByID['src'];
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
+                                        $product['photo_name'] = $selectPhotosByID['name'] ?? '';
+                                        $product['photo_src'] = $selectPhotosByID['src'] ?? '';
                                         ?>
                                         <div class='item'>
                                             <div class='product-card'>

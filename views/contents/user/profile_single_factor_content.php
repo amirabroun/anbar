@@ -79,7 +79,7 @@
                             foreach ($selectorder_productByUserId as $order_product){
                                 $getDetailsProductsByID = getDetailsProductsByID2($order_product['product_id']);
                                 $selectPhotoProducts = selectPhotoProducts($getDetailsProductsByID['id']);
-                                $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                 $getDetailsProductsByID['photo_name'] = $selectPhotosByID['name'];
                                 $getDetailsProductsByID['photo_src'] = $selectPhotosByID['src'];
                                 ?>

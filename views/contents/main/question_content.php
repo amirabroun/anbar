@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-12 pr-4 mb-3">
                             <div class="section-title title-wide no-title-wide-before mb-1 no-after-title-wide">
-                                <img src="https://anbaritoys.com/assets/img/faq/question.svg" width="30" alt="راهنمای خرید عنبری تویز">
+                                <img src="/assets/img/faq/question.svg" width="30" alt="راهنمای خرید عنبری تویز">
                                 <h2 class="font-weight-bold">چطور میتوانم خرید کنم؟</h2>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 text-center">
-                                    <img src="https://anbaritoys.com/assets/img/faq/phone.svg" alt="تماس با عنبری تویز">
+                                    <img src="/assets/img/faq/phone.svg" alt="تماس با عنبری تویز">
                                     <div class="page-contact-option-text mr-3">
                                         شماره تماس 1 :
                                         <?php

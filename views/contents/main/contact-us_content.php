@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 text-center">
-                        <img src="https://anbaritoys.com/assets/img/faq/phone.svg" alt="شماره تماس عنبری تویز">
+                        <img src="/assets/img/faq/phone.svg" alt="شماره تماس عنبری تویز">
                         <div class="page-contact-option-text mr-3">
                             شماره تماس 1 :
                             <?php
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 text-center">
-                        <img src="https://anbaritoys.com/assets/img/faq/email.svg" class="mb-5" alt="آدرس عنبری تویز">
+                        <img src="/assets/img/faq/email.svg" class="mb-5" alt="آدرس عنبری تویز">
                         <div class="page-contact-option-text mr-3">
                             آدرس :
                             <?php

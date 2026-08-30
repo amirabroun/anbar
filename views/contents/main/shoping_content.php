@@ -11,7 +11,7 @@ $number_product=count($cart_products);
             <div class="col-12 text-center pt-2">
                 <div class="header-shopping-logo dt-sl">
                     <a href="#">
-                        <img src="https://anbaritoys.com/assets/img/logoo.png" alt="لوگو عنبری تویز" style="height:55px;">
+                        <img src="/assets/img/logoo.png" alt="لوگو عنبری تویز" style="height:55px;">
                     </a>
                     <br>
                 </div>
@@ -207,7 +207,7 @@ $number_product=count($cart_products);
                                         $detailproduct =getDetailsCart2($product['id']);
                                         
                                         $selectPhotoProducts = selectPhotoProducts($detailproduct['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $detailproduct['photo_name'] = $selectPhotosByID['name'];
                                         $detailproduct['photo_src'] = $selectPhotosByID['src'];
                                        
@@ -312,7 +312,7 @@ $number_product=count($cart_products);
                     <ul>
                        
                         <li class="checkout-feature-aside-item">
-                                            <img src="https://anbaritoys.com/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
+                                            <img src="/assets/img/svg/payment-terms.svg" alt="پرداخت عنبری تویز">
                                             66,000 تومان هزینه ارسال
                                         </li>
                        

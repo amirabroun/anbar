@@ -19,14 +19,14 @@
         $inter = getLastProductsById22($product['product_id']);
         if ($inter){
         foreach ($inter as $inter_user_one){
-            if ($inter_user_one['many_id'] != 0){
+            if (!empty($inter_user_one['many_id'])) {
                 $many = selectManyById($inter_user_one['many_id']);
                 $inter_user_one['price'] = $many['price'] * $inter_user_one['price'];
                 $inter_user_one['price_discounted'] = $many['price'] * $inter_user_one['price_discounted'];
             }
 
             $selectPhotoProducts = selectPhotoProducts($inter_user_one['id']);
-            $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+            $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
             $inter_user_one['photo_name'] = $selectPhotosByID['name'];
             $inter_user_one['photo_src'] = $selectPhotosByID['src'];
             ?>

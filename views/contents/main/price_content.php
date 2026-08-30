@@ -70,14 +70,14 @@
                                 if ($getLastProductsByPrice){
                                     foreach ($getLastProductsByPrice as $productCategory){
 
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
 
@@ -118,11 +118,11 @@
 
                                             if (!empty($productCategory['photo_name'])){
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
                                                 <?php
                                             }else{
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
                                                 <?php
                                             }
                                             ?>
@@ -260,14 +260,14 @@
                                 <?php
                                 if ($getLastProductsByPrice3){
                                     foreach ($getLastProductsByPrice3 as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                         ?>
@@ -304,11 +304,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }
                                                     ?>
@@ -441,14 +441,14 @@
                                 <?php
                                 if ($getLastProductsByPrice4){
                                     foreach ($getLastProductsByPrice4 as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                         ?>
@@ -485,11 +485,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }
                                                     ?>
@@ -621,7 +621,7 @@
                                 <?php
                                 if ($getLastProductsByPrice5){
                                     foreach ($getLastProductsByPrice5 as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
@@ -660,11 +660,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
                                                         <?php
                                                     }
                                                     ?>

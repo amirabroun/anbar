@@ -143,11 +143,11 @@
 
                                             if (!empty($products['photo_name'])){
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])?>' alt='Product Thumbnail'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])?>' alt='Product Thumbnail'>
                                                 <?php
                                             }else{
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
                                                 <?php
                                             }
                                             ?>
@@ -229,11 +229,11 @@
 /*
                                                             if (!empty($products['photo_name'])){
                                                                 */?>
-                                                                <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])*/?>' alt='Product Thumbnail'>
+                                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])*/?>' alt='Product Thumbnail'>
                                                                 <?php
 /*                                                            }else{
                                                                 */?>
-                                                                <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
+                                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
                                                                 <?php
 /*                                                            }
                                                             */?>
@@ -317,11 +317,11 @@
 /*
                                                             if (!empty($products['photo_name'])){
                                                                 */?>
-                                                                <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])*/?>' alt='Product Thumbnail'>
+                                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $products['photo_src'], $products['photo_name'])*/?>' alt='Product Thumbnail'>
                                                                 <?php
 /*                                                            }else{
                                                                 */?>
-                                                                <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
+                                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
                                                                 <?php
 /*                                                            }
                                                             */?>
@@ -394,11 +394,11 @@
 /*
                                                     if (!empty($productCategory['photo_name'])){
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }else{
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }
                                                     */?>
@@ -464,11 +464,11 @@
 /*
                                                     if (!empty($productCategory['photo_name'])){
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }else{
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }
                                                     */?>
@@ -534,11 +534,11 @@
 /*
                                                     if (!empty($productCategory['photo_name'])){
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }else{
                                                         */?>
-                                                        <img  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php /*echo normalizedPath(DOMAIN['public'],'/images/180.png')*/?>' alt='Product Thumbnail'>
                                                         <?php
 /*                                                    }
                                                     */?>

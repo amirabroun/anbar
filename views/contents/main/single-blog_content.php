@@ -55,16 +55,16 @@
                                     $photoBlog2 = getProductPhotoss4($photoBlog['photo_id']);
                                     if (!empty($photoBlog2['name'])){
                                         ?>
-                                        <img src="<?php echo DOMAIN['public'] . $photoBlog2['src'] . $photoBlog2['name']?>" alt="<?= $getArticlesById['title'] ?>">
+                                        <img loading="lazy" decoding="async" src="<?php echo DOMAIN['public'] . $photoBlog2['src'] . $photoBlog2['name']?>" alt="<?= $getArticlesById['title'] ?>">
                                         <?php
                                     }else{
                                         ?>
-                                        <img width="400" height="400" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
+                                        <img loading="lazy" decoding="async" width="400" height="400" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
                                         <?php
                                     }
                                 }else{
                                     ?>
-                                    <img width="400" height="400" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
+                                    <img loading="lazy" decoding="async" width="400" height="400" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
                                     <?php
                                 }
                                 ?>
@@ -93,16 +93,16 @@
                                                         $photoBlog2 = getProductPhotoss4($photoBlog['photo_id']);
                                                         if (!empty($photoBlog2['name'])){
                                                             ?>
-                                                            <img width="50" height="50" src="<?php echo DOMAIN['public'] . $photoBlog2['src'] . $photoBlog2['name']?>" alt="<?php echo $Articles['title'] ?>">
+                                                            <img loading="lazy" decoding="async" width="50" height="50" src="<?php echo DOMAIN['public'] . $photoBlog2['src'] . $photoBlog2['name']?>" alt="<?php echo $Articles['title'] ?>">
                                                             <?php
                                                         }else{
                                                             ?>
-                                                            <img  width="50" height="50"  src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
+                                                            <img loading="lazy" decoding="async"  width="50" height="50"  src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
                                                             <?php
                                                         }
                                                     }else{
                                                         ?>
-                                                        <img  width="50" height="50"  src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
+                                                        <img loading="lazy" decoding="async"  width="50" height="50"  src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt="تصویر مقالات عنبری تویز">
                                                         <?php
                                                     }
                                                     ?>

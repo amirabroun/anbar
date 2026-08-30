@@ -51,14 +51,14 @@
                                 <?php
                                 if ($getLastProductsByCategory){
                                     foreach ($getLastProductsByCategory as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                 ?>
@@ -99,11 +99,11 @@
 
                                             if (!empty($productCategory['photo_name'])){
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
                                                 <?php
                                             }else{
                                                 ?>
-                                                <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                 <?php
                                             }
                                             ?>
@@ -241,14 +241,14 @@
                                 <?php
                                 if ($getLastProducts){
                                     foreach ($getLastProducts as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                         ?>
@@ -286,11 +286,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                         <?php
                                                     }
                                                     ?>
@@ -423,14 +423,14 @@
                                 <?php
                                 if ($getLastProductsPriseZero){
                                     foreach ($getLastProductsPriseZero as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                         ?>
@@ -468,11 +468,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                         <?php
                                                     }
                                                     ?>
@@ -604,14 +604,14 @@
                                 <?php
                                 if ($getLastProductsPriseFool){
                                     foreach ($getLastProductsPriseFool as $productCategory){
-                                        if ($productCategory['many_id'] != 0){
+                                        if (!empty($productCategory['many_id'])) {
                                             $many = selectManyById($productCategory['many_id']);
                                             $productCategory['price'] = $many['price'] * $productCategory['price'];
                                             $productCategory['price_discounted'] = $many['price'] * $productCategory['price_discounted'];
                                         }
 
                                         $selectPhotoProducts = selectPhotoProducts($productCategory['id']);
-                                        $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                        $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                         $productCategory['photo_name'] = $selectPhotosByID['name'];
                                         $productCategory['photo_src'] = $selectPhotosByID['src'];
                                         ?>
@@ -649,11 +649,11 @@
 
                                                     if (!empty($productCategory['photo_name'])){
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $productCategory['photo_src'], $productCategory['photo_name'])?>' alt='<?php echo $productCategory['title'] ?>'>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
+                                                        <img loading="lazy" decoding="async"  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='تصویر محصولات عنبری تویز'>
                                                         <?php
                                                     }
                                                     ?>

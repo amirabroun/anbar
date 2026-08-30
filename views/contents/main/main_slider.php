@@ -13,20 +13,20 @@
                 <li data-target='#main-slider' data-slide-to='4'></li>
             </ol>
             <div class='carousel-inner'>
-                <a class='carousel-item active' href="https://anbaritoys.com/cagegorys.php?id=81">
-                    <img src="https://anbaritoys.com/assets/img/main-slider/1.jpg" style="width: 100%;height: 100%;" alt="تاب و سرسره های عنبری تویز">
+                <a class='carousel-item active' href="/cagegorys.php?id=81">
+                    <img src="/assets/img/main-slider/1.jpg" style="width: 100%;height: 100%;" alt="تاب و سرسره های عنبری تویز">
                 </a>
-                <a class='carousel-item' href="https://anbaritoys.com/cagegorys.php?id=95">
-                    <img src="https://anbaritoys.com/assets/img/main-slider/2.jpg" style="width: 100%;height: 100%;" alt="اسکوتر های کودک عنبری تویز">
+                <a class='carousel-item' href="/cagegorys.php?id=95">
+                    <img src="/assets/img/main-slider/2.jpg" style="width: 100%;height: 100%;" alt="اسکوتر های کودک عنبری تویز">
                 </a>
-                <a class='carousel-item' href="https://anbaritoys.com/cagegorys.php?id=84">
-                    <img src="https://anbaritoys.com/assets/img/main-slider/3.jpg" style="width: 100%;height: 100%;" alt="میز و صندلی های کودک عنبری تویز">
+                <a class='carousel-item' href="/cagegorys.php?id=84">
+                    <img src="/assets/img/main-slider/3.jpg" style="width: 100%;height: 100%;" alt="میز و صندلی های کودک عنبری تویز">
                 </a>
-                <a class='carousel-item' href="https://anbaritoys.com/cagegorys.php?id=93">
-                    <img src="https://anbaritoys.com/assets/img/main-slider/4.jpg" style="width: 100%;height: 100%;" alt="عروسک های پولیشی عنبری تویز">
+                <a class='carousel-item' href="/cagegorys.php?id=93">
+                    <img src="/assets/img/main-slider/4.jpg" style="width: 100%;height: 100%;" alt="عروسک های پولیشی عنبری تویز">
                 </a>
-                <a class='carousel-item' href="https://anbaritoys.com/cagegorys.php?id=96">
-                    <img src="https://anbaritoys.com/assets/img/main-slider/5.jpg" style="width: 100%;height: 100%;" alt='الاکنگ تعادلی و واکر کودک عنبری تویز'>
+                <a class='carousel-item' href="/cagegorys.php?id=96">
+                    <img src="/assets/img/main-slider/5.jpg" style="width: 100%;height: 100%;" alt='الاکنگ تعادلی و واکر کودک عنبری تویز'>
                 </a>
             </div>
             <a class='carousel-control-prev' href='#main-slider' role='button' data-slide='prev'>
@@ -50,27 +50,27 @@
 
                 <div class='carousel-item active'>
                     <a class='main-slider-slide' href='#'>
-                        <img src="https://anbaritoys.com/assets/img/main-slider/1.jpg" style="width: 100%;height: 150px;" alt="تاب و سرسره های عنبری تویز">
+                        <img src="/assets/img/main-slider/1.jpg" style="width: 100%;height: 150px;" alt="تاب و سرسره های عنبری تویز">
                     </a>
                 </div>
                 <div class='carousel-item'>
                     <a class='main-slider-slide' href='#'>
-                        <img src="https://anbaritoys.com/assets/img/main-slider/2.jpg" style="width: 100%;height: 150px;" alt="اسکوتر های کودک عنبری تویز">
+                        <img src="/assets/img/main-slider/2.jpg" style="width: 100%;height: 150px;" alt="اسکوتر های کودک عنبری تویز">
                     </a>
                 </div>
                 <div class='carousel-item'>
                     <a class='main-slider-slide' href='#'>
-                        <img src="https://anbaritoys.com/assets/img/main-slider/3.jpg" style="width: 100%;height: 150px;" alt="میز و صندلی های کودک عنبری تویز"
+                        <img src="/assets/img/main-slider/3.jpg" style="width: 100%;height: 150px;" alt="میز و صندلی های کودک عنبری تویز"
                     </a>
                 </div>
                 <div class='carousel-item'>
                     <a class='main-slider-slide' href='#'>
-                        <img src="https://anbaritoys.com/assets/img/main-slider/4.jpg" style="width: 100%;height: 150px;" alt="عروسک های پولیشی عنبری تویز">
+                        <img src="/assets/img/main-slider/4.jpg" style="width: 100%;height: 150px;" alt="عروسک های پولیشی عنبری تویز">
                     </a>
                 </div>
                 <div class='carousel-item'>
                     <a class='main-slider-slide' href='#'>
-                        <img src="https://anbaritoys.com/assets/img/main-slider/5.jpg" style="width: 100%;height: 150px;" alt='الاکنگ تعادلی و واکر کودک عنبری تویز'
+                        <img src="/assets/img/main-slider/5.jpg" style="width: 100%;height: 150px;" alt='الاکنگ تعادلی و واکر کودک عنبری تویز'
                     </a>
                 </div>
 

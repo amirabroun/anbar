@@ -11,7 +11,7 @@
                     if ($category){
                     foreach ($category as $key=> $gory){
                         $categoryPlus = $key+1;
-                        $categoryPlusItem = $category[$categoryPlus];
+                        $categoryPlusItem = $category[$categoryPlus] ?? null;
                         if (($key % 2 == 0 && $key!=0) || $key==1 ) {
                             continue;
                         }

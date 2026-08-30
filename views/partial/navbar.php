@@ -6,7 +6,7 @@
                 <div class='col-lg-2 col-md-3 col-6' style="margin-right: 25px;position: absolute;margin-top: -12px">
                     <div class='logo-area float-right'>
                         <a href='/'>
-                            <img src='https://anbaritoys.ir/assets/img/logoo.png' alt='لوگوی عنبری تویز' width="60">
+                            <img src='/assets/img/logoo.png' alt='لوگوی عنبری تویز' width="60">
                             <span class='anbaryToysName'>عنبری تویز</span>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
 
                                             $detailproduct = getDetailsCart2($product['id']);
                                             $selectPhotoProducts = selectPhotoProducts($product['id']);
-                                            $selectPhotosByID = selectPhotosByID($selectPhotoProducts['photo_id']);
+                                            $selectPhotosByID = $selectPhotoProducts ? selectPhotosByID($selectPhotoProducts['photo_id']) : false;
                                             $detailproduct['photo_name'] = $selectPhotosByID['name'];
                                             $detailproduct['photo_src'] = $selectPhotosByID['src'];
                                             ?>
@@ -129,7 +129,7 @@
                             <a class='nav-link  btn text-dark shadow' href='/cart.php'>
                                 <span class='label-dropdown'>سبد خرید</span>
                                 <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                    <img src="https://anbaritoys.ir/cart.png" width="25"> 
+                                    <img src="/cart.png" width="25"> 
                                 </span>
                             </a>
                             <!--<div class='dropdown-menu cart dropdown-menu-sm dropdown-menu-left'>
@@ -191,7 +191,7 @@
                             <div class='dropdown-menu dropdown-menu-sm dropdown-menu-left'>
                                 <a class='dropdown-item' href='<?php echo userUrl($_SESSION['user_sing']) ?>'>
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                         <img src="https://anbaritoys.ir/login.png" width="25"> 
+                                         <img src="/login.png" width="25"> 
                                     </span>
                                     پروفایل
                                 </a>
@@ -209,7 +209,7 @@
                             <a class='nav-link btn text-dark shadow ml-2' href='login.php'>
                                 <span class='label-dropdown'>ورود | ثبت نام</span>
                                 <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                    <img src="https://anbaritoys.ir/login.png" width="25"> 
+                                    <img src="/login.png" width="25"> 
                                 </span>
                             </a>
                             <?php
@@ -352,7 +352,7 @@
                                 <input name="search" type='text'
                                        placeholder='نام کالا مورد نظر خود را جستجو کنید…'>
                                 <button type='submit' style="background-color: #ff2c4c"><img
-                                            src='https://anbaritoys.ir/assets/img/theme/search.png' alt='سرچ در عنبری تویز'></button>
+                                            src='/assets/img/theme/search.png' alt='سرچ در عنبری تویز'></button>
                                 <button class='close-search-result' type='button'><i class='mdi mdi-close'></i></button>
                             </form>
                         </div>
@@ -581,7 +581,7 @@
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <div class="">
-                            <img src="https://anbaritoys.ir/assets/img/gift.png" class="img-fluid" alt="کادوی تولد عنبری تویز">
+                            <img src="/assets/img/gift.png" class="img-fluid" alt="کادوی تولد عنبری تویز">
                         </div>
                     </div>
                 </div>
