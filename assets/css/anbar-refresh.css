@@ -763,70 +763,133 @@ footer.main-footer .newsletter form .btn {
     border-radius: 3px !important;
 }
 
-/* ---------- اسلایدر اصلی: کارت لایه‌دار روی هیرو ---------- */
+/* ---------- اسلایدر اصلی — از صفر ---------- */
+
+/* wrapper شناور روی hero */
+.anbar-slider-wrap {
+    margin: 0 0 4.4rem;
+}
 @media (min-width: 992px) {
-    .main-container > .row.mb-5:first-child {
-        margin-top: -46px !important;
+    .anbar-slider-wrap {
+        margin-top: -64px;
         position: relative;
         z-index: 6;
-        background: #fff;
-        border-radius: 22px;
-        box-shadow: var(--anbar-shadow-lg);
-        padding: 10px !important;
-        overflow: hidden;
     }
 }
-.main-container > .row.mb-5:first-child .carousel-inner {
-    border-radius: 16px;
+
+/* کادر */
+.anbar-slider {
+    position: relative;
+    border-radius: 22px;
     overflow: hidden;
+    box-shadow: 0 20px 50px rgba(36,39,44,.14), 0 6px 20px rgba(207,31,61,.09);
+    background: #f0eae8;
+    line-height: 0; /* جلوگیری از فاصله زیر img */
 }
-.main-container > .row.mb-5:first-child img {
+
+/* track */
+.anbar-slider__track {
+    display: grid;
+    width: 100%;
+}
+.anbar-slider__slide {
+    grid-area: 1 / 1;
+    display: block;
+    opacity: 0;
+    transition: opacity .55s ease;
+    pointer-events: none;
+    line-height: 0;
+}
+.anbar-slider__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* تصویر: عرض کامل، ارتفاع طبیعی حفظ میشه */
+.anbar-slider__slide img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 16px;
 }
-/* بنر اصلی: نمایش کامل تصویر با نسبت طبیعی (بدون crop شدن متن بنر) */
-#main-slider .carousel-item { height: auto; }
-/* موبایل: نوار کوتاه با برش مرکزی (هدف‌مند) */
-#main-slider-res img { height: 150px; object-fit: cover; }
-.main-slider-slide { display: block; }
 
-/* فلش‌های کاروسل: دایره‌ی سفید، فقط با هاور */
-.main-slider .carousel-control-prev,
-.main-slider .carousel-control-next {
-    width: 42px;
-    height: 42px;
+/* overlay پایین برای خوانایی dot‌ها */
+.anbar-slider::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 80px;
+    background: linear-gradient(to top, rgba(15,8,6,.5) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* فلش‌ها */
+.anbar-slider__arrow {
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin: 0 12px;
-    background: #fff;
+    z-index: 5;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, .14);
-    opacity: 0;
-    transition: opacity .25s ease;
-    color: var(--anbar-primary);
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255,255,255,.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--anbar-primary-strong);
+    box-shadow: 0 4px 18px rgba(0,0,0,.18);
+    opacity: .6;
+    transition: opacity .2s ease, transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
 }
-.main-slider:hover .carousel-control-prev,
-.main-slider:hover .carousel-control-next { opacity: 1; }
-.main-slider .carousel-control-prev i,
-.main-slider .carousel-control-next i { font-size: 1.5rem; }
+.anbar-slider__arrow--prev { right: 14px; }
+.anbar-slider__arrow--next { left: 14px; }
+.anbar-slider__arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.12);
+    box-shadow: 0 8px 26px rgba(0,0,0,.22);
+}
+.anbar-slider__arrow svg { flex: none; display: block; }
 
-/* نشانگرهای پایین اسلایدر: قرص‌های هماهنگ با تم */
-.main-slider .carousel-indicators li {
-    width: 18px;
-    height: 5px;
-    border-radius: 999px;
-    background: #d9d2cf;
-    border: 0;
-    transition: all .25s ease;
+/* dot‌ها */
+.anbar-slider__dots {
+    position: absolute;
+    bottom: 14px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 5;
 }
-.main-slider .carousel-indicators li.active {
-    width: 34px;
-    background: var(--anbar-primary);
+.anbar-slider__dot {
+    width: 20px;
+    height: 4px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,.45);
+    padding: 0;
+    transition: width .28s ease, background .28s ease, box-shadow .28s ease;
+}
+.anbar-slider__dot.is-active {
+    width: 38px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+
+/* موبایل */
+@media (max-width: 767px) {
+    .anbar-slider { border-radius: 16px; }
+    /* بنرهای عریض روی موبایل بیش‌ازحد کوتاه می‌شوند؛ برش مرکزی هدفمند مثل اسلایدر موبایل قبلی */
+    .anbar-slider__slide img { height: 170px; object-fit: cover; }
+    .anbar-slider__arrow { width: 34px; height: 34px; opacity: .7; }
+    .anbar-slider__arrow--prev { right: 10px; }
+    .anbar-slider__arrow--next { left: 10px; }
+    .anbar-slider__dots { bottom: 10px; }
 }
 
 /* ---------- ریسپانسیو صفحه اصلی ---------- */
@@ -1278,6 +1341,7 @@ footer.main-footer .copyright {
     .brand-slider .item:hover, .category-card:hover,
     .age-card:hover, .brand-card:hover { transform: none; }
 }
+
 /* ============================================================
    Refresh Layer v2 — پولیش بصری صفحه اصلی
    ============================================================ */
