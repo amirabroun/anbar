@@ -2,8 +2,6 @@ services:
     nginx:
         image: nginx:alpine
         container_name: "anbar-nginx"
-        depends_on:
-            - php
         ports:
             - "${APP_PORT:-8000}:80"
         volumes:
@@ -13,6 +11,9 @@ services:
             - "anbaritoys.ir:0.0.0.0"
             - "localhost:0.0.0.0"
         restart: unless-stopped
+        depends_on:
+            - php
+            - admin-php
 
     php:
         container_name: "anbar-php"
@@ -25,6 +26,22 @@ services:
             - "localhost:127.0.0.1"
         volumes:
             - ./:/usr/share/nginx/www
+        restart: unless-stopped
+
+    # Admin panel gets its own php-fpm so its core.php bootstrap (and its
+    # login guard) can never leak into main-site requests, and vice versa.
+    admin-php:
+        container_name: "anbar-admin-php"
+        image: anbar-php
+        hostname: anbar-admin
+        depends_on:
+            - php
+        extra_hosts:
+            - "anbaritoys.ir:127.0.0.1"
+            - "localhost:127.0.0.1"
+        volumes:
+            - ./:/usr/share/nginx/www
+            - ./docs/dockerfiles/anbar-admin.ini:/usr/local/etc/php/conf.d/anbar.ini:ro
         restart: unless-stopped
 
 networks:
