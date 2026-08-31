@@ -191,11 +191,34 @@ function selectproduct ($id){
 }
 function deleteProduct($product_id){
     global $cn;
-    $sql="DELETE FROM `products` WHERE `products`.`id` = ?";
-    $result=$cn->prepare($sql);
-    $result ->bindValue(1,$product_id);
-    return $result->execute();
-
+    // حذف ردیف‌های وابسته + خود محصول در یک تراکنش
+    // (order_product عمداً حفظ می‌شود تا سابقه سفارش‌ها از بین نرود)
+    $tables_with_product_id = [
+        'photo_product', 'category_product', 'details', 'product_variety',
+        'interest', 'single_product_for', 'discount_code_product', 'discount_code_product_grop',
+    ];
+    $tables_with_teack_product = ['comente', 'question'];
+    try {
+        $cn->beginTransaction();
+        foreach ($tables_with_product_id as $table) {
+            $stmt = $cn->prepare("DELETE FROM `$table` WHERE `product_id` = ?");
+            $stmt->bindValue(1, $product_id);
+            $stmt->execute();
+        }
+        foreach ($tables_with_teack_product as $table) {
+            $stmt = $cn->prepare("DELETE FROM `$table` WHERE `teack_product` = ?");
+            $stmt->bindValue(1, $product_id);
+            $stmt->execute();
+        }
+        $stmt = $cn->prepare("DELETE FROM `products` WHERE `id` = ?");
+        $stmt->bindValue(1, $product_id);
+        $stmt->execute();
+        $cn->commit();
+        return true;
+    } catch (Exception $e) {
+        $cn->rollBack();
+        return false;
+    }
 }
 
 function selectProductsTBL()

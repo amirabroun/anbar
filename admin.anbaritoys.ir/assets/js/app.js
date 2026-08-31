@@ -505,3 +505,42 @@ function change_SuggestedProducts($products_id){
         },
     })
 }
+
+
+function deleteProductConfirm($products_id, btn){
+    const title = $(btn).closest('tr').find('.product-title').text().trim() || ('کد ' + $products_id);
+    Swal.fire({
+        title: 'حذف محصول',
+        html: 'محصول <b>' + title + '</b> برای همیشه حذف شود؟<br><small class="text-muted">این عملیات قابل بازگشت نیست.</small>',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'بله، حذف کن',
+        cancelButtonText: 'انصراف',
+        confirmButtonColor: '#d33',
+    }).then(function (result) {
+        if (!result.isConfirmed) return;
+        $.ajax({
+            url: 'requests/ProductsRequest.php',
+            method: 'get',
+            dataType: 'json',
+            data: {
+                action: 'delete_product',
+                products_id: $products_id,
+            },
+            success: function (response) {
+                if (response.status === 200) {
+                    $('#datatable_products').DataTable().row($(btn).closest('tr')).remove().draw(false);
+                }
+                Swal.fire({
+                    title: response.title,
+                    html: response.text ? response.text : response.messages,
+                    icon: response.type ? response.type : 'error',
+                    confirmButtonText: 'متوجه شدم!',
+                })
+            },
+            error: function (error) {
+                console.log(error)
+            },
+        })
+    })
+}

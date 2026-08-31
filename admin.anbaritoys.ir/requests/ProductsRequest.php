@@ -128,11 +128,19 @@ if (isset($_GET['action']) && $_GET['action'] === 'change_Suggested_products') {
 if (isset($_GET['action']) && $_GET['action'] === 'delete_product') {
     $delete_product = deleteProduct($_GET['products_id']);
     if ($delete_product) {
-        setMessage('عملیات موفق', 'حذف محصول با موفقیت انجام شد', 'success');
-    } else setMessage('عملیات نا موفق', 'حذف محصول با موفقیت انجام نشد', 'error');
-    back();
-
-
+        responseJson([
+            'status' => 200,
+            'title' => 'عملیات موفق',
+            'text' => 'حذف محصول با موفقیت انجام شد',
+            'type' => 'success',
+        ]);
+    }
+    responseJson([
+        'status' => 400,
+        'title' => 'عملیات نا موفق',
+        'text' => 'حذف محصول با موفقیت انجام نشد',
+        'type' => 'error',
+    ]);
 }
 if (pageName()=='update_products'){
     $product=selectproduct($_GET['products_id']);
