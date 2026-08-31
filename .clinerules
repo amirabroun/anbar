@@ -1,0 +1,11 @@
+# Cline rules — read AGENTS.md first
+
+Before any change in this repo, read [AGENTS.md](AGENTS.md) (project entry for AI agents) and keep its hard rules:
+
+- Never run `git commit`/`git push` unless the user explicitly asks in this session.
+- Never write real credentials (DB password, SECRET_TOKEN, zarinpal merchant id) into files, diffs, or docs.
+- Repo is CRLF — preserve line endings; beware `\n`-only replacements silently no-oping.
+- CSS edits to `assets/css/anbar-refresh.css` require bumping `?v=N` in all 5 header partials under `views/partial/`.
+- Do not restructure the legacy `auto_prepend_file` / `pagename()` architecture.
+
+Deep reference: [docs/PROJECT.md](docs/PROJECT.md) · Open work: [docs/BACKLOG.md](docs/BACKLOG.md)
