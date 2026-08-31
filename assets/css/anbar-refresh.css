@@ -1536,3 +1536,92 @@ footer.main-footer {
     .feature-bar__icon { width: 44px; height: 44px; }
 }
 
+/* ============================================================
+   بخش برندهای محبوب — ریدیزاین کامل (brand-pill)
+   ============================================================ */
+
+/* غیرفعال کردن استایل‌های قدیمی brand-card برای این بخش */
+.brand-section .brand-card,
+.brand-section .brand-card__img,
+.brand-section .brand-card__title { all: unset; }
+
+/* grid اصلی */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+}
+
+/* هر pill */
+.brand-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1.5px solid var(--anbar-border);
+    border-radius: 18px;
+    padding: 16px 10px 14px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(36,39,44,.05);
+    transition: transform .22s cubic-bezier(.34,1.56,.64,1),
+                box-shadow .22s ease,
+                border-color .22s ease,
+                background .22s ease;
+}
+.brand-pill:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(207,31,61,.14);
+    border-color: #f0b8c3;
+    background: linear-gradient(160deg, #fff 50%, #fff5f7 100%);
+}
+
+/* محفظه لوگو: مربع با نسبت ثابت */
+.brand-pill__logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fafafa;
+    border: 1px solid #f0eae8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex: none;
+    transition: background .22s ease;
+}
+.brand-pill:hover .brand-pill__logo {
+    background: #fff4f6;
+    border-color: #f6d4da;
+}
+.brand-pill__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+.brand-pill:hover .brand-pill__logo img { transform: scale(1.1); }
+
+/* نام برند */
+.brand-pill__name {
+    font-size: .82rem;
+    font-weight: 800;
+    color: var(--anbar-ink-soft);
+    text-align: center;
+    line-height: 1.5;
+    transition: color .2s ease;
+}
+.brand-pill:hover .brand-pill__name { color: var(--anbar-primary-deep); }
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .brand-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
+    .brand-pill { padding: 12px 8px 10px; border-radius: 14px; gap: 8px; }
+    .brand-pill__logo { width: 70px; height: 70px; border-radius: 12px; padding: 8px; }
+    .brand-pill__name { font-size: .76rem; }
+}
+@media (max-width: 400px) {
+    .brand-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .brand-pill__logo { width: 60px; height: 60px; }
+}
