@@ -17,6 +17,7 @@ include "models/photo.php";
 include 'models/User.php';
 include 'models/collection.php';
 include 'models/factor.php';
+include 'models/Dashboard.php';
 include 'models/about_us.php';
 include 'models/perper.php';
 include 'models/Color.php';

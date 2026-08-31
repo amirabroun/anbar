@@ -1,103 +1,55 @@
 <!DOCTYPE html>
-<html lang="fa" direction="rtl" dir="rtl" style="direction: rtl" >
-<!--begin::Head-->
+<html lang="fa" dir="rtl">
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 if(!isset($_GET["secret"]) || $_GET["secret"]!== whirlpool(SECRET_TOKEN) ){
     back();
 }
+$anFlash = null;
+if (isset($_SESSION['message'])) {
+    $anFlash = $_SESSION['message'];
+    unset($_SESSION['message']);
+}
 ?>
 <head>
-    <meta charset="utf-8" />
-    <title>ورود مدیران</title>
-    <meta name="description" content="Login page example" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="canonical" href="https://keenthemes.com/metronic" />
-    <!--begin::Fonts-->
-    <!--end::Fonts-->
-    <!--begin::Page Custom Styles(used by this page)-->
-    <link href="assets/css/pages/login/classic/login-5.css" rel="stylesheet" type="text/css" />
-    <!--end::Page Custom Styles-->
-    <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
-    <!--end::Global Theme Styles-->
-    <!--begin::Layout Themes(used by all pages)-->
-    <link href="assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
-    <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود مدیران | پنل مدیریت انبار</title>
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico">
+    <link rel="stylesheet" href="assets/css/admin.css">
 </head>
-<!--end::Head-->
-<!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
-<!--begin::Main-->
-<div class="d-flex flex-column flex-root">
-    <!--begin::Login-->
-    <div class="login login-5 login-signin-on d-flex flex-row-fluid" id="kt_login">
-        <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url(assets/media/bg/bg-2.jpg);">
-            <div class="login-form text-center text-white p-7 position-relative overflow-hidden">
-                <!--begin::Login Header-->
-                <div class="d-flex flex-center mb-15">
-                    <a href="#">
-                        <img src="assets/media/logos/logo-letter-13.png" class="max-h-75px" alt="" />
-                    </a>
-                </div>
-                <!--end::Login Header-->
-                <!--begin::Login Sign in form-->
-                <div class="login-signin">
-                    <div class="mb-20">
-                        <h3 class="opacity-40 font-weight-normal">ورود به صفحه مدیریت</h3>
-                        <p class="opacity-40">مشخصات خود را برای ورود وارد کنید:</p>
-                    </div>
-                    <form class="form" method="post" action="requests/LoginRequest.php">
-                        <input name="action" type="hidden" value="manager_login">
-                        <div class="form-group">
-                            <input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="email" placeholder="ایمیل " name="email" autocomplete="off" />
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="password" placeholder="رمز ورود" name="password" />
-                        </div>
-                        <!--<div class="form-group d-flex flex-wrap justify-content-between align-items-center px-8 opacity-60">
-                            <div class="checkbox-inline">
-                                <label class="checkbox checkbox-outline checkbox-white text-white m-0">
-                                    <input type="checkbox" name="remember" />
-                                    <span></span>بخاطر بسپار</label>
-                            </div>
-                        </div>-->
-                        <div class="form-group text-center mt-10">
-                            <button class="btn btn-pill btn-primary opacity-90 px-15 py-3" type="submit">ورود</button>
-                        </div>
-                    </form>
-                    <!--<div class="mt-10">
-                        <span class="opacity-40 mr-4">Don't have an account yet?</span>
-                        <a href="javascript:;" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a>
-                    </div>-->
-                </div>
-                <!--end::Login Sign in form-->
-            </div>
+<body class="an-body">
+<?php include __DIR__ . '/views/partials/an-icon.php'; ?>
+<div class="an-login">
+    <div class="an-login-card">
+        <div class="an-login-brand">
+            <span class="an-brand-mark"><svg class="an-ic"><use href="#an-i-box"></use></svg></span>
+            <b>پنل مدیریت انبار</b>
+            <span>برای ورود، مشخصات مدیر خود را وارد کنید</span>
         </div>
+        <?php if ($anFlash) { ?>
+            <div class="an-alert is-<?php echo $anFlash['type'] === 'success' ? 'success' : 'error' ?>">
+                <svg class="an-ic"><use href="#an-i-<?php echo $anFlash['type'] === 'success' ? 'check' : 'alert' ?>"></use></svg>
+                <div><b><?php echo htmlspecialchars($anFlash['title']) ?></b><br><?php echo htmlspecialchars($anFlash['text']) ?></div>
+            </div>
+        <?php } ?>
+        <form class="form" method="post" action="requests/LoginRequest.php">
+            <input name="action" type="hidden" value="manager_login">
+            <div class="an-field">
+                <label for="anEmail">ایمیل</label>
+                <input class="an-input" id="anEmail" type="email" placeholder="ایمیل" name="email" autocomplete="off" required>
+            </div>
+            <div class="an-field">
+                <label for="anPassword">رمز ورود</label>
+                <input class="an-input" id="anPassword" type="password" placeholder="رمز ورود" name="password" required>
+            </div>
+            <button class="an-btn an-btn-primary" type="submit">
+                ورود به پنل
+                <svg class="an-ic" style="width:17px;height:17px"><use href="#an-i-chevron"></use></svg>
+            </button>
+        </form>
+        <div class="an-login-foot">انبار — سیستم مدیریت فروشگاه اسباب‌بازی · فنی مهندسی پاسکال</div>
     </div>
-    <!--end::Login-->
 </div>
-<!--end::Main-->
-<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
-<!--begin::Global Config(global config for global JS scripts)-->
-<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
-<!--end::Global Config-->
-<!--begin::Global Theme Bundle(used by all pages)-->
-<script src="assets/plugins/global/plugins.bundle.js"></script>
-<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-<script src="assets/js/scripts.bundle.js"></script>
-
-<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-<!--end::Global Theme Bundle-->
-<!--begin::Page Scripts(used by this page)-->
-<script src="assets/js/app.js"></script>
-<!--end::Page Scripts-->
 </body>
-<!--end::Body-->
 </html>
