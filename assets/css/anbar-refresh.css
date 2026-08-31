@@ -450,6 +450,39 @@ footer.main-footer .newsletter form .btn {
     object-fit: contain;
     transition: transform .3s ease;
 }
+
+/* اصلاح: wrapper سن — بزرگ‌تر و بدون padding اضافه */
+.age-card__img {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    padding: 4px;
+    background: linear-gradient(145deg, #fff8ee 0%, #fff3e0 100%);
+    box-shadow: 0 4px 12px rgba(255, 177, 0, .12);
+}
+.age-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* اصلاح: wrapper برند — ratio افقی برای لوگو */
+.brand-card__img {
+    width: 140px;
+    height: 80px;
+    border-radius: 16px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #f0eae8;
+    box-shadow: 0 2px 10px rgba(36,39,44,.06);
+}
+.brand-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+}
 .category-card:hover .category-card__img img,
 .age-card:hover .age-card__img img,
 .brand-card:hover .brand-card__img img { transform: scale(1.08); }
@@ -483,7 +516,7 @@ footer.main-footer .newsletter form .btn {
     transition: transform .3s ease;
 }
 .brand-slider .item:hover img, .category-slider .item:hover img { transform: scale(1.04); }
-.brand-slider .item a span, .category-slider .item a span {
+.brand-slider .item a span:not([class]), .category-slider .item a span:not([class]) {
     display: block;
     text-align: center;
     font-weight: 700;
@@ -492,7 +525,7 @@ footer.main-footer .newsletter form .btn {
     margin: 0 !important;
     transition: color .18s ease;
 }
-.brand-slider .item a:hover span, .category-slider .item a:hover span { color: var(--anbar-primary-deep); }
+.brand-slider .item a:hover span:not([class]), .category-slider .item a:hover span:not([class]) { color: var(--anbar-primary-deep); }
 
 /* کارت‌ها داخل کاروسل: هم‌قد (owl خودش عرض آیتم‌ها را مدیریت می‌کند) */
 .owl-item .category-card, .owl-item .product-card { height: 100%; }
@@ -805,7 +838,9 @@ footer.main-footer .newsletter form .btn {
     .home-cta { padding: 1.5rem 1.25rem; text-align: center; }
     .home-cta__content { flex-direction: column; gap: 12px; }
     .home-cta .text-left { text-align: center !important; margin-top: 14px; }
-    .category-card__img, .age-card__img, .brand-card__img { width: 64px; height: 64px; }
+    .category-card__img { width: 64px; height: 64px; }
+    .age-card__img { width: 86px; height: 86px; }
+    .brand-card__img { width: 110px; height: 64px; }
     .feature-bar__text strong { font-size: .8rem; }
 }
 @media (max-width: 768px) {
