@@ -1278,3 +1278,261 @@ footer.main-footer .copyright {
     .brand-slider .item:hover, .category-card:hover,
     .age-card:hover, .brand-card:hover { transform: none; }
 }
+/* ============================================================
+   Refresh Layer v2 — پولیش بصری صفحه اصلی
+   ============================================================ */
+
+/* ---------- هیرو: عمق و تایپوگرافی ---------- */
+.anbar-hero {
+    padding: 4rem 0 5.5rem;
+    background:
+        radial-gradient(ellipse 900px 500px at 85% -15%, rgba(255, 177, 0, .22), transparent 58%),
+        radial-gradient(ellipse 700px 400px at 5% 115%, rgba(15, 171, 150, .15), transparent 52%),
+        radial-gradient(ellipse 500px 350px at 50% 60%, rgba(207, 31, 61, .08), transparent 65%),
+        linear-gradient(125deg, #b81530 0%, #cf1f3d 30%, #e63950 60%, #ff6b45 100%);
+}
+@media (min-width: 992px) {
+    .anbar-hero { padding: 5rem 0 6.5rem; }
+}
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -.5px;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, .18);
+    margin-bottom: 1.2rem;
+}
+.hero-title em {
+    color: #ffe08a;
+    text-shadow: 0 0 28px rgba(255, 177, 0, .5);
+}
+.hero-title em::after {
+    height: 11px;
+    background: rgba(255, 224, 138, .35);
+    border-radius: 8px;
+}
+.hero-sub {
+    font-size: 1.08rem;
+    line-height: 2.1;
+    opacity: .95;
+    max-width: 36rem;
+    margin-bottom: 2rem;
+}
+.hero-cta {
+    padding: .9rem 2.4rem;
+    font-size: 1.08rem;
+    font-weight: 900;
+    letter-spacing: -.2px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+.stat-chip {
+    background: rgba(255, 255, 255, .16);
+    border: 1.5px solid rgba(255, 255, 255, .35);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem 1.5rem;
+    min-width: 112px;
+}
+.stat-chip strong { font-size: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,.15); }
+
+/* blob‌های هیرو: بزرگ‌تر و نرم‌تر */
+.blob-1 { width: 280px; height: 280px; right: -80px; top: -100px; background: rgba(255,255,255,.12); }
+.blob-2 { width: 150px; height: 150px; left: 5%; bottom: -60px; background: rgba(255, 224, 138, .28); }
+.blob-3 { width: 80px; height: 80px; left: 40%; top: 20px; }
+.star-1 { font-size: 2rem; opacity: .9; }
+.star-2 { font-size: 1.3rem; opacity: .75; }
+
+/* ---------- تیتر بخش‌ها: واضح‌تر ---------- */
+.section-title, .title-wide {
+    padding: .45rem 1.6rem .45rem 3rem;
+    border-radius: 999px;
+    border: 2px solid var(--anbar-primary-soft);
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(207, 31, 61, .08);
+    margin-bottom: 1.5rem !important;
+}
+.section-title::before, .title-wide::before {
+    width: 28px;
+    height: 14px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, #ffb100 0%, #ff7a30 100%);
+    box-shadow: 1px 5px 0 rgba(0,0,0,.08);
+    right: 1.2rem;
+}
+.section-title h2, .title-wide h2 { font-size: 1.15rem; font-weight: 900; }
+
+/* ---------- feature-bar: آیکون‌های گرادیانت ---------- */
+.feature-bar { margin-top: 2rem !important; }
+@media (min-width: 992px) {
+    .feature-bar { margin-top: -2.5rem !important; position: relative; z-index: 7; }
+}
+.feature-bar__item {
+    padding: 1.1rem 1.2rem !important;
+    border-radius: 20px !important;
+    border: 1.5px solid var(--anbar-border) !important;
+    box-shadow: 0 4px 18px rgba(36,39,44,.07);
+    background: #fff;
+    transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s ease;
+}
+.feature-bar__item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(207, 31, 61, .13);
+    border-color: #f6d4da !important;
+}
+.feature-bar__icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 16px !important;
+    background: linear-gradient(135deg, var(--anbar-primary-soft) 0%, #fce8ec 100%) !important;
+    color: var(--anbar-primary-strong) !important;
+    box-shadow: 0 4px 10px rgba(207,31,61,.1);
+}
+.feature-bar__text strong { font-size: .9rem; font-weight: 900; }
+.feature-bar__text span { font-size: .76rem; }
+
+/* ---------- گرید دسته‌بندی: hover رنگی ---------- */
+.category-card {
+    border-radius: 20px !important;
+    border: 1.5px solid var(--anbar-border) !important;
+    padding: 18px 8px 14px;
+    gap: 12px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(36,39,44,.06);
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, border-color .25s ease;
+}
+.category-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(207, 31, 61, .16);
+    border-color: #f0b8c3 !important;
+    background: linear-gradient(160deg, #fff 60%, #fff5f7 100%);
+}
+.category-card__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #fdf3f0 0%, #fff4f6 100%);
+    box-shadow: 0 3px 10px rgba(207,31,61,.08);
+    transition: background .25s ease;
+}
+.category-card:hover .category-card__img {
+    background: linear-gradient(145deg, #fdeef1 0%, #fce8ec 100%);
+}
+.category-card__title {
+    font-size: .82rem !important;
+    font-weight: 800 !important;
+    color: var(--anbar-ink-soft) !important;
+    transition: color .22s ease;
+}
+.category-card:hover .category-card__title { color: var(--anbar-primary-deep) !important; }
+
+/* ---------- کارت محصول: پولیش نهایی ---------- */
+.product-card {
+    border-radius: 20px !important;
+    border: 1.5px solid var(--anbar-border) !important;
+    box-shadow: 0 2px 12px rgba(36,39,44,.06);
+    transition: transform .26s cubic-bezier(.34,1.56,.64,1), box-shadow .26s ease, border-color .26s ease;
+}
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 36px rgba(207, 31, 61, .15);
+    border-color: #f0b8c3 !important;
+}
+.product-card .product-thumb {
+    background: linear-gradient(145deg, #fdf3f0 0%, #fff8f7 100%);
+    border-radius: 14px;
+    min-height: 160px;
+    margin: 10px 10px 0;
+}
+.product-card:hover .product-thumb img { transform: scale(1.1); }
+.product-card .product-card-body { padding: 8px 14px 16px; }
+
+/* قیمت با رنگ برند */
+.product-price strong {
+    color: var(--anbar-primary-strong) !important;
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+.product-price del { color: #b0b8c1 !important; }
+
+/* ---------- بنر CTA کادوی تولد: جلوه‌ی بهتر ---------- */
+.home-cta {
+    background: linear-gradient(125deg, #b81530 0%, #cf1f3d 35%, #e63950 65%, #ff6b45 100%);
+    border-radius: 24px;
+    padding: 2.4rem 3rem;
+    box-shadow: 0 18px 40px rgba(207, 31, 61, .28);
+    position: relative;
+    overflow: hidden;
+}
+.home-cta::before {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.07);
+    left: -80px;
+    bottom: -80px;
+    pointer-events: none;
+}
+.home-cta::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,.25);
+    left: 60px;
+    top: -20px;
+    pointer-events: none;
+}
+.home-cta h3 { font-size: 1.5rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,.12); }
+.home-cta__btn {
+    padding: 13px 32px;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+}
+
+/* ---------- کارت سن ---------- */
+.age-card {
+    border-radius: 20px !important;
+    border: 1.5px solid var(--anbar-border) !important;
+    padding: 18px 8px 14px;
+    box-shadow: 0 2px 12px rgba(36,39,44,.06);
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, border-color .25s ease;
+}
+.age-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(255,177,0,.2);
+    border-color: #ffe5a0 !important;
+}
+.age-card__img { border-radius: 18px; }
+
+/* ---------- فوتر: پس‌زمینه‌ی نرم‌تر ---------- */
+footer.main-footer {
+    background: linear-gradient(180deg, #fafafa 0%, #fff4ef 60%, #fff0e8 100%);
+    margin-top: 4rem;
+}
+
+/* ---------- home-section فاصله یکنواخت ---------- */
+.home-section { margin-top: 3rem !important; }
+
+/* ---------- ریسپانسیو v2 ---------- */
+@media (max-width: 576px) {
+    .anbar-hero { padding: 2.6rem 0 3rem; }
+    .stat-chip { min-width: 82px; padding: .7rem .6rem; }
+    .stat-chip strong { font-size: 1.2rem; }
+    .category-card__img { width: 70px; height: 70px; }
+    .feature-bar { margin-top: 1.5rem !important; }
+    .home-cta { padding: 1.8rem 1.5rem; }
+    .home-cta::after { display: none; }
+}
+@media (max-width: 768px) {
+    .anbar-hero { padding: 2.8rem 0 3.4rem; border-radius: 0 0 28px 28px; }
+    .anbar-hero-stats { margin-top: 1rem; }
+    .feature-bar__item { padding: .9rem .85rem !important; }
+    .feature-bar__icon { width: 44px; height: 44px; }
+}
+
