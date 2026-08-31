@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['action'])&& $_POST['action']=== 'changeBanner1'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/banner/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -17,7 +17,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'changeBanner2'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/banner/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -34,7 +34,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'changeBanner3'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/banner/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -51,7 +51,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider1'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -68,7 +68,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider2'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -85,7 +85,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider3'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -102,7 +102,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider4'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -120,7 +120,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider2_1'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/slider-responsive/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -137,7 +137,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider2_2'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/slider-responsive/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -154,7 +154,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider2_3'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/slider-responsive/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));
@@ -171,7 +171,7 @@ if (! move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir)) {
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'slider2_4'){
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../user/assets/img/main-slider/slider-responsive/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));

@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 $target_dir = "../../../photos.anbaritoys.ir/images/products/";
 $target_str = basename($_FILES["fileToUpload"]["name"]);
 $imageFileType = strtolower(pathinfo($target_str,PATHINFO_EXTENSION));

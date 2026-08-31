@@ -13,4 +13,6 @@ session_set_cookie_params([
     'samesite' => 'Lax',
 ]);
 ini_set('session.gc_maxlifetime', $expire);
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
