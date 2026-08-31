@@ -1,75 +1,45 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content" xmlns="http://www.w3.org/1999/html">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">پیام ها</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php
+$getMessage = selectCategoryTBLcontact_us22($_GET['massege_id'] ?? null);
+?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-message"></use></svg>
+                جزئیات پیام
+            </h3>
+            <div class="an-card-sub">پیام ثبت‌شده از بخش تماس با ما</div>
         </div>
+        <a class="an-btn an-btn-ghost an-btn-sm" href="manage_massege2.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به پیام‌ها
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <?php
-            $getCategory = selectCategoryTBLcontact_us22($_GET['massege_id']);
-            ?>
-            <div class="card card-custom gutter-b">
-                <div class="card-header">
-                    <h3 class="card-title">پیام ها</h3>
+    <div class="an-card-body">
+        <?php if ($getMessage) { ?>
+            <div class="an-form-grid">
+                <div class="an-field">
+                    <label>نام</label>
+                    <div><?php echo $getMessage['name'] ?? '-----' ?></div>
                 </div>
-                <div class="card-body">
-                    <table class="table table-bordered table-hover table-checkable" id="datatable_category" style="margin-top: 13px !important;font-family: 'B Nazanin'">
-                        <thead class="bg-info">
-                        <tr>
-                            <th>#</th>
-                            <th>نام کاربر</th>
-                            <th>شماره تماس</th>
-                            <th>موضوع</th>
-                            <th>پیام</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if ($getCategory ){
-                                ?>
-                                <tr>
-                                    <td >اطلاعات کاربر</td>
-                                    <td><?php echo $getCategory['name'] ?? '-----'?></td>
-                                    <td nowrap="nowrap"><?php echo $getCategory['mobile'] ?? '-----'?></td>
-                                    <td><?php echo $getCategory['Issue'] ?? '-----'?></td>
-                                    <td nowrap="nowrap"><?php echo $getCategory['Description'] ?? '-----'?></td>
-                                </tr>
-                        <?php
-                        }
-                        ?>
-                        </tbody>
-                        <thead  class="bg-info">
-                        </thead>
-
-                    </table>
+                <div class="an-field">
+                    <label>شماره تماس</label>
+                    <div dir="ltr" style="text-align:right"><?php echo $getMessage['mobile'] ?? '-----' ?></div>
+                </div>
+                <div class="an-field">
+                    <label>موضوع</label>
+                    <div><?php echo $getMessage['Issue'] ?? '-----' ?></div>
+                </div>
+                <div class="an-field an-span-2">
+                    <label>متن پیام</label>
+                    <div style="line-height:2"><?php echo $getMessage['Description'] ?? '-----' ?></div>
                 </div>
             </div>
-        </div>
-        <!--end::Container-->
+        <?php } else { ?>
+            <div class="an-empty" style="display:flex">
+                <svg class="an-ic"><use href="#an-i-info"></use></svg>
+                <b>پیامی یافت نشد</b>
+            </div>
+        <?php } ?>
     </div>
-    <!--end::Entry-->
 </div>

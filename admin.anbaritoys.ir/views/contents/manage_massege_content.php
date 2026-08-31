@@ -1,87 +1,70 @@
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content" xmlns="http://www.w3.org/1999/html">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">نظرات</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php
+$getCategory = selectCategoryTBLquestion();
+?>
+<div class="an-card">
+    <div class="an-toolbar">
+        <div class="an-search">
+            <svg class="an-ic"><use href="#an-i-search"></use></svg>
+            <input type="text" placeholder="جستجو در نام کاربر…">
         </div>
+        <span class="an-count"></span>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
+    <div class="an-table-wrap">
+        <table class="an-table" data-an-table data-an-page-size="10">
+            <thead>
+            <tr>
+                <th data-sortable data-rank># <span class="an-sort">&#9650;&#9660;</span></th>
+                <th data-sortable>نام کاربر <span class="an-sort">&#9650;&#9660;</span></th>
+                <th data-sortable>شماره تماس <span class="an-sort">&#9650;&#9660;</span></th>
+                <th>وضعیت</th>
+                <th data-sortable>کد کالا <span class="an-sort">&#9650;&#9660;</span></th>
+                <th>عملیات</th>
+            </tr>
+            </thead>
+            <tbody>
             <?php
-            $getCategory = selectCategoryTBLquestion();
+            if ($getCategory) {
+                foreach ($getCategory as $key => $getcategory) {
+                    $anUser = selectmobileuser($getcategory['user_id'] ?? null);
+                    $anStatus = $getcategory['status'] ?? '';
+                    ?>
+                    <tr>
+                        <td data-rank="1"><?php echo $key + 1 ?></td>
+                        <td><span class="an-cell-title"><?php echo $getcategory['name'] ?? '-----' ?></span></td>
+                        <td dir="ltr" style="text-align:right"><?php echo $anUser['mobile'] ?? '-----' ?></td>
+                        <td>
+                            <?php if ($anStatus === 'active') { ?>
+                                <span class="an-badge is-success"><span class="an-dot"></span>تایید شده</span>
+                            <?php } else { ?>
+                                <span class="an-badge is-muted"><span class="an-dot"></span><?php echo $anStatus === 'inactive' ? 'تایید نشده' : 'نامشخص' ?></span>
+                            <?php } ?>
+                        </td>
+                        <td><span class="an-code"><?php echo $getcategory['teack_product'] ?? '-----' ?></span></td>
+                        <td>
+                            <div class="an-actions">
+                                <a class="an-iconbtn is-edit" href="manage_single_massege.php?massege_id=<?php echo $getcategory['id'] ?>" title="مشاهده و پاسخ">
+                                    <svg class="an-ic"><use href="#an-i-eye"></use></svg>
+                                </a>
+                                <a class="an-iconbtn is-bolt" href="?action=change_status_massage&massage_id=<?php echo $getcategory['id'] ?>&old_status=<?php echo $anStatus ?>" title="تایید / عدم تایید">
+                                    <svg class="an-ic"><use href="#an-i-bolt"></use></svg>
+                                </a>
+                                <a class="an-iconbtn is-trash" href="?action=delete_massage&id=<?php echo $getcategory['id'] ?>" title="حذف سوال">
+                                    <svg class="an-ic"><use href="#an-i-trash"></use></svg>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php
+                }
+            }
             ?>
-            <div class="card card-custom gutter-b">
-                <div class="card-header" >
-                    <h3 class="card-title">نظرات</h3>
-                </div>
-                <div class="card-body">
-                    <table class="table table-bordered table-hover table-checkable" id="datatable_category" style="margin-top: 13px !important;font-family: 'B Nazanin'">
-                        <thead>
-                        <tr>
-                            <th>Record ID</th>
-                            <th>نام کاربر</th>
-                            <th>شماره کاربر</th>
-                            <th>وضیعت</th>
-                            <th>کد کالا</th>
-                            <th>مشاهد جزعیات</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if ($getCategory ){
-                            foreach ($getCategory as $key=> $getcategory){
-                                $getCategory2 = selectmobileuser($getcategory['user_id']);
-                                ?>
-                                <tr>
-                                    <td ><?php echo $key +1 ?></td>
-                                    <td><?php echo $getcategory['name'] ?? '-----'?></td>
-                                    <td><?php echo $getCategory2['mobile'] ?? '-----'?></td>
-                                    <td><?php echo statusComante($getcategory['status'])?></td>
-                                    <td nowrap="nowrap"><?php echo $getcategory['teack_product'] ?? '-----'?></td>
-                                    <td nowrap="nowrap">
-                                        <a href="/manage_single_massege.php?massege_id=<?php echo $getcategory['id'] ?>" class="btn btn-info">مشاهده</a>
-                                        <a href="?action=change_status_massage&massage_id=<?php echo $getcategory['id']?>&old_status=<?php echo $getcategory['status'] ?>" class="btn btn-success btn-icon btn-shadow-hover font-weight-bold">
-                                            <i class="fa fa-bolt" style='color: white'></i>
-                                        </a>
-                                        <a href="?action=delete_massage&id=<?php echo $getcategory['id']?>" class="btn btn-danger btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                            <i class="fa fa-trash" style='color: white'></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                        <?php
-
-                            }
-                        }
-                        ?>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!--end::Container-->
+            </tbody>
+        </table>
     </div>
-    <!--end::Entry-->
+    <div class="an-empty" style="display:none">
+        <svg class="an-ic"><use href="#an-i-search"></use></svg>
+        <b>موردی پیدا نشد</b>
+        عبارت جستجو را تغییر دهید.
+    </div>
+    <div class="an-pager"><span class="an-pager-info"></span></div>
 </div>

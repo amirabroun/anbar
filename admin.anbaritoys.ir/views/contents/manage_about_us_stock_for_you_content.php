@@ -1,63 +1,36 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5"> آدرس</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php
+$limit = selectAbout_usStockById(1);
+?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-sliders"></use></svg>
+                تعداد محصولات مرتبط
+            </h3>
+            <div class="an-card-sub">تعداد محصولاتی که در صفحهٔ محصول به‌عنوان «مرتبط» نمایش داده می‌شود</div>
         </div>
+        <a class="an-btn an-btn-ghost an-btn-sm" href="index.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به داشبورد
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <div class="card card-custom gutter-b">
-                <div class="card-header">
-                    <h3 class="card-title" > ویرایش تعداد برای نمایش محصولات مرتبط</h3>
+    <div class="an-card-body">
+        <?php echo initFormErrors() ?>
+        <form method="post" novalidate>
+            <input type="hidden" name="action" value="update_about_us_stock">
+            <div class="an-form-grid">
+                <div class="an-field">
+                    <label>تعداد <small>*</small></label>
+                    <input type="number" class="an-input" name="stock" value="<?php echo $limit['stock'] ?? '' ?>">
                 </div>
-                <?php echo initFormErrors();
-                
-                $limit = selectAbout_usStockById(1);
-                
-                ?>
-                <form class="form" method="post">
-                    <input type="hidden" name="action" value="update_about_us_stock">
-                    <div class="card-body">
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <label>تعداد:</label>
-                                <input type="number" value="<?= $limit['stock'] ?>" class="form-control" name="stock">
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary mr-2">ثبت</button>
-                        </div>
-                </form>
             </div>
-        </div>
-        <!--end::Container-->
+            <div class="an-form-actions" style="margin-top:22px">
+                <button type="submit" class="an-btn an-btn-primary">
+                    <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-check"></use></svg>
+                    ثبت
+                </button>
+            </div>
+        </form>
     </div>
-    <!--end::Entry-->
 </div>
-<script>
-
-</script>
