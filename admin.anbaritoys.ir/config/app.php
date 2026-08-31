@@ -37,15 +37,20 @@ const PREFIX_IMAGE_CODE = [
     'product' => 'IMG-'
 ];
 // آدرس‌های دامنه‌ها — در صورت تغییر محیط، فقط همین‌جا ویرایش شود
+// (فایل helpers/env.php بدون .env هم امن است و پیش‌فرض برمی‌گرداند)
+require_once dirname(__DIR__, 2) . '/helpers/env.php';
+
+// مسیر فایل‌سیستم برای آپلود/جابه‌جایی عکس‌ها — ثابت می‌ماند
 const  DOCUMENT_ROOT_DOMAIN = [
     'public' => '../photos.anbaritoys.ir/'
 ];
 
-const  DOMAIN = [
-    'main' => 'https://anbaritoys.ir/',
-    'public' => 'https://photos.anbaritoys.ir',
+// آدرس‌های URL — در داکر لوکال از .env خوانده می‌شود، روی cPanel پیش‌فرض
+define('DOMAIN', [
+    'main' => env('APP_URL', 'https://anbaritoys.ir/'),
+    'public' => env('PUBLIC_URL', 'https://photos.anbaritoys.ir'),
     'document_root' => '../photos.anbaritoys.ir',
-];
+]);
 
 
 const SECRET_TOKEN = "AmirRezaSiteSecret0001290109000102";
