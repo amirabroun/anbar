@@ -1,196 +1,117 @@
+<?php
+$selectAddressOrdersByUserId = selectAdressOrdersByUserIdd($_GET['id']);
+$selectPeyOrdersByUserId = selectPeyOrdersByUserIdd($_GET['id']);
+$selectOrdersByUserId = selectOrdersByUserIdByIdd($_GET['id']);
+$selectorder_productByUserId = selectorder_productByUserIdd($_GET['id']);
+$selectorder_citiByUserId = selectorder_cititByUserIdd($selectAddressOrdersByUserId['city_id']);
+$selectorder_preByUserId = selectorder_preByUserIdd($selectorder_citiByUserId['province_id']);
+?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-printer"></use></svg>
+                جزئیات فاکتور
+            </h3>
+            <div class="an-card-sub">فاکتور فروش سفارش <span dir="ltr"><?php echo $selectOrdersByUserId['tracking_code'] ?></span></div>
+        </div>
+        <a class="an-btn an-btn-soft an-btn-sm" href="manage_factor.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به فاکتورها
+        </a>
+    </div>
+    <div class="an-card-body">
+        <div class="an-invoice">
+            <div class="an-invoice-head">
+                <h2>فاکتور فروش</h2>
+                <div class="an-invoice-meta">
+                    <div>
+                        <span>تاریخ ثبت سفارش</span>
+                        <b><?php echo $selectOrdersByUserId['create_at'] ?></b>
+                    </div>
+                    <div>
+                        <span>شماره فاکتور</span>
+                        <b dir="ltr"><?php echo $selectOrdersByUserId['tracking_code'] ?></b>
+                    </div>
+                    <div>
+                        <span>کد پیگیری پرداخت</span>
+                        <b dir="ltr"><?php echo $selectPeyOrdersByUserId['payment_track_id'] ?></b>
+                    </div>
+                </div>
+            </div>
+            <div class="an-invoice-body">
+                <div class="an-invoice-box">
+                    <h5>اطلاعات تحویل‌گیرنده</h5>
+                    <div class="an-invoice-meta">
+                        <div>
+                            <span>نام و نام خانوادگی</span>
+                            <b><?php echo $selectAddressOrdersByUserId['first_name'] . ' ' . $selectAddressOrdersByUserId['last_name'] ?></b>
+                        </div>
+                        <div>
+                            <span>شماره تماس</span>
+                            <b dir="ltr"><?php echo $selectAddressOrdersByUserId['mobile'] ?></b>
+                        </div>
+                        <div>
+                            <span>مبلغ قابل پرداخت</span>
+                            <b><?php echo priceFormant($selectOrdersByUserId['amount_payable']) ?></b>
+                        </div>
+                    </div>
+                    <div class="an-invoice-meta" style="margin-top:14px">
+                        <div style="flex:3">
+                            <span>آدرس</span>
+                            <b style="font-weight:400;font-size:12.5px;line-height:2">
+                                استان <?php echo $selectorder_preByUserId['name'] ?>، شهر <?php echo $selectorder_citiByUserId['name'] ?> — <?php echo $selectAddressOrdersByUserId['address'] ?> — کد پستی <?php echo $selectAddressOrdersByUserId['post_code'] ?>
+                            </b>
+                        </div>
+                    </div>
+                </div>
 
-<!--end::Header Mobile-->
-<div class="d-flex flex-column flex-root">
-    <!--begin::Page-->
-    <div class="d-flex flex-row flex-column-fluid page">
-
-
-        <?php
-        $selectAddressOrdersByUserId = selectAdressOrdersByUserIdd($_GET['id']);
-        $selectPeyOrdersByUserId = selectPeyOrdersByUserIdd($_GET['id']);
-        $selectOrdersByUserId = selectOrdersByUserIdByIdd($_GET['id']);
-        $selectorder_productByUserId = selectorder_productByUserIdd($_GET['id']);
-        $selectorder_citiByUserId = selectorder_cititByUserIdd($selectAddressOrdersByUserId['city_id']);
-        $selectorder_preByUserId = selectorder_preByUserIdd($selectorder_citiByUserId['province_id']);
-        ?>
-
-        <!--begin::Wrapper-->
-
-            <!--begin::Content-->
-            <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
-
-                <!--begin::Entry-->
-                <div class="d-flex flex-column-fluid">
-                    <!--begin::Container-->
-                    <div class=" container" style="margin-top: -5%">
-                        <!-- begin::Card-->
-                        <div class="card card-custom overflow-hidden">
-                            <div class="card-body p-0">
-                                <!-- begin: فاکتور-->
-                                <!-- begin: فاکتور header-->
-                                <div class="row justify-content-center bgi-size-cover bgi-no-repeat py-8 px-8 py-md-27 px-md-0" style="background-image: url(assets/media/bg/bg-6.jpg);">
-                                    <div class="col-md-9">
-                                        <div class="d-flex justify-content-between pb-10 pb-md-20 flex-column flex-md-row">
-                                            <h1 class="display-4 text-white font-weight-boldest mb-10">فاکتور</h1>
-                                        </div>
-                                        <div class="border-bottom w-100 opacity-20"></div>
-                                        <div class="d-flex justify-content-between text-white pt-6">
-                                            <div class="d-flex flex-column flex-root">
-                                                <span class="font-weight-bolde mb-2r">تاریخ</span>
-                                                <span class="opacity-70"><?php echo $selectOrdersByUserId['create_at'] ?></span>
-                                            </div>
-                                            <div class="d-flex flex-column flex-root">
-                                                <span class="font-weight-bolder mb-2">شماره فاکتور</span>
-                                                <span class="opacity-70"><?php echo $selectOrdersByUserId['tracking_code'] ?></span>
-                                            </div>
-                                            <div class="d-flex flex-column flex-root">
-                                                <span class="font-weight-bolder mb-2">آدرس خریدار</span>
-                                                <span class="text-light" style="font-family: 'B Yekan';font-size: 15px;"><?php echo 'استان: ' . $selectorder_preByUserId['name'] .' | شهر: ' . $selectorder_citiByUserId['name'] .' '. ' | آدرس: ' . $selectAddressOrdersByUserId['address'] . ' | کد پستی: ' . $selectAddressOrdersByUserId['post_code']  ?></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: فاکتور header-->
-
-                                <!-- begin: فاکتور body-->
-                                <div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
-                                    <div class="col-md-9">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                <tr>
-                                                    <th class="pl-0 font-weight-bold text-muted  text-uppercase">#</th>
-                                                    <th class="text-right font-weight-bold text-muted text-uppercase">نام و نام خوانوادگی</th>
-                                                    <th class="text-right font-weight-bold text-muted text-uppercase">شمارخ تماس</th>
-                                                    <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">کد مرسوله</th>
-                                                    <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">مبلغ این مرسوله</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr class="font-weight-boldest font-size-lg">
-                                                    <td class="pl-0 pt-7">اطلاعات تحویل گیرنده:</td>
-                                                    <br>
-                                                    <td class="text-right pt-7"><?php echo $selectAddressOrdersByUserId['first_name'].' '.$selectAddressOrdersByUserId['last_name'] ?></td>
-                                                    <br>
-                                                    <td class="text-right pt-7"><?php echo $selectAddressOrdersByUserId['mobile'] ?></td>
-                                                    <br>
-                                                    <td class="text-danger pr-0 pt-7 text-right"><?php echo $selectPeyOrdersByUserId['payment_track_id'] ?></td>
-                                                    <br>
-                                                    <td class="text-danger pr-0 pt-7 text-right"><?php echo priceFormant($selectOrdersByUserId['amount_payable']) ?></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: فاکتور body-->
-
-                                <!-- begin: فاکتور footer-->
-                                <div class="row justify-content-center bg-gray-100 py-8 px-8 py-md-10 px-md-0">
-                                    <div class="col-md-9">
-                                        <div class="font-weight-bolder font-size-lg mb-3">مشخصات کالا های خریداری شده</div>
-
-                                        <?php
-                                      
-                                        
-                                        foreach ($selectorder_productByUserId as $order_product){
-                                            
-                                        $getDetailsProductsByID = getDetailsProductsByIDd2($order_product['product_id']);
-                                        $photo = getLastPhotoProduct($order_product['product_id']);
-                                    
-                                        if($photo){
-                                            $photo2 = getPhotoProduct222($photo['photo_id']);
-                                        }
-                                        
-                                        
-                                        ?>
-                                        <div class="d-flex justify-content-between flex-column flex-md-row font-size-lg">
-                                            <div class="d-flex flex-column mb-10 mb-md-0">
-
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span class="mr-15 font-weight-bold">نام کالا:</span>
-                                                    
-                                                    <span class="text-right"><?php echo $getDetailsProductsByID['title']?></span></span>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span class="mr-15 font-weight-bold">تعداد:</span>
-                                                    <span class="text-right" style="background-color: #00ff80;padding-right: 10px;padding-left: 10px; border-radius: 10px;font-size: 20px"><?php echo $order_product['quantity']?></span>
-                                                </div>
-
-
-                                                <span class='product-price'>
-                                                <?php
-                                                if (empty($getDetailsProductsByID['price_discounted']))
-                                                {
-                                                    ?>
-                                                    <strong><?php echo priceFormant($getDetailsProductsByID['price'])?> </strong>
-                                                    <?php
-                                                } else
-                                                {
-                                                    ?>
-                                                    <strong class="text-danger">قیمت با تخفیف :  <?php echo priceFormant($getDetailsProductsByID['price_discounted'])?></strong>
-                                                    <br>
-                                                    <del>قیمت اصلی :  <?php echo priceFormant($getDetailsProductsByID['price'])?></del>
-                                                    <?php
-                                                }
-                                                ?> </span>
-
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="mr-15 font-weight-bold">کد پیگیری:</span>
-                                                    <span class="text-right"><?php echo $getDetailsProductsByID['tracking_code']?></span></span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column text-md-right">
-                                                <?php
-                                                
-                                                if ($photo2){
-                                                    ?>
-                                                    <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'], $photo2['src'], $photo2['name'])?>' alt='Product Thumbnail'>
-                                                    <?php
-                                                }else{
-                                                    ?>
-                                                    <img  height="120" width="150" src='<?php echo normalizedPath(DOMAIN['public'],'/images/180.png')?>' alt='Product Thumbnail'>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                        </div>
-                                            <br>
-                                            <hr>
-                                            <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                                <!-- end: فاکتور footer-->
-
-                                <!-- begin: فاکتور action-->
-                                <div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
-                                    <div class="col-md-9">
-                                        <div class="d-flex justify-content-between">
-                                            <button type="button" class="btn btn-light-primary font-weight-bold" onclick="window.print();">دانلود فاکتور</button>
-                                            <button type="button" class="btn btn-primary font-weight-bold" onclick="window.print();">چاپ فاکتور</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: فاکتور action-->
-
-                                <!-- end: فاکتور-->
+                <h5 style="margin:0 0 12px;font-size:13.5px">کالاهای خریداری‌شده</h5>
+                <div class="an-invoice-items">
+                    <?php
+                    foreach ($selectorder_productByUserId as $order_product) {
+                        $getDetailsProductsByID = getDetailsProductsByIDd2($order_product['product_id']);
+                        $photo = getLastPhotoProduct($order_product['product_id']);
+                        $photo2 = $photo ? getPhotoProduct222($photo['photo_id']) : false;
+                        ?>
+                        <div class="an-invoice-item">
+                            <?php if ($photo2) { ?>
+                                <img src="<?php echo normalizedPath(DOMAIN['public'], $photo2['src'], $photo2['name']) ?>" alt="<?php echo $getDetailsProductsByID['title'] ?>">
+                            <?php } else { ?>
+                                <img src="<?php echo normalizedPath(DOMAIN['public'], '/images/180.png') ?>" alt="بدون تصویر">
+                            <?php } ?>
+                            <div class="an-invoice-item-info">
+                                <b><?php echo $getDetailsProductsByID['title'] ?></b>
+                                <span>کد مرسوله: <span dir="ltr"><?php echo $getDetailsProductsByID['tracking_code'] ?></span></span>
+                                <?php if (empty($getDetailsProductsByID['price_discounted'])) { ?>
+                                    <span style="margin-top:4px"><?php echo priceFormant($getDetailsProductsByID['price']) ?></span>
+                                <?php } else { ?>
+                                    <span style="margin-top:4px">
+                                        <?php echo priceFormant($getDetailsProductsByID['price_discounted']) ?>
+                                        <del style="margin-right:6px"><?php echo priceFormant($getDetailsProductsByID['price']) ?></del>
+                                    </span>
+                                <?php } ?>
+                            </div>
+                            <div class="an-invoice-item-price">
+                                <span class="an-invoice-qty"><?php echo $order_product['quantity'] ?> عدد</span>
                             </div>
                         </div>
-                        <!-- end::Card-->
-                    </div>
-                    <!--end::Container-->
+                        <?php
+                    }
+                    ?>
                 </div>
-                <!--end::Entry-->
+
+                <div class="an-invoice-actions" style="margin-top:26px">
+                    <button type="button" class="an-btn an-btn-primary" data-an-print>
+                        <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-download"></use></svg>
+                        دانلود فاکتور
+                    </button>
+                    <button type="button" class="an-btn an-btn-ghost" data-an-print>
+                        <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-printer"></use></svg>
+                        چاپ فاکتور
+                    </button>
+                </div>
             </div>
-            <!--end::Content-->
-
-
         </div>
-        <!--end::Wrapper-->
     </div>
-    <!--end::Page-->
-
-<!--end::Main-->
+</div>

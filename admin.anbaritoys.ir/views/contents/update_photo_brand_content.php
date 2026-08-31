@@ -1,65 +1,46 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5"> برند ها</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php
+$anImgBlog = getImgBlog2($_GET['brand_id'] ?? null);
+$anBrandPhoto = false;
+if ($anImgBlog) {
+    $anPhotoStmt = $cn->prepare('select * from brand_photo where id = ?');
+    $anPhotoStmt->bindValue(1, $anImgBlog['photo_id']);
+    $anPhotoStmt->execute();
+    $anBrandPhoto = $anPhotoStmt->fetch() ?: false;
+}
+?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-image"></use></svg>
+                عکس برند
+            </h3>
+            <div class="an-card-sub">فرمت‌های مجاز: png / jpg / jpeg</div>
         </div>
+        <a class="an-btn an-btn-ghost an-btn-sm" href="manage_brand.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به برندها
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <div class="card card-custom gutter-b"">
-                <div class="card-header">
-                    <h3 class="card-title">ویرایش برند</h3>
+    <div class="an-card-body">
+        <?php echo initFormErrors() ?>
+        <form method="post" action="" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="blogImg">
+            <?php if ($anBrandPhoto) { ?>
+                <div style="margin-bottom:18px">
+                    <img src="<?php echo normalizedPath(DOMAIN['public'], $anBrandPhoto['src'], $anBrandPhoto['name']) ?>" alt="عکس برند" style="max-width:280px;max-height:180px;border-radius:12px;border:1px solid var(--an-border,#e5e7eb)">
                 </div>
-                <?php echo initFormErrors()?>
-                <form method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" value="blogImg" name="action">
-                    <div class="form-group row">
-                        <div class="col-md-3 col-3">
-                            <div class="image-input image-input-outline" id="product_img_1">
-                                <div class="image-input-wrapper" style="background-image: url(assets/img/no-product.jpg)"></div>
-                                <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="تغییر تصویر">
-                                    <i class="fa fa-pen icon-sm text-muted"></i>
-                                    <input type="file" name="product_img[]" accept=".png, .jpg, .jpeg"/>
-                                    <input type="hidden" name="profile_avatar_remove"/>
-                                </label>
-
-                                <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="حذف تصویر">
-                                                    <i class="ki ki-bold-close icon-xs text-muted"></i>
-                                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" name="submit" class="btn btn-success" value="درج تصاویر">
-                </form>
+            <?php } ?>
+            <div class="an-field">
+                <label>انتخاب تصویر</label>
+                <input type="file" class="an-input" name="product_img[]" accept=".png, .jpg, .jpeg">
             </div>
-        </div>
-        <!--end::Container-->
+            <div class="an-form-actions" style="margin-top:22px">
+                <button type="submit" class="an-btn an-btn-primary">
+                    <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-upload"></use></svg>
+                    درج تصویر
+                </button>
+            </div>
+        </form>
     </div>
-    <!--end::Entry-->
 </div>
-<script>
-
-</script>

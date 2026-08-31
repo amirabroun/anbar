@@ -59,6 +59,19 @@ function getPhotoProduct($product_id){
 
 
 
+
+// فهرست کامل عکس‌های یک محصول (getPhotoProduct فقط یک ردیف برمی‌گرداند)
+function getPhotoProductList($product_id){
+    global $cn;
+    $sql="select pp.*, p.src, p.name from photo_product pp join photos p on p.id = pp.photo_id where pp.product_id = ? order by pp.sort asc";
+    $result=$cn->prepare($sql);
+    $result ->bindValue(1,$product_id);
+    $result->execute();
+    if ($result->rowCount()>0){
+        return $result->fetchAll();
+    }
+    return false;
+}
 function getImgBlog($blog){
     try {
         global $cn;
