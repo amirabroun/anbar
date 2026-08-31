@@ -1,80 +1,51 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">برند ها</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php $anBrand = selectBrandd($_GET['brand_id']); ?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-edit"></use></svg>
+                ویرایش برند
+            </h3>
+            <div class="an-card-sub"><?php echo $anBrand ? $anBrand['title'] : 'برند یافت نشد' ?></div>
         </div>
+        <a class="an-btn an-btn-ghost an-btn-sm" href="manage_brand.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به برندها
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <?php
-            $brad=selectBrandd($_GET['brand_id']);
-            ?>
-            <div class="card card-custom gutter-b">
-                <div class="card-header">
-                    <h3 class="card-title">ویرایش برند</h3>
+    <div class="an-card-body">
+        <?php echo initFormErrors() ?>
+        <form method="post" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="action" value="update_brand">
+            <input type="hidden" name="id" value="<?php echo $anBrand['id'] ?>">
+            <div class="an-form-grid">
+                <div class="an-field">
+                    <label>عنوان فارسی <small>*</small></label>
+                    <input type="text" class="an-input" name="title" value="<?php echo $anBrand['title'] ?>">
                 </div>
-                <?php
-                echo initFormErrors()
-                ?>
-                <form class="form" method="post"  enctype="multipart/form-data">
-                    <input type="hidden" name="action" value="update_brand">
-                    <div class="card-body">
-                        <div class="form-group row">
-
-                            <input type="hidden" class="form-control" name="id" value="<?php  echo $brad['id'] ?>" />
-
-                            <div class="col-lg-6">
-                                <label>عنوان برند:</label>
-                                <input type= "text" class="form-control" placeholder="عنوان" name="title" value="<?php  echo $brad['title']?>"/>
-                            </div>
-                            <div class="col-lg-6">
-                                <label>عنوان انگلیسی برند:</label>
-                                <input type= "text" class="form-control" placeholder="عنوان" name="english_title" value="<?php  echo $brad['english_title']?>"/>
-                            </div>
-                            <div class="col-lg-6">
-                                <label >وضعیت:</label>
-                                <select class="form-control selectpicker " name="status">
-                                    <option value="active" > فعال</option>
-                                    <option value="inactive" > غیر فعال</option>
-                                </select>
-                            </div>
-
-                            <div class="col-lg-6 mt-5">
-                                <label>تصویر:</label>
-                                <input name="pic" type="file" class="form-control">
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary mr-2">ثبت</button>
-                        </div>
-                </form>
+                <div class="an-field">
+                    <label>عنوان انگلیسی</label>
+                    <input type="text" class="an-input" name="english_title" value="<?php echo $anBrand['english_title'] ?>" dir="ltr" style="text-align:right">
+                </div>
+                <div class="an-field">
+                    <label>وضعیت</label>
+                    <select class="an-select" name="status">
+                        <option value="active" <?php echo $anBrand['status'] === 'active' ? 'selected' : '' ?>>فعال</option>
+                        <option value="inactive" <?php echo $anBrand['status'] === 'inactive' ? 'selected' : '' ?>>غیر فعال</option>
+                    </select>
+                </div>
+                <div class="an-field">
+                    <label>تصویر برند <small>(فقط png)</small></label>
+                    <input type="file" class="an-input" name="pic">
+                </div>
             </div>
-        </div>
-        <!--end::Container-->
+            <div class="an-form-actions" style="margin-top:22px">
+                <button type="submit" class="an-btn an-btn-primary">
+                    <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-check"></use></svg>
+                    ذخیره تغییرات
+                </button>
+                <a class="an-btn an-btn-ghost" href="manage_brand.php">انصراف</a>
+            </div>
+        </form>
     </div>
-    <!--end::Entry-->
 </div>

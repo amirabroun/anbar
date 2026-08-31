@@ -1,120 +1,79 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">دسته بندی ها</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php $anCategory = selectParentCategory($_GET['category_id']); ?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-edit"></use></svg>
+                ویرایش دسته‌بندی
+            </h3>
+            <div class="an-card-sub"><?php echo $anCategory ? $anCategory['title'] : 'دسته یافت نشد' ?></div>
         </div>
+        <a class="an-btn an-btn-ghost an-btn-sm" href="manage_category.php">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+            بازگشت به دسته‌ها
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <?php
-            $category=selectParentCategory($_GET['category_id']);
-            ?>
-            <div class="card card-custom gutter-b" >
-                <div class="card-header">
-                    <h3 class="card-title" >ویرایش دسته</h3>
+    <div class="an-card-body">
+        <?php echo initFormErrors() ?>
+        <form method="post" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="action" value="update_category">
+            <input type="hidden" name="id" value="<?php echo $anCategory['id'] ?>">
+            <div class="an-form-grid">
+                <div class="an-field">
+                    <label>عنوان فارسی <small>*</small></label>
+                    <input type="text" class="an-input" name="title" value="<?php echo $anCategory['title'] ?>">
                 </div>
-                <?php echo initFormErrors()?>
-                <form class="form" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="action" value="update_category">
-                    <div class="card-body">
-                        <div class="form-group row">
-
-                                <input type="hidden" class="form-control" name="id" value="<?php  echo $category['id'] ?>" />
-
-                            <div class="col-lg-6">
-                                <label>عنوان:</label>
-                                <input type="text" class="form-control" placeholder="عنوان" name="title" value="<?php  echo $category['title'] ?>" />
-                            </div>
-                                <div class="col-lg-6">
-                                   <label>عنوان انگلیسی:</label>
-                                    <input type="text" class="form-control" placeholder="عنوان انگلیسی" name="title_english" value="<?php  echo $category['english_title']?>" />
-                            </div>
-                            <?php
-                            $categoreis =selectCategory();
-                            ?>
-                            <div class="col-lg-6">
-                                <label >دسته والد:</label>
-                                    <select class="form-control selectpicker" name="parent_id">
-                                        <option value="0" > انتخاب کنید..</option>
-                                        <?php
-                                        if($categoreis)
-                                        {
-                                            foreach ($categoreis as $category_item )
-                                            {
-                                                ?>
-                                            <option <?php echo $category_item['id']===$category['parent_id'] ? 'selected' : null ;?> value="<?php echo $category_item['id']?>"> <?php echo $category_item['title']?></option>
-                                            <?php
-                                            }
-                                        }
-                                             ?>
-                                    </select>
-                            </div>
-
-                            <?php
-                            $selectCollection=selectCollectionTBL();
-                            
-                            ?>
-                            <div class="col-lg-6">
-                                <label >مجموعه:</label>
-                                <select class="form-control selectpicker" name="Collection_id">
-                                    <option value="0" > انتخاب کنید..</option>
-                                    <?php
-                                    if($selectCollection)
-                                    {
-                                        foreach ($selectCollection as $category_item )
-                                        {
-                                            ?>
-                                            <option <?php echo $category_item['id']===$category['parent_id'] ? 'selected' : null ;?> value="<?php echo $category_item['id']?>"> <?php echo $category_item['title']?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <label >وضعیت:</label>
-                                <select class="form-control selectpicker " name="status">
-                                    <option value="active" > فعال</option>
-                                    <option value="inactive" > غیر فعال</option>
-                                </select>
-                            </div>
-
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary mr-2">ثبت</button>
-                        </div>
-                </form>
+                <div class="an-field">
+                    <label>عنوان انگلیسی</label>
+                    <input type="text" class="an-input" name="title_english" value="<?php echo $anCategory['english_title'] ?>" dir="ltr" style="text-align:right">
+                </div>
+                <div class="an-field">
+                    <label>دسته والد</label>
+                    <select class="an-select" name="parent_id">
+                        <option value="0">انتخاب کنید…</option>
+                        <?php
+                        $categoreis = selectCategory();
+                        if ($categoreis) {
+                            foreach ($categoreis as $categoryItem) {
+                                ?>
+                                <option <?php echo $categoryItem['id'] === $anCategory['parent_id'] ? 'selected' : '' ?> value="<?php echo $categoryItem['id'] ?>"><?php echo $categoryItem['title'] ?></option>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="an-field">
+                    <label>مجموعه</label>
+                    <select class="an-select" name="Collection_id">
+                        <option value="0">انتخاب کنید…</option>
+                        <?php
+                        $selectCollection = selectCollectionTBL();
+                        if ($selectCollection) {
+                            foreach ($selectCollection as $collectionItem) {
+                                ?>
+                                <option <?php echo $collectionItem['id'] === $anCategory['Collection_id'] ? 'selected' : '' ?> value="<?php echo $collectionItem['id'] ?>"><?php echo $collectionItem['title'] ?></option>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="an-field">
+                    <label>وضعیت</label>
+                    <select class="an-select" name="status">
+                        <option value="active" <?php echo $anCategory['status'] === 'active' ? 'selected' : '' ?>>فعال</option>
+                        <option value="inactive" <?php echo $anCategory['status'] === 'inactive' ? 'selected' : '' ?>>غیر فعال</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <!--end::Container-->
+            <div class="an-form-actions" style="margin-top:22px">
+                <button type="submit" class="an-btn an-btn-primary">
+                    <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-check"></use></svg>
+                    ذخیره تغییرات
+                </button>
+                <a class="an-btn an-btn-ghost" href="manage_category.php">انصراف</a>
+            </div>
+        </form>
     </div>
-    <!--end::Entry-->
 </div>
-<script>
-
-</script>

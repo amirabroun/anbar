@@ -1,150 +1,102 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5"> محصولات</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php $product = selectproduct($_GET['products_id']); ?>
+<div class="an-card">
+    <div class="an-card-head">
+        <div>
+            <h3 class="an-card-title">
+                <svg class="an-ic"><use href="#an-i-edit"></use></svg>
+                ویرایش محصول
+            </h3>
+            <div class="an-card-sub"><?php echo htmlspecialchars($product['title']) ?></div>
+        </div>
+        <div class="an-actions">
+            <a class="an-btn an-btn-ghost an-btn-sm" href="manage_products_photos.php?product_id=<?php echo $_GET['products_id'] ?>">
+                <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-image"></use></svg>
+                عکس‌های محصول
+            </a>
+            <a class="an-btn an-btn-ghost an-btn-sm" href="manage_products_category.php?product_id=<?php echo $_GET['products_id'] ?>">
+                <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-layers"></use></svg>
+                دسته‌بندی
+            </a>
+            <a class="an-btn an-btn-soft an-btn-sm" href="manage_products.php">
+                <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-chevron"></use></svg>
+                بازگشت
+            </a>
         </div>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
-            <?php
-            $product=selectproduct($_GET['products_id']);
-            ?>
-            <div class="card card-custom gutter-b" >
-                <div class="card-header">
-                    <h3 class="card-title">افزودن محصولات</h3>
+    <div class="an-card-body">
+        <?php echo initFormErrors() ?>
+        <form class="form" method="post">
+            <input type="hidden" name="action" value="update_product">
+            <input type="hidden" name="category_id" value="37">
+            <div class="an-form-grid">
+                <div class="an-field">
+                    <label>عنوان فارسی <small>*</small></label>
+                    <input type="text" class="an-input" name="title" value="<?php echo $product['title'] ?>">
                 </div>
-                <?php  echo initFormErrors()?>
-                <form class="form" method="post">
-                    <input type="hidden" name="action" value="update_product">
-                    <div class="card-body">
-                        <div class="form-group row">
-                            <div class="col-lg-6">
-                                <label s>عنوان فارسی:</label>
-                                <input type="text" class="form-control" placeholder="عنوان" name="title" value="<?php echo $product['title']?>" />
-                            </div>
-                            <div class="col-lg-6">
-                                   <label >عنوان انگلیسی:</label>
-                                    <input type="text" class="form-control" placeholder="عنوان انگلیسی" name="english_title" value="<?php echo $product['english_title']?>" />
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                                <div class="col-lg-6">
-                                    <label >قیمت:</label>
-                                    <input type="text" class="form-control" placeholder="قیمت"  name=" price" value="<?php echo $product['price']?>"/>
-                                </div>
-                                <div class="col-lg-6">
-                                    <label>قیمت با تخفیف:</label>
-                                    <input type="text" class="form-control" placeholder="قیمت با تخفیف" name="price_discounted" value="<?php echo $product['price_discounted']?>" />
-                                </div>
-                            </div>
-                        <div class="form-group row">
-                            <div class="col-lg-6">
-                                <label>موجودی:</label>
-                                <input type="text" class="form-control" placeholder="موجودی" name="stock" value="<?php echo $product['stock']?>"/>
-                            </div>
-                            <div class="col-lg-6">
-                                    <label >وضعیت:</label>
-                                    <select class="form-control selectpicker " name="status" >
-                                        <option value="active">فعال</option>
-                                        <option value="inactive"> غیر فعال</option>
-
-                                    </select>
-                                </div>
-
-                        </div>
-                        <div class="form-group row">
-                            <!--<div class="col-lg-6">
+                <div class="an-field">
+                    <label>عنوان انگلیسی <small>*</small></label>
+                    <input type="text" class="an-input" name="english_title" value="<?php echo $product['english_title'] ?>" dir="ltr" style="text-align:right">
+                </div>
+                <div class="an-field">
+                    <label>قیمت (تومان) <small>*</small></label>
+                    <input type="text" class="an-input" name="price" value="<?php echo $product['price'] ?>" inputmode="numeric">
+                </div>
+                <div class="an-field">
+                    <label>قیمت با تخفیف</label>
+                    <input type="text" class="an-input" name="price_discounted" value="<?php echo $product['price_discounted'] ?>" inputmode="numeric">
+                </div>
+                <div class="an-field">
+                    <label>موجودی <small>*</small></label>
+                    <input type="text" class="an-input" name="stock" value="<?php echo $product['stock'] ?>" inputmode="numeric">
+                </div>
+                <div class="an-field">
+                    <label>وضعیت</label>
+                    <select class="an-select" name="status">
+                        <option value="active" <?php echo $product['status'] === 'active' ? 'selected' : '' ?>>فعال</option>
+                        <option value="inactive" <?php echo $product['status'] === 'inactive' ? 'selected' : '' ?>>غیر فعال</option>
+                    </select>
+                </div>
+                <div class="an-field">
+                    <label>برند</label>
+                    <?php $selectBrandsForProducts = selectBrandForProduct(); ?>
+                    <select class="an-select" name="brand_id">
+                        <option value="33">انتخاب کنید…</option>
+                        <?php
+                        if ($selectBrandsForProducts) {
+                            foreach ($selectBrandsForProducts as $selectbrandsforproducts) {
+                                ?>
+                                <option <?php echo $selectbrandsforproducts['id'] === $product['brand_id'] ? 'selected' : '' ?>
+                                        value="<?php echo $selectbrandsforproducts['id'] ?>"><?php echo $selectbrandsforproducts['title'] ?></option>
                                 <?php
-/*                                $selectCategoriesForProducts=selectCategoryForProduct();
-                                */?>
-                                <label  style="font-family: 'B Nazanin'">دسته بندی:</label>
-                                <select class="form-control selectpicker " name="category_id" >
-                                <option style="font-family: 'B Nazanin'">انتخاب کنید...</option>
-                                 <?php
-/*                                 if ($selectCategoriesForProducts){
-                                        foreach ($selectCategoriesForProducts as $selectcategoryforproducts)
-                                        {
-                                            */?>
-                                            <option <?php /*echo $selectcategoryforproducts['id']===$product['category_id'] ? 'selected' : null ;*/?> value="<?php /*echo $selectcategoryforproducts['id']; */?>"><?php /*echo $selectcategoryforproducts['title']; */?></option>
-                                            <?php
-/*                                        }
-                                    }
-                                 */?>
-                                </select>
-                            </div>-->
-                            <input type="hidden" name="category_id" value="37">
-                            <div class="col-lg-6">
-                                <label >برند : </label>
-                                <select class="form-control selectpicker" name="brand_id">
-                                <option>انتخاب کنید...</option>
-                                    <?php
-                                    $selectBrandsForProducts=selectBrandForProduct();
-                                    $selectCategoriesForProducts=selectCategoryForProduct();
-                                    if ($selectBrandsForProducts){
-                                        foreach ($selectBrandsForProducts as $selectbrandsforproducts)
-                                        {
-                                            ?>
-                                            <option <?php echo $selectbrandsforproducts['id']===$product['brand_id'] ? 'selected' : null ;?> value="<?php echo $selectbrandsforproducts['id']; ?>"><?php echo $selectbrandsforproducts['title']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <br>
-                        <div class="col-lg-12">
-                            <label>برچسب ها: (برای سئو) - (کلمه ها را با - جدا کنید)</label>
-                            <input value="<?php echo $product['label'] ?>" type="text" class="form-control" placeholder="قیمت خرید" name="label" id="label"/>
-                        </div>
-                        
-                        <div class="col-lg-12">
-                            <label>توضیح کوتاه: (برای سئو)</label>
-                            <input value="<?php echo $product['MiniDescription'] ?>" type="text" class="form-control" placeholder="قیمت خرید" name="MiniDescription" id="MiniDescription"/>
-                        </div>
-                        <br>
-                        
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <label >نقد و بررسی:</label>
-                                <textarea class="summernote" style="display: none;" name="review" "><?php echo $product['review'] ?></textarea>
-                            </div>
-                            <div class="col-lg-12">
-                                <label >توضیحات:</label>
-                                <textarea class="summernote"  style="display: none;" name="description"><?php echo $product['description'] ?></textarea>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary mr-2">ثبت</button>
-                        </div>
-                </form>
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="an-field">
+                    <label>برچسب‌ها <small>(سئو — با - جدا کنید)</small></label>
+                    <input type="text" class="an-input" name="label" value="<?php echo $product['label'] ?>">
+                </div>
+                <div class="an-field an-span-2">
+                    <label>توضیح کوتاه <small>(سئو)</small></label>
+                    <input type="text" class="an-input" name="MiniDescription" value="<?php echo $product['MiniDescription'] ?>">
+                </div>
+                <div class="an-field an-span-2">
+                    <label>نقد و بررسی <small>*</small></label>
+                    <textarea data-an-editor name="review" placeholder="نقد و بررسی محصول…"><?php echo $product['review'] ?></textarea>
+                </div>
+                <div class="an-field an-span-2">
+                    <label>توضیحات <small>*</small></label>
+                    <textarea data-an-editor name="description" placeholder="توضیحات کامل محصول…"><?php echo $product['description'] ?></textarea>
+                </div>
             </div>
-        </div>
-        <!--end::Container-->
+            <div class="an-form-actions" style="margin-top:22px">
+                <button type="submit" class="an-btn an-btn-primary">
+                    <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-check"></use></svg>
+                    ذخیره تغییرات
+                </button>
+                <a class="an-btn an-btn-ghost" href="manage_products.php">انصراف</a>
+            </div>
+        </form>
     </div>
-    <!--end::Entry-->
 </div>

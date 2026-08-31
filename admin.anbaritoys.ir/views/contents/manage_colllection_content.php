@@ -1,86 +1,65 @@
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content" xmlns="http://www.w3.org/1999/html">
-    <!--begin::Subheader-->
-    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-            <!--begin::Info-->
-            <div class="d-flex align-items-center flex-wrap mr-2">
-                <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">مجموعه ها</h5>
-                <!--end::Page Title-->
-                <!--begin::Actions-->
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                <a href="/index.php" class="btn btn-light-warning font-weight-bolder btn-sm font-size-h3">رفتن به خانه</a>
-                <!--end::Actions-->
-            </div>
-            <!--end::Info-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" data-placement="left">
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">خوش آمدید.</span>
-                </a>
-                <!--end::Daterange-->
-            </div>
-            <!--end::Toolbar-->
+<?php
+$getCollection = selectCollectionTBL();
+?>
+<div class="an-card">
+    <div class="an-toolbar">
+        <div class="an-search">
+            <svg class="an-ic"><use href="#an-i-search"></use></svg>
+            <input type="text" placeholder="جستجو در مجموعه‌ها…">
         </div>
+        <span class="an-count"></span>
+        <a class="an-btn an-btn-primary an-btn-sm" href="create_collection.php" style="margin-right:14px">
+            <svg class="an-ic" style="width:15px;height:15px"><use href="#an-i-plus"></use></svg>
+            افزودن مجموعه
+        </a>
     </div>
-    <!--end::Subheader-->
-    <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
-        <!--begin::Container-->
-        <div class="container">
+    <div class="an-table-wrap">
+        <table class="an-table" data-an-table data-an-page-size="10">
+            <thead>
+            <tr>
+                <th data-sortable data-rank># <span class="an-sort">&#9650;&#9660;</span></th>
+                <th data-sortable>عنوان <span class="an-sort">&#9650;&#9660;</span></th>
+                <th data-sortable>عنوان لاتین <span class="an-sort">&#9650;&#9660;</span></th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+            </tr>
+            </thead>
+            <tbody>
             <?php
-            $getCategory = selectCollectionTBL();
+            if ($getCollection) {
+                foreach ($getCollection as $key => $getcollection) {
+                    $collectionId = (int)$getcollection['id'];
+                    $isActive = $getcollection['status'] === 'active';
+                    ?>
+                    <tr>
+                        <td data-rank="1"><?php echo $key + 1 ?></td>
+                        <td><span class="an-cell-title"><?php echo $getcollection['title'] ?></span></td>
+                        <td><span class="an-cell-sub" dir="ltr" style="text-align:right"><?php echo $getcollection['english_title'] ?></span></td>
+                        <td>
+                            <span class="an-badge is-<?php echo $isActive ? 'success' : 'muted' ?>"><span class="an-dot"></span><?php echo $isActive ? 'فعال' : 'غیرفعال' ?></span>
+                        </td>
+                        <td>
+                            <div class="an-actions">
+                                <a class="an-iconbtn is-edit" href="update_collection.php?collection_id=<?php echo $collectionId ?>" title="ویرایش مجموعه">
+                                    <svg class="an-ic"><use href="#an-i-edit"></use></svg>
+                                </a>
+                                <a class="an-iconbtn is-bolt" href="?action=change_status_collection&category_id=<?php echo $collectionId ?>&old_status=<?php echo $getcollection['status'] ?>" title="فعال / غیرفعال">
+                                    <svg class="an-ic"><use href="#an-i-bolt"></use></svg>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php
+                }
+            }
             ?>
-            <div class="card card-custom gutter-b">
-                <div class="card-header" >
-                    <h3 class="card-title">مجموعه ها</h3>
-                </div>
-                <div class="card-body">
-                    <table class="table table-bordered table-hover table-checkable" id="datatable_category" style="margin-top: 13px !important;font-family: 'B Nazanin'">
-                        <thead>
-                        <tr>
-                            <th>Record ID</th>
-                            <th>عنوان</th>
-                            <th>عنوان لاتین</th>
-                            <th>وضعیت</th>
-                            <th>عملیات</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if ($getCategory ){
-                            foreach ($getCategory as $key=> $getcategory){
-                                ?>
-                                <tr>
-                                    <td ><?php echo $key +1 ?></td>
-                                    <td><?php echo $getcategory['title']?></td>
-                                    <td><?php echo $getcategory['english_title']?></td>
-                                    <td><?php echo status($getcategory['status'])?></td>
-                                    <td nowrap="nowrap">
-                                        <a href="/update_collection.php?collection_id=<?php echo $getcategory['id'] ?>" class="btn btn-primary btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="?action=change_status_collection&category_id=<?php echo $getcategory['id']?>&old_status=<?php echo $getcategory['status'] ?>" class="btn btn-warning btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                            <i class="fa fa-bolt" style='color: white'></i>
-                                        </a>
-                                     <!--   <a href="?action=delete_collection&category_id=<?php /*echo $getcategory['id']*/?>" class="btn btn-danger btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                            <i class="fa fa-trash" style='color: white'></i>
-                                        </a>-->
-                                    </td>
-                                </tr>
-                        <?php
-
-                            }
-                        }
-                        ?>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!--end::Container-->
+            </tbody>
+        </table>
     </div>
-    <!--end::Entry-->
+    <div class="an-empty" style="display:none">
+        <svg class="an-ic"><use href="#an-i-search"></use></svg>
+        <b>موردی پیدا نشد</b>
+        عبارت جستجو را تغییر دهید.
+    </div>
+    <div class="an-pager"><span class="an-pager-info"></span></div>
 </div>
