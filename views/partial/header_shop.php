@@ -22,7 +22,7 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/colors/anbar.css?v=2" id="colorswitch">
-<link rel='stylesheet' href='/assets/css/anbar-refresh.css?v=7'>
+<link rel='stylesheet' href='/assets/css/anbar-refresh.css?v=15'>
 
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
