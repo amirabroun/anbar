@@ -83,7 +83,7 @@
                         </ul>
                     </div>
                 </li>-->
-                <?php if(!$_SESSION['blog']){ ?>
+                <?php if(empty($_SESSION['blog'])){ ?>
                 <li class="menu-section">
                     <h4 class="menu-text" >مجموعه ها</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
@@ -613,7 +613,7 @@
                     </div>
                 </li>
 
-                <?php if(!$_SESSION['blog']){ ?>
+                <?php if(empty($_SESSION['blog'])){ ?>
                 <li class="menu-section">
                     <h4 class="menu-text">مدیریت کاربران</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
