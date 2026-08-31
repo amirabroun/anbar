@@ -2,7 +2,7 @@
 <html lang="fa" direction="rtl" dir="rtl" style="direction: rtl" >
 <!--begin::Head-->
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 if(!isset($_GET["secret"]) || $_GET["secret"]!== whirlpool(SECRET_TOKEN) ){
     back();
 }
@@ -53,7 +53,7 @@ if(!isset($_GET["secret"]) || $_GET["secret"]!== whirlpool(SECRET_TOKEN) ){
                         <h3 class="opacity-40 font-weight-normal">ورود به صفحه مدیریت</h3>
                         <p class="opacity-40">مشخصات خود را برای ورود وارد کنید:</p>
                     </div>
-                    <form class="form" method="post" action="/requests/LoginRequest.php">
+                    <form class="form" method="post" action="requests/LoginRequest.php">
                         <input name="action" type="hidden" value="manager_login">
                         <div class="form-group">
                             <input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="email" placeholder="ایمیل " name="email" autocomplete="off" />
