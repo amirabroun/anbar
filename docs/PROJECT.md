@@ -82,6 +82,15 @@ Pages then `include` view partials from `views/partial/` (headers, navbar, foote
   - Admin pages are CRUD-style (`create_products.php`, `manage_all_products.php`, `manage_brand.php`, …) rendered with admin-side views/assets.
 - Product deletion cascades across related tables (photos, category links, varieties, comments, discount-code links, order lines …) — see the delete logic in `admin.anbaritoys.ir/models/Product.php` before touching product data.
 
+### Admin shell state (since the 2026-09 redesign)
+
+- **Every admin page now renders the new shell.** Wrappers are 3-line files: `an-header.php` → `views/contents/X_content.php` → `an-footer.php`. The old Metronic partials (`views/partials/{header,side-bar,footer,2 (1),2 (2)}.php`) and old assets (`app.js`, `assets/plugins/`, `style.bundle*`, …) are referenced by nothing outside `.trash/` — deletion list in BACKLOG §16. Only `assets/media/logos/favicon.ico` from the old tree is still referenced (login.php).
+- UI assets: `assets/css/admin.css` + `assets/js/admin.js` (vanilla, no jQuery/DataTables/Dropzone/Summernote) + `views/partials/an-icon.php` SVG sprite. JS hooks are `data-an-*` attributes; legacy endpoints, field names and JSON shapes must stay byte-identical.
+- Repeating view conventions: `.an-card > .an-toolbar > .an-table-wrap > table.an-table[data-an-table]` for lists; `.an-form-grid > .an-field` + `initFormErrors()` for forms; `textarea[data-an-editor]` replaces Summernote; `.an-drop#anDrop` with `data-an-product` / optional `data-an-file` (file field key) / `data-an-id-name` (id field key, default `product_id`) for uploads.
+- **GET-param naming is inconsistent across product pages** (BACKLOG §15): some take `?products_id=`, others `?product_id=` — always read the content file's `$_GET` key before smoke-testing a URL.
+- Curl smoke sweep: log in (admin session), then for each page check `%{http_code}` plus greps for `<b>Warning|Fatal` and Metronic markers (`card card-custom|kt_content|flaticon|summernote|datatable_`). Many `manage_*`/`update_*` pages legitimately 302 without their GET param, and param-dependent pages need a real row id (e.g. `products_id`, `brand_id`, `collection_id`, `blog_id`, `id` for factor/about-us). Admin sessions live in the admin container's `/tmp` and lapse/restart often — re-login before a sweep.
+- Broken flows that are **server-side, not UI**: banner upload path (BACKLOG §11), category-photo request branch (BACKLOG §12), create_manager stub (BACKLOG §13).
+
 ## 5. Payments & SMS
 
 - **Zarinpal** is the configured gateway (`GATEWAY_PAYMENT` in `config/app.php`; merchant id from `env('ZARINPAL_MERCHANT_ID')` with a production fallback). Flow: `shopping-payment.php` → zarinpal → `callback.php` → `verify.php`.

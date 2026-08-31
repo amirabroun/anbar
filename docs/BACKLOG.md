@@ -15,6 +15,17 @@ Staged, known-but-unfixed items. Ordered roughly by priority. Nothing here is co
 6. **products.php performance** — renders the whole catalog ~4× per page (≈85k DOM nodes). Needs real pagination + query consolidation.
 7. **Broken product images** — 9 DB photo rows point at missing files; either re-upload or clean the rows.
 
+## Admin shell migration leftovers (2026-09 redesign)
+
+All ~70 admin pages now render the new `an-*` shell (see PROJECT.md §4). The old Metronic partials/assets are referenced by **nothing** outside `.trash/`. Items below were found during the conversion and intentionally left untouched (UI-only scope):
+
+11. **Banner upload is broken server-side** — `requests/banner/changePic.php` (actions `changeBanner1/2/3`) moves uploads to `../../../user/assets/img/banner/` = `www/user/…`, which does not exist. The new UI surface (forms, flash, error toast) works; the file never lands anywhere.
+12. **Category-photo upload branch is dead** — in `requests/PhotoProductRequest.php` the `photo_category` branch (a) requires `$_POST['category_id']` while the client sends `product_id`, (b) reads `$_FILES['photo_product']` instead of `photo_category`, (c) looks up via `getLastPhotoProduct($_POST['product_id'])`. Until fixed server-side, `manage_category_photos.php` cannot actually upload category images.
+13. **create_manager has no backend** — the form ships no `name` attributes and no request handler; submitting does nothing. The managers list used to be a hardcoded demo table and is now an honest empty state. Building manager CRUD needs owner input (roles?).
+14. **`/test.php` backdoor** — reachable without auth (it is on the guard's public-page list). Remove or gate it.
+15. **Legacy GET-param naming across product pages** — `update_products.php`, `create_product_variety.php`, `manage_products_variety.php` take `?products_id=`; `manage_products_photos.php`, `manage_products_category.php`, `create_details.php` take `?product_id=`. Links match readers today, but curl-smoking a page with the wrong key produces false "undefined key" warnings — read the `$_GET` key in the page's `views/contents/*_content.php` first.
+16. **Delete the old Metronic shell** (needs owner approval, then the same deletion on prod cPanel): `views/partials/{header,side-bar,footer,2 (1),2 (2)}.php`, `assets/plugins/` (30M), `assets/css/{style.bundle.css,style.bundle.rtl.css,pages/,themes/,fonts.css}`, `assets/js/{pages/,scripts.bundle.js,app.js}`, `assets/media/` **except** `logos/favicon.ico` (login.php references it), and the orphan `photoTest/` folder. ≈53 of 57M assets reclaimable. Keep `assets/css/admin.css`, `assets/js/admin.js`, `assets/fonts/`, `views/partials/an-*.php`.
+
 ## Hygiene
 
 8. **`.trash/` tracking** — ~2758 files under `admin.anbaritoys.ir/.trash/` (a gitignored dir) are still tracked from the init commit. Remove from the index (`git rm -r --cached`).

@@ -99,6 +99,14 @@ Keys understood by the code: `APP_URL`, `PUBLIC_URL`, `ZARINPAL_CALLBACK`, `ZARI
 - Auth guard `admin.anbaritoys.ir/helpers/authentication.php`: allowed pages `login`, `test`, `LoginRequest`; everyone else needs `$_SESSION['admin_sing']`, else `redirect('/login.php')` — an **absolute** path that is wrong locally (known wart, don't "fix" without the owner).
 - Sessions are shared per-container in `/tmp`; shop (`$_SESSION['user_sing']`) and admin (`$_SESSION['admin_sing']`) identities are separate keys in the same session mechanism.
 
+## Admin UI: the new `an-*` shell (2026-09)
+
+- **Every admin page now renders the new shell** (`views/partials/an-{header,side-bar,footer,icon}.php` + `assets/css/admin.css` + `assets/js/admin.js`, IRANYekan fonts). The old Metronic partials/assets are referenced by nothing outside `.trash/` — deletion list: `docs/BACKLOG.md` §16 (needs owner approval + prod cPanel cleanup).
+- Wrapper convention (3 lines): `include_once 'views/partials/an-header.php';` → `include_once 'views/contents/X_content.php';` → `include_once 'views/partials/an-footer.php';`. New pages must follow it; don't reintroduce Metronic markup.
+- `admin.js` is vanilla; JS hooks are `data-an-*` attributes (uploader: `data-an-product`, `data-an-file`, `data-an-id-name`). Endpoint/field names/JSON shapes are contract — keep them byte-identical.
+- **GET-param naming is inconsistent** across product pages (`?products_id=` vs `?product_id=`) — read the `$_GET` key in the page's content file before curl-smoking, or you get false warnings.
+- Known **server-side** broken flows (UI fine, backend pre-dates the redesign, see BACKLOG §11–14): banner upload writes to nonexistent `www/user/…`, category-photo branch in `PhotoProductRequest.php` is dead, `create_manager` has no handler, `/test.php` backdoor. Fixing these is a backend decision with the owner, not part of UI work.
+
 ## Quick self-check after any change
 
 ```bash
