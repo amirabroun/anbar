@@ -124,7 +124,13 @@ function selectBrandForProduct (){
 }
 function selectProductTBL(){
     global $cn;
-    $sql="select * from products ";
+    // برند و اولین عکس با هم در یک کوئری (به‌جای یک کوئری جدا برای هر ردیف)
+    $sql="select products.*, b.title as brand_title,
+            (select concat(p.src, p.name) from photo_product pp join photos p on p.id = pp.photo_id
+             where pp.product_id = products.id order by pp.sort asc limit 1) as photo_path
+        from products
+        left join brands b on b.id = products.brand_id
+        order by products.id desc";
     $result=$cn->prepare($sql);
     $result->execute();
     if($result->rowCount()>0) {

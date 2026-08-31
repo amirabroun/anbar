@@ -83,7 +83,7 @@
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="assets/js/pages/widgets.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js?v=2"></script>
 
 
 <?php

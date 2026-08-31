@@ -7,6 +7,11 @@ $('#datatable_products').DataTable({
     responsive:true
 });
 
+// تولتیپ برای دکمه‌های جدول‌ها (delegated تا با صفحه‌بندی DataTables هم کار کند)
+$('body').tooltip({
+    selector: '[data-toggle="tooltip"]'
+});
+
 $('#datatable_category').DataTable({
     responsive:true
 });
@@ -420,18 +425,29 @@ $(document).on("change", "#insertBottomBannerCat4", function (event) {
     })
 });
 
+// بج‌های وضعیت/پیشنهادی — باید هم‌راستا با خروجی PHP در manage_products_content.php باشد
+function anbarStatusBadge(status) {
+    const map = {
+        active:       ['فعال', 'success'],
+        inactive:     ['غیر فعال', 'danger'],
+        unavialable:  ['ناموجود', 'warning'],
+        stop_selling: ['توقف فروش', 'warning'],
+    };
+    const [text, color] = map[status] || ['نامشخص', 'secondary'];
+    return '<span class="label label-lg label-inline font-weight-bold label-light-' + color + '">' +
+        '<span class="label label-dot label-' + color + ' mr-2"></span>' + text + '</span>';
+}
+
+function anbarSuggestedBadge(suggested) {
+    const map = { yes: ['پیشنهادی', 'success'], no: ['عادی', 'secondary'] };
+    const [text, color] = map[suggested] || ['نامشخص', 'secondary'];
+    return '<span class="label label-lg label-inline font-weight-bold label-light-' + color + '">' +
+        '<span class="label label-dot label-' + color + ' mr-2"></span>' + text + '</span>';
+}
+
 function change_statusProducts($products_id){
-    let $old_status_product = ''
-    let $status = document.getElementById('status'+$products_id).innerHTML
-    if ($status==='<span style="width: 110px;"><span class="label label-primary label-dot mr-2"></span><span class="font-weight-bold text-primary">فعال</span></span>'){
-        $old_status_product = 'inactive'
-    }else {
-        if ($status==='فعال'){
-            $old_status_product = 'inactive'
-        }else {
-            $old_status_product = 'active'
-        }
-    }
+    const cell = document.getElementById('status' + $products_id);
+    const current = cell.dataset.status === 'active' ? 'inactive' : 'active';
     $.ajax({
         url: 'requests/ProductsRequest.php',
         method: 'get',
@@ -439,37 +455,19 @@ function change_statusProducts($products_id){
         data: {
             action: 'change_status_products',
             products_id: $products_id,
-            old_status_product: $old_status_product,
+            old_status_product: current,
         },
         success: function (response) {
             if (response.status === 200) {
-                if ($status==='<span style="width: 110px;"><span class="label label-primary label-dot mr-2"></span><span class="font-weight-bold text-primary">فعال</span></span>'){
-                    $status = 'فعال'
-                }
-                if($status==='فعال'){
-                    document.getElementById('status'+$products_id).innerHTML = 'غیر فعال'
-                    document.getElementById('status'+$products_id).style.color = 'red'
-                }else {
-                    document.getElementById('status'+$products_id).innerHTML = 'فعال'
-                    document.getElementById('status'+$products_id).style.color = 'blue'
-                }
-
-                Swal.fire({
-                    title: response.title,
-                    html: response.text ? response.text : response.messages,
-                    icon: response.type ? response.type : 'error',
-                    confirmButtonText: 'متوجه شدم!',
-                })
-                $("#print-error-msg").css('display','none')
-            }else{
-                $("#print-error-msg").css('display','block')
-                Swal.fire({
-                    title: response.title,
-                    html: response.text ? response.text : response.messages,
-                    icon: response.type ? response.type : 'error',
-                    confirmButtonText: 'متوجه شدم!',
-                })
+                cell.dataset.status = current;
+                cell.innerHTML = anbarStatusBadge(current);
             }
+            Swal.fire({
+                title: response.title,
+                html: response.text ? response.text : response.messages,
+                icon: response.type ? response.type : 'error',
+                confirmButtonText: 'متوجه شدم!',
+            })
         },
         error: function (error) {
             console.log(error)
@@ -479,17 +477,8 @@ function change_statusProducts($products_id){
 
 
 function change_SuggestedProducts($products_id){
-    let $old_status_product = ''
-    let $status = document.getElementById('Suggested'+$products_id).innerHTML
-    if ($status==='<span style="width: 110px;"><span class="label label-primary label-dot mr-2"></span><span class="font-weight-bold text-primary">فعال</span></span>'){
-        $old_status_product = 'no'
-    }else {
-        if ($status==='فعال'){
-            $old_status_product = 'no'
-        }else {
-            $old_status_product = 'yes'
-        }
-    }
+    const cell = document.getElementById('Suggested' + $products_id);
+    const current = cell.dataset.suggested === 'yes' ? 'no' : 'yes';
     $.ajax({
         url: 'requests/ProductsRequest.php',
         method: 'get',
@@ -497,37 +486,19 @@ function change_SuggestedProducts($products_id){
         data: {
             action: 'change_Suggested_products',
             products_id: $products_id,
-            old_Suggested_product: $old_status_product,
+            old_Suggested_product: current,
         },
         success: function (response) {
             if (response.status === 200) {
-                if ($status==='<span style="width: 110px;"><span class="label label-primary label-dot mr-2"></span><span class="font-weight-bold text-primary">فعال</span></span>'){
-                    $status = 'فعال'
-                }
-                if($status==='فعال'){
-                    document.getElementById('Suggested'+$products_id).innerHTML = 'غیر فعال'
-                    document.getElementById('Suggested'+$products_id).style.color = 'red'
-                }else {
-                    document.getElementById('Suggested'+$products_id).innerHTML = 'فعال'
-                    document.getElementById('Suggested'+$products_id).style.color = 'blue'
-                }
-
-                Swal.fire({
-                    title: response.title,
-                    html: response.text ? response.text : response.messages,
-                    icon: response.type ? response.type : 'error',
-                    confirmButtonText: 'متوجه شدم!',
-                })
-                $("#print-error-msg").css('display','none')
-            }else{
-                $("#print-error-msg").css('display','block')
-                Swal.fire({
-                    title: response.title,
-                    html: response.text ? response.text : response.messages,
-                    icon: response.type ? response.type : 'error',
-                    confirmButtonText: 'متوجه شدم!',
-                })
+                cell.dataset.suggested = current;
+                cell.innerHTML = anbarSuggestedBadge(current);
             }
+            Swal.fire({
+                title: response.title,
+                html: response.text ? response.text : response.messages,
+                icon: response.type ? response.type : 'error',
+                confirmButtonText: 'متوجه شدم!',
+            })
         },
         error: function (error) {
             console.log(error)

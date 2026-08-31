@@ -31,6 +31,17 @@
         <div class="container">
             <?php
             $getProduct = selectProductTBL();
+            // برچسب فارسی + رنگ بج برای هر وضعیت (در JS هم همین نگاشت استفاده می‌شود)
+            $anbarStatusMeta = [
+                'active'       => ['فعال', 'success'],
+                'inactive'     => ['غیر فعال', 'danger'],
+                'unavialable'  => ['ناموجود', 'warning'],
+                'stop_selling' => ['توقف فروش', 'warning'],
+            ];
+            $anbarSuggestedMeta = [
+                'yes' => ['پیشنهادی', 'success'],
+                'no'  => ['عادی', 'secondary'],
+            ];
             ?>
             <div class="card card-custom gutter-b">
                 <div class="card-header">
@@ -40,61 +51,102 @@
                         <table class="table table-bordered table-hover table-checkable" id="datatable_products" style="margin-top: 13px !important;">
                             <thead>
                             <tr>
-                                <th>Record ID</th>
+                                <th>#</th>
+                                <th>عکس</th>
                                 <th>کد محصول</th>
                                 <th>نام کالا</th>
                                 <th>قیمت</th>
-                                <th>قیمت با تخفیف</th>
+                                <th>تخفیف</th>
                                 <th>موجودی</th>
                                 <th>وضعیت</th>
                                 <th>کالای پیشنهادی</th>
-                                <th>برند</th>
-                                <th>Actions</th>
+                                <th>عملیات</th>
                             </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 if ($getProduct ){
                                 foreach ($getProduct as $key=> $getproduct){
-                                $getBrand = selectbrand($getproduct['brand_id']);
+                                $productId = (int)$getproduct['id'];
+                                $productStatus = $getproduct['status'];
+                                $productSuggested = $getproduct['Suggested'];
+                                [$statusText, $statusColor] = $anbarStatusMeta[$productStatus] ?? ['نامشخص', 'secondary'];
+                                [$suggestedText, $suggestedColor] = $anbarSuggestedMeta[$productSuggested] ?? ['نامشخص', 'secondary'];
+                                // مسیر عکس بندانگشتی (لوکال: /photos/... — cPanel: http://photos.anbaritoys.ir/...)
+                                $thumbUrl = null;
+                                if (!empty($getproduct['photo_path'])) {
+                                    $thumbUrl = normalizedPath(DOMAIN['public'], $getproduct['photo_path']);
+                                    if ($thumbUrl[0] !== '/' && strpos($thumbUrl, 'http') !== 0) {
+                                        $thumbUrl = '/' . $thumbUrl;
+                                    }
+                                }
+                                $hasDiscount = !empty($getproduct['price_discounted']) && (int)$getproduct['price_discounted'] > 0;
+                                $stock = (int)$getproduct['stock'];
                                 ?>
                             <tr>
-                                <td><?php echo $key +1 ?></td>
-                                <td><span class="label label-lg font-weight-bold label-light-info label-inline"><?php echo $getproduct['tracking_code'] ?></span></td>
-                                <td><?php echo $getproduct['title']?></td>
-                                <td><?php echo $getproduct['price']?></td>
-                                <td><?php echo $getproduct['price_discounted'] ?? '-----' ?></td>
-                                <td><?php echo $getproduct['stock']?></td>
-                                <td id="status<?php echo $getproduct['id']?>"><?php echo status($getproduct['status'])?></td>
-                                <td id="Suggested<?php echo $getproduct['id']?>"><?php echo Suggested($getproduct['Suggested'])?></td>
-                                <td><?php echo $getBrand['title'] ?? '-----' ?></td>
+                                <td><?php echo $key + 1 ?></td>
+                                <td>
+                                    <?php if ($thumbUrl) { ?>
+                                        <img src="<?php echo $thumbUrl ?>" alt="<?php echo htmlspecialchars($getproduct['title']) ?>"
+                                             class="anbar-thumb" width="46" height="46"
+                                             style="width:46px;height:46px;object-fit:cover;border-radius:10px;background:#f3f6f9;border:1px solid #EBEDF3;"
+                                             onerror="this.style.visibility='hidden'">
+                                    <?php } else { ?>
+                                        <span class="d-inline-flex align-items-center justify-content-center" style="width:46px;height:46px;border-radius:10px;background:#f3f6f9;border:1px solid #EBEDF3;color:#B5B5C3;">
+                                            <i class="fas fa-image"></i>
+                                        </span>
+                                    <?php } ?>
+                                </td>
+                                <td nowrap="nowrap"><span class="label label-lg label-inline label-light-info font-weight-bold" dir="ltr"><?php echo $getproduct['tracking_code'] ?></span></td>
+                                <td>
+                                    <span class="text-dark-75 font-weight-bold product-title"><?php echo $getproduct['title'] ?></span>
+                                    <span class="d-block text-muted font-size-sm"><?php echo $getproduct['brand_title'] ?? 'بدون برند' ?></span>
+                                </td>
+                                <td nowrap="nowrap" class="font-weight-bold text-dark-75"><?php echo number_format((int)$getproduct['price']) ?> <span class="text-muted font-size-sm">تومان</span></td>
                                 <td nowrap="nowrap">
-                                    <a target="_blank" href="/update_products.php?products_id=<?php echo $getproduct['id'] ?>" class="btn btn-primary btn-icon btn-shadow-hover font-weight-bold mr-2">
+                                    <?php if ($hasDiscount) { ?>
+                                        <span class="label label-lg label-inline label-light-danger font-weight-bold"><?php echo number_format((int)$getproduct['price_discounted']) ?> تومان</span>
+                                    <?php } else { ?>
+                                        <span class="text-muted">—</span>
+                                    <?php } ?>
+                                </td>
+                                <td nowrap="nowrap">
+                                    <?php if ($stock <= 0) { ?>
+                                        <span class="label label-lg label-inline label-light-danger font-weight-bold">ناموجود</span>
+                                    <?php } elseif ($stock < 5) { ?>
+                                        <span class="label label-lg label-inline label-light-warning font-weight-bold"><?php echo $stock ?> عدد</span>
+                                    <?php } else { ?>
+                                        <span class="label label-lg label-inline label-light-success font-weight-bold"><?php echo $stock ?> عدد</span>
+                                    <?php } ?>
+                                </td>
+                                <td id="status<?php echo $productId ?>" data-status="<?php echo $productStatus ?>" nowrap="nowrap">
+                                    <span class="label label-lg label-inline font-weight-bold label-light-<?php echo $statusColor ?>">
+                                        <span class="label label-dot label-<?php echo $statusColor ?> mr-2"></span><?php echo $statusText ?>
+                                    </span>
+                                </td>
+                                <td id="Suggested<?php echo $productId ?>" data-suggested="<?php echo $productSuggested ?>" nowrap="nowrap">
+                                    <span class="label label-lg label-inline font-weight-bold label-light-<?php echo $suggestedColor ?>">
+                                        <span class="label label-dot label-<?php echo $suggestedColor ?> mr-2"></span><?php echo $suggestedText ?>
+                                    </span>
+                                </td>
+                                <td nowrap="nowrap">
+                                    <a target="_blank" href="/update_products.php?products_id=<?php echo $productId ?>" class="btn btn-light-primary btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="ویرایش محصول">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="#" onclick="change_statusProducts(<?php echo $getproduct['id']?>,'<?php echo $getproduct['status'] ?>');" class="btn btn-warning btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                        <i class="fa fa-bolt" style='color: white'></i>
+                                    <a href="#" onclick="change_statusProducts(<?php echo $productId ?>);return false;" class="btn btn-light-warning btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="فعال / غیرفعال کردن">
+                                        <i class="fa fa-bolt"></i>
                                     </a>
-                                   <a href="#" onclick="change_SuggestedProducts(<?php echo $getproduct['id']?>,'<?php echo $getproduct['status'] ?>');"" class="btn btn-info btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
-                                            <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
-                                        </svg>
+                                    <a href="#" onclick="change_SuggestedProducts(<?php echo $productId ?>);return false;" class="btn btn-light-info btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="تغییر کالای پیشنهادی">
+                                        <i class="fas fa-star"></i>
                                     </a>
-                                    <!--<a href="?action=delete_product&products_id=<?php /*echo $getproduct['id']*/?>" class="btn btn-danger btn-icon btn-shadow-hover font-weight-bold mr-2">
-                                        <i class="fa fa-trash" style='color: white'></i>
-                                    </a>-->
-                                    <a target="_blank" href="/manage_products_photos.php?product_id=<?php echo $getproduct['id'] ?>" class="btn btn-success btn-icon btn-shadow-hover font-weight-bold mr-2">
+                                    <a target="_blank" href="/manage_products_photos.php?product_id=<?php echo $productId ?>" class="btn btn-light-success btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="مدیریت عکس‌ها">
                                         <i class="far fa-file-image"></i>
                                     </a>
-                                    <!--<a href="/create_details.php?product_id=<?php /*echo $getproduct['id'] */?>" class="btn btn-info btn-shadow-hover font-weight-bold mr-2" style="width: 34px" data-toggle="tooltip" data-theme="dark" title="افزودن جزییات جزیی محصول">
-                                        <svg style="margin-right: -5px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16">
-                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
-                                        </svg>
-                                    </a>-->
-                                    <a target="_blank" href="/manage_products_category.php?product_id=<?php echo $getproduct['id'] ?>" class="btn btn-info btn-shadow-hover font-weight-bold mr-2" style="width: 34px" data-toggle="tooltip" data-theme="dark" title="افزودن دسته بندی محصول">
-                                        <svg style="margin-right: -5px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16">
-                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
-                                        </svg>
+                                    <a target="_blank" href="/manage_products_category.php?product_id=<?php echo $productId ?>" class="btn btn-light-info btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="دسته‌بندی محصول">
+                                        <i class="fas fa-tags"></i>
+                                    </a>
+                                    <a href="#" onclick="deleteProductConfirm(<?php echo $productId ?>, this);return false;" class="btn btn-light-danger btn-icon btn-sm" data-toggle="tooltip" data-theme="dark" title="حذف محصول">
+                                        <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </td>
                             </tr>
