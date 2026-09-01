@@ -7,5 +7,6 @@ Before any change in this repo, read [AGENTS.md](AGENTS.md) (project entry for A
 - Repo is CRLF — preserve line endings; beware `\n`-only replacements silently no-oping.
 - CSS edits to `assets/css/anbar-refresh.css` require bumping `?v=N` in all 5 header partials under `views/partial/`.
 - Do not restructure the legacy `auto_prepend_file` / `pagename()` architecture.
+- **Knowledge maintenance (see AGENTS.md "Knowledge maintenance"):** before ending a session, record durable findings — facts → `docs/PROJECT.md`, unfixed bugs → `docs/BACKLOG.md`, traps → `AGENTS.md` — fix stale claims, never record secrets.
 
 Deep reference: [docs/PROJECT.md](docs/PROJECT.md) · Open work: [docs/BACKLOG.md](docs/BACKLOG.md)

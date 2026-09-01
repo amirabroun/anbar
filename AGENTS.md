@@ -44,6 +44,21 @@ Non-obvious: `admin.anbaritoys.ir/` has BOTH `helper/` and `helpers/` directorie
 6. **Don't restructure.** The `auto_prepend_file` + `pagename()`-gated architecture is deliberate (it mimics production Apache). No framework-ification, no PSR-4, no whole-file reformatting (it would destroy CRLF history and blame).
 7. **Preserve production files:** `.htaccess` (contains the prod `auto_prepend_file` line), root `php.ini`, `docker-compose.yml`, `docs/dockerfiles/*` are load-bearing.
 
+## Knowledge maintenance — mandatory for every agent
+
+The agent docs are **living operational knowledge, not read-only documentation**. Every agent that works in this repo must hand what it learned to the next one:
+
+1. **Before ending a session, record durable findings in the right file:**
+   - Architecture/behavior facts (routes, tables, env keys, deploy steps, quirks) → `docs/PROJECT.md`.
+   - A bug you found but did NOT fix (out of scope, or owner decision needed) → `docs/BACKLOG.md` with file, line, symptom, and why it was left.
+   - A trap that will bite the next agent (wrong GET params, false-alarm test output, tooling gotchas) → the matching `AGENTS.md` section, 1–2 lines max.
+2. **Fixed something? Update or delete the claim that said it was broken.** Stale docs are worse than none.
+3. **Facts only, no narration.** One bullet per fact, with the file/function/table name and the *why*. No session logs, no plans, no promises of future work.
+4. **Verify before writing.** Only record what you actually ran/grepped/tested in this repo; mark anything unverified explicitly as "suspected, untested".
+5. **No secrets, ever** — no passwords, tokens, merchant ids, `?secret=` URLs, or real user data, in any doc.
+6. **Don't duplicate.** `AGENTS.md` = rules + traps (short), `docs/PROJECT.md` = deep reference, `docs/BACKLOG.md` = known-but-unfixed. Check the other two before adding; link between them instead of copying.
+7. Doc edits are part of the task and stay **uncommitted** like all other changes — commit only when the owner asks in the current session (Hard rule 1). If an existing doc claim is wrong, verify and correct it instead of silently working around it.
+
 ## Local development (Docker)
 
 ```bash
