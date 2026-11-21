@@ -65,11 +65,6 @@ if (isset($_GET['Status']) && isset($_GET['Authority'])){
             $_SESSION['cart_user']['notification'] = $errors;
             redirect('/cart.php');
         }
-        $order_status = 'failed';
-        $payment_status = 'failed';
-        $user_id =getIdUsers($_SESSION['user_sing']);
-
-
         if ($_GET['Status'] === "OK") {
             $status_get = 10;
             $order_status = 'failed';
@@ -77,7 +72,15 @@ if (isset($_GET['Status']) && isset($_GET['Authority'])){
             $user_id = getIdUsers($_SESSION['user_sing']);
              $total_amount = $_SESSION['cart_user']['summary']['total_amount'];
             $amount_payable = $_SESSION['cart_user']['summary']['amount_payable'];
-            $track_id = "1111";
+            // zarinpal server-side verify (BACKLOG #1): trust nothing from the redirect.
+            // initiation sent toman*10 (rial) — verify against the same amount
+            $verify = verifyTransaction((int) round(((float)$amount_payable) * 10));
+            if (!$verify) {
+                unset($_SESSION['gift_code'],$_SESSION['gift_code_id']);
+                $_SESSION['shopping_not'] = $_SESSION['user_order']['tracking_code'];
+                redirect('shopping-complete_not.php?tracking_code=' . $_SESSION['user_order']['tracking_code']);
+            }
+            $track_id = $verify['ref_id'];
              $order = createOrder($_SESSION['user_order']['tracking_code'], $total_amount, $order_status,(int)$user_id['id'] ,$amount_payable );
                 if ($order) {
                     $order_id = getOrderId($_SESSION['user_order']['tracking_code']);
