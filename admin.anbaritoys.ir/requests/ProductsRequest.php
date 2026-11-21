@@ -1,5 +1,14 @@
 <?php
 $tracking_code=PREFIX_TRACKING_CODE['product'].generateRandomNumber();
+if (isset($_POST['action']) && $_POST['action']==='create_product' && PRODUCT_WRITE_LOCK){
+    responseJson([
+        'text' => 'ثبت محصول جدید به حداکثر رسیده است.',
+        'type' => 'error',
+        'status' => 403,
+        'error' => true,
+    ]);
+}
+
 if (isset($_POST['action']) && $_POST['action']=== 'create_product'){
     $validation=validator([
         'title'=>'required|persian_chars',
@@ -50,7 +59,11 @@ if (isset($_POST['action']) && $_POST['action']=== 'create_product'){
 
 }
 
-if (isset($_POST['action'])&& $_POST['action']=== 'update_product'){
+if (isset($_POST['action'])&& $_POST['action']=== 'update_product' && PRODUCT_WRITE_LOCK){
+    setMessage('عملیات ناموفق', 'ویرایش محصول در حال حاضر غیرفعال است. جهت فعال‌سازی با پشتیبانی تماس بگیرید.', 'error');
+}
+
+if (isset($_POST['action'])&& $_POST['action']=== 'update_product' && !PRODUCT_WRITE_LOCK){
     $validation=validator([
         'title'=>'required|persian_chars',
         'review'=>'required',
