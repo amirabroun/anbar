@@ -18,3 +18,6 @@ admin.anbaritoys.ir/.trash
 photos.anbaritoys.ir/
 # ابزارهای محلی
 .zcode/
+
+# CodeGraph index (local, by codegraph CLI)
+.codegraph/
