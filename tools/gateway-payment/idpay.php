@@ -31,33 +31,25 @@ if ($err) {
 } else {
     if (empty($result['errors'])) {
         if ($result['data']['code'] == 100) {
-            $link = 'https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"];
-            if($link){
-                return array("link" => $link);
+            // guard on authority itself: an empty authority still builds a truthy "link" string
+            if (!empty($result['data']["authority"])){
+                return array("link" => 'https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
             }
-            else{
-               return false; 
-            }
-            
+            return false;
         }
     } else {
           return false;
-          // echo('Error Code: ' . $result['errors']['code']);
-          // dd('message: ' .  $result['errors']['message']);
-
     }
     }
 }
 
-function verifyTransaction($amount, $id, $order_id){
-    
+function verifyTransaction($amount){
+
     $Authority = $_GET['Authority'];
     $data = array(
     "merchant_id" => GATEWAY_PAYMENT['zarinpal']['merchant_id'],
     "authority" => $Authority,
     "amount" => $amount,
-    "id" => $id,
-    "order_id" => $order_id,
 
     );
     $jsonData = json_encode($data);
@@ -78,15 +70,12 @@ function verifyTransaction($amount, $id, $order_id){
     if ($err) {
         return false;
     } else {
-        if ($result['data']['code'] == 100) {
-            return "با موفقیت ثبت شد";
-            echo 'Transation success. RefID:' . $result['data']['ref_id'];
-        } else {return false;
-             // echo'code: ' . $result['errors']['code'];
-             // dd('message: ' .  $result['errors']['message']);
-             
+        // 100 = verified now, 101 = already verified (callback reopened)
+        if (isset($result['data']['code']) && in_array($result['data']['code'], [100, 101])) {
+            return ['ref_id' => $result['data']['ref_id'] ?? '', 'code' => $result['data']['code']];
         }
     }
 
+    return false;
 }
 ?>

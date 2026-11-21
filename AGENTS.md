@@ -59,6 +59,11 @@ The agent docs are **living operational knowledge, not read-only documentation**
 6. **Don't duplicate.** `AGENTS.md` = rules + traps (short), `docs/PROJECT.md` = deep reference, `docs/BACKLOG.md` = known-but-unfixed. Check the other two before adding; link between them instead of copying.
 7. Doc edits are part of the task and stay **uncommitted** like all other changes — commit only when the owner asks in the current session (Hard rule 1). If an existing doc claim is wrong, verify and correct it instead of silently working around it.
 
+## CodeGraph (code intelligence)
+
+- Initialized 2026-09-10: index in `.codegraph/` (local, gitignored — never commit). MCP tool `codegraph_explore` works with `projectPath` = this repo; CLI `~/.local/bin/codegraph` (`status`/`explore`/`callers`/`impact`).
+- After large file additions/moves run `codegraph sync` — a stale index silently omits new symbols. `.trash/` and `photos.anbaritoys.ir/` are excluded.
+
 ## Local development (Docker)
 
 ```bash
@@ -83,6 +88,10 @@ Runtime is **colima**. Stack (compose project `anbar`):
 - `docs/dockerfiles/nginx.conf`: `docker exec anbar-nginx nginx -s reload`.
 - `docker-compose.yml`: `docker-compose up -d`.
 - `docs/dockerfiles/Dockerfile`: `docker-compose up -d --build php`.
+
+**Docker build trap:** the Dockerfile base is `php:8.2-fpm-bookworm` (since 2026-09-10). Do **not** pin back to `php:8.2.6-fpm` — that tag is Debian bullseye, which went EOL 2026-08-31: `apt-get update` dies on the expired `bullseye-security` Release file, and even with `Check-Valid-Until=false` the `.deb` downloads 404 because the pool has moved. `archive.debian.org` and `snapshot.debian.org` were unreachable/too slow from this network, so bookworm was the only sane fix (prod runs cPanel PHP, not this image).
+
+**Docker proxy — PERMANENT since 2026-11-21:** Docker Hub is 403-blocked from this network, so dockerd runs with proxy via a systemd drop-in **inside the colima VM** (`/etc/systemd/system/docker.service.d/proxy.conf` → `HTTP(S)_PROXY=http://192.168.5.2:2080`, Throne's local proxy reachable at the VM gateway; `NO_PROXY=localhost,127.0.0.1,docker.arvancloud.ir`). Plain `docker pull` now works (verified with alpine:3), but is slow (~2 min) — `registry-mirrors: [https://docker.arvancloud.ir]` is also set in `~/.colima/default/colima.yaml` and kicks in on the next colima start (mirror bypasses the proxy, so Hub pulls still work when Throne is off). Caveats: (1) daemon proxy env does NOT reach build `RUN` steps — pass `--build-arg HTTP_PROXY=http://192.168.5.2:2080 --build-arg HTTPS_PROXY=…` for builds needing apt; (2) proxy works only while Throne is up; (3) `daemon.json` has no `live-restore`, so a dockerd/colima restart stops ALL containers on the machine — restore with `docker start <names>` and expect nginx containers racing their php upstream (e.g. `sanjup`) to fail DNS and need a second `docker start`.
 
 **Recreating any PHP container wipes `/tmp` → all sessions die** (shop logins, admin login, carts). Warn the user before `--force-recreate`/rebuild-then-recreate.
 
@@ -113,6 +122,7 @@ Keys understood by the code: `APP_URL`, `PUBLIC_URL`, `ZARINPAL_CALLBACK`, `ZARI
 - Login page is **secret-gated**: `/login.php?secret=<whirlpool(SECRET_TOKEN)>`; without the right secret it bounces (`back()`).
 - Auth guard `admin.anbaritoys.ir/helpers/authentication.php`: allowed pages `login`, `test`, `LoginRequest`; everyone else needs `$_SESSION['admin_sing']`, else `redirect('/login.php')` — an **absolute** path that is wrong locally (known wart, don't "fix" without the owner).
 - Sessions are shared per-container in `/tmp`; shop (`$_SESSION['user_sing']`) and admin (`$_SESSION['admin_sing']`) identities are separate keys in the same session mechanism.
+- **Deliberate product-write lock (settlement hold, owner request 2026-11-21):** `PRODUCT_WRITE_LOCK` in `admin.anbaritoys.ir/config/app.php` blocks the `create_product`/`update_product` actions in `requests/ProductsRequest.php` with an explicit "contact support" message. This is intentional, NOT a bug — don't "fix" it; the owner flips it to `false` to unlock.
 
 ## Admin UI: the new `an-*` shell (2026-09)
 
@@ -125,9 +135,12 @@ Keys understood by the code: `APP_URL`, `PUBLIC_URL`, `ZARINPAL_CALLBACK`, `ZARI
 ## Quick self-check after any change
 
 ```bash
-for p in / /products /login.php /register.php /cart /admin/login.php; do
+for p in / /products.php /login.php /register.php /cart.php /admin/login.php; do
   curl -s -o /dev/null -w "%{http_code} $p\n" "http://localhost:8008$p"; done
 # 200 expected everywhere EXCEPT /admin/login.php without ?secret= (302 by design)
+# URL must have the .php suffix — extensionless paths (/cart, /products) 404.
+# Grep page bodies with exact patterns: "Warning:|Notice:|Fatal error:|Deprecated:"
+# (a bare `grep -i warning` matches product-status CSS labels — false alarm).
 ```
 
 Also grep page bodies for `Warning`/`Notice`/`Fatal` — PHP display_errors is on locally.

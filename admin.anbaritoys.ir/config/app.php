@@ -54,3 +54,6 @@ define('DOMAIN', [
 
 
 const SECRET_TOKEN = "AmirRezaSiteSecret0001290109000102";
+
+// قفل موقت ایجاد/ویرایش محصول از پنل — برای فعال‌سازی مجدد false شود
+define('PRODUCT_WRITE_LOCK', true);

@@ -115,10 +115,11 @@ Pages then `include` view partials from `views/partial/` (headers, navbar, foote
  both talk to external container "mariadb" (DB anbar) ──────────────────┘
 ```
 
-- Image `anbar-php`: `php:8.2.6-fpm` + pdo_mysql, mbstring, gd, zip, intl, exif, bcmath, opcache, sockets; uploads 200M; runs as user `www` (uid 1000); `COPY . .` is shadowed by the bind mount.
+- Image `anbar-php`: `php:8.2-fpm-bookworm` (moved off `php:8.2.6-fpm` = Debian bullseye on 2026-09-10 — bullseye went EOL 2026-08-31 and its apt repo broke: expired security `InRelease`, then 404 `.deb`s from the drained pool; `archive/snapshot.debian.org` unreachable from this network) + pdo_mysql, mbstring, gd, zip, intl, exif, bcmath, opcache, sockets; uploads 200M; runs as user `www` (uid 1000); `COPY . .` is shadowed by the bind mount.
 - Compose file: `docker-compose.yml`; overrides in `docker-compose.override.yml`; secrets/config via `.env` (`APP_PORT=8008`, `APP_DOCKER_NETWORK=app`).
 - Use the **standalone `docker-compose` binary** (`docker compose` plugin is not installed). Runtime is **colima**, not Docker Desktop.
 - `mariadb` container is shared with the user's other projects and shows `unhealthy` in `docker ps` — it still serves fine; don't "fix" it as part of anbar work.
+- Forging an admin session for local E2E tests: write `admin_sing|i:1;` into `/tmp/sess_<id>` **as user `www` (or chmod 666)** — a root-owned file gets zeroed/ignored by the FPM worker, and the guard 302s despite the session being "valid".
 
 ## 7. Production deployment model (cPanel)
 

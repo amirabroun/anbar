@@ -48,9 +48,9 @@ function getLastProducts (){
     return false;
 }
 
-function getLastProductsss (){
+function getLastProductsss ($limit = null){
     global $cn;
-    $sql="select * from products where status = 'active' order by  products.created_at";
+    $sql="select * from products where status = 'active' order by  products.created_at" . ($limit ? " limit " . (int)$limit : "");
 
     $result=$cn->prepare($sql);
     $result->execute();
@@ -60,9 +60,9 @@ function getLastProductsss (){
     return false;
 }
 
-function getLastProductsssZero (){
+function getLastProductsssZero ($limit = null){
     global $cn;
-    $sql="select * from products where status = 'active' order by  products.created_at desc";
+    $sql="select * from products where status = 'active' order by  products.created_at desc" . ($limit ? " limit " . (int)$limit : "");
 
     $result=$cn->prepare($sql);
     $result->execute();
@@ -72,9 +72,9 @@ function getLastProductsssZero (){
     return false;
 }
 
-function getLastProductsssPriceZero (){
+function getLastProductsssPriceZero ($limit = null){
     global $cn;
-    $sql="select * from products where status = 'active' order by  products.price";
+    $sql="select * from products where status = 'active' order by  products.price" . ($limit ? " limit " . (int)$limit : "");
 
     $result=$cn->prepare($sql);
     $result->execute();
@@ -84,9 +84,9 @@ function getLastProductsssPriceZero (){
     return false;
 }
 
-function getLastProductsss100Zero (){
+function getLastProductsss100Zero ($limit = null){
     global $cn;
-    $sql="select * from products where status = 'active' order by  products.price desc";
+    $sql="select * from products where status = 'active' order by  products.price desc" . ($limit ? " limit " . (int)$limit : "");
 
     $result=$cn->prepare($sql);
     $result->execute();

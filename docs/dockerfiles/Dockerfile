@@ -1,5 +1,7 @@
 # PHP 8.2 FPM image for the anbar stack (nginx + php-fpm)
-FROM php:8.2.6-fpm
+# Base must stay on a supported Debian (bookworm): bullseye went EOL
+# 2026-08-31 and its apt pools now 404 mid-build.
+FROM php:8.2-fpm-bookworm
 
 # Base system packages
 RUN apt-get update && \
