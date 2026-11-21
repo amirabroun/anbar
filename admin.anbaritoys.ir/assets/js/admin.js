@@ -286,35 +286,46 @@
     };
 
     /* ==========================================================================
-       افزودن محصول — همان POST فرم create_product
+       ثبت و ویرایش محصول — POST مشترک با پاسخ JSON (create_product / update_product)
        ========================================================================== */
-    AN.createProduct = function (form) {
+    AN.postProductForm = function (form, action, url, onOk) {
         var errBox = document.getElementById('anFormErrors');
         if (errBox) errBox.style.display = 'none';
         var fd = new FormData(form);
         fd.delete('action');
         var params = new URLSearchParams();
         fd.forEach(function (v, k) { params.append(k, v); });
-        params.append('action', 'create_product');
+        params.append('action', action);
         var btn = form.querySelector('[data-an-submit]');
         if (btn) btn.disabled = true;
-        AN.request('requests/ProductsRequest.php', { method: 'POST', body: params })
+        AN.request(url || form.getAttribute('action') || window.location.href, { method: 'POST', body: params })
             .then(function (res) {
                 if (res.status == 200) {
-                    AN.toast(res.title || 'عملیات موفق', res.text || 'افزودن محصول با موفقیت انجام شد', 'success');
-                    setTimeout(function () {
-                        window.location.assign('manage_products_category.php?product_id=' + res.id);
-                    }, 500);
-                } else {
-                    if (btn) btn.disabled = false;
-                    if (errBox) {
-                        errBox.innerHTML = res.message || '<ul><li>خطای نامشخص</li></ul>';
-                        errBox.style.display = 'block';
-                        errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
+                    onOk(res);
+                    return;
+                }
+                if (btn) btn.disabled = false;
+                if (errBox) {
+                    errBox.innerHTML = res.message || res.text || '<ul><li>خطای نامشخص</li></ul>';
+                    errBox.style.display = 'block';
+                    errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             })
             .catch(function () { if (btn) btn.disabled = false; });
+    };
+    AN.createProduct = function (form) {
+        AN.postProductForm(form, 'create_product', 'requests/ProductsRequest.php', function (res) {
+            AN.toast(res.title || 'عملیات موفق', res.text || 'افزودن محصول با موفقیت انجام شد', 'success');
+            setTimeout(function () {
+                window.location.assign('manage_products_category.php?product_id=' + res.id);
+            }, 500);
+        });
+    };
+    AN.updateProduct = function (form) {
+        AN.postProductForm(form, 'update_product', '', function (res) {
+            AN.toast(res.title || 'عملیات موفق', res.text || 'ویرایش محصول با موفقیت انجام شد', 'success');
+            setTimeout(function () { window.location.reload(); }, 600);
+        });
     };
 
     /* ==========================================================================
@@ -577,6 +588,9 @@
         initPrint();
         document.querySelectorAll('[data-an-create]').forEach(function (form) {
             form.addEventListener('submit', function (e) { e.preventDefault(); AN.createProduct(form); });
+        });
+        document.querySelectorAll('[data-an-update]').forEach(function (form) {
+            form.addEventListener('submit', function (e) { e.preventDefault(); AN.updateProduct(form); });
         });
         document.querySelectorAll('[data-an-paper]').forEach(function (form) {
             form.addEventListener('submit', function (e) { e.preventDefault(); AN.insertPaper(form); });
