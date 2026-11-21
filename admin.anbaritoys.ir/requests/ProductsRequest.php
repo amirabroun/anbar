@@ -60,7 +60,16 @@ if (isset($_POST['action']) && $_POST['action']=== 'create_product'){
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'update_product' && PRODUCT_WRITE_LOCK){
-    setMessage('عملیات ناموفق', 'ویرایش محصول در حال حاضر غیرفعال است. جهت فعال‌سازی با پشتیبانی تماس بگیرید.', 'error');
+    $lock_msg = 'ویرایش محصول در حال حاضر غیرفعال است. جهت فعال‌سازی با پشتیبانی تماس بگیرید.';
+    if (isAjaxRequest()){
+        responseJson([
+            'text' => $lock_msg,
+            'type' => 'error',
+            'status' => 403,
+            'error' => true,
+        ]);
+    }
+    setMessage('عملیات ناموفق', $lock_msg, 'error');
 }
 
 if (isset($_POST['action'])&& $_POST['action']=== 'update_product' && !PRODUCT_WRITE_LOCK){
@@ -88,9 +97,14 @@ if (isset($_POST['action'])&& $_POST['action']=== 'update_product' && !PRODUCT_W
 
         $update_product=updateProduct($_POST['title'],$_POST['english_title'],$_POST['price'],$_POST['price_discounted'],$_POST['stock'],$_POST['status'], $_brand_id ,$_POST['description'],$_POST['review'], $_category_id ,$_GET['products_id'],$_POST['MiniDescription'],$_POST['label']);
         if ($update_product){
-            setMessage('عملیات موفق', 'ویرایش محصول با موفقیت انجام شد', 'success');
+            $res = ['title' => 'عملیات موفق', 'text' => 'ویرایش محصول با موفقیت انجام شد', 'type' => 'success', 'status' => 200];
+        }else{
+            $res = ['title' => 'عملیات نا موفق', 'text' => 'ویرایش محصول با موفقیت انجام نشد', 'type' => 'error', 'status' => 400, 'error' => true];
         }
-        else setMessage('عملیات نا موفق', 'افزودن محصول با موفقیت انجام نشد', 'error');
+        if (isAjaxRequest()){
+            responseJson($res);
+        }
+        setMessage($res['title'], $res['text'], $res['type']);
 
     }
 

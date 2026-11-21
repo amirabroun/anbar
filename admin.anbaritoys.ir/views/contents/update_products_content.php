@@ -25,7 +25,8 @@
     </div>
     <div class="an-card-body">
         <?php echo initFormErrors() ?>
-        <form class="form" method="post">
+        <div class="an-alert is-error" id="anFormErrors" style="display:none"></div>
+        <form class="form" method="post" data-an-update novalidate>
             <input type="hidden" name="action" value="update_product">
             <input type="hidden" name="category_id" value="37">
             <div class="an-form-grid">
@@ -91,7 +92,7 @@
                 </div>
             </div>
             <div class="an-form-actions" style="margin-top:22px">
-                <button type="submit" class="an-btn an-btn-primary">
+                <button type="submit" class="an-btn an-btn-primary" data-an-submit>
                     <svg class="an-ic" style="width:16px;height:16px"><use href="#an-i-check"></use></svg>
                     ذخیره تغییرات
                 </button>
