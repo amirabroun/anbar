@@ -2,10 +2,10 @@
 <main class="main-content dt-sl mt-4 mb-3">
     <div class="container main-container">
         <?php
-        $getLastProducts=getLastProductsss();
-        $getLastProductsZero=getLastProductsssZero();
-        $getLastProductszeroprice=getLastProductsssPriceZero();
-        $getLastProductsss100Zero=getLastProductsss100Zero();
+        $getLastProducts=getLastProductsss(12);
+        $getLastProductsZero=getLastProductsssZero(12);
+        $getLastProductszeroprice=getLastProductsssPriceZero(12);
+        $getLastProductsss100Zero=getLastProductsss100Zero(12);
         ?>
         <div class="row">
 
